@@ -21,7 +21,7 @@
 								<h1>邀请码管理</h1>
                           </div>
                         </div>
-								<p>{$config["appName"]} 的邀请码(点击邀请码直接注册)</p>
+								<p>{$config["appName"]} 的邀请码(点击或复制邀请码直接注册)</p>
                                    <div class="table-wrapper">
 										<table>
 											<thead>

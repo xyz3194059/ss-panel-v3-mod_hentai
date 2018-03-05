@@ -46,7 +46,7 @@ Image:
 -------------------
 ![](https://github.com/galaxychuck/images/blob/master/5.jpg)
 
-> f2f支付宝支付（[需要代开当面付点我](https://t.me/shouyeren)）
+> f2f支付宝支付
 
 -------------------
 ![](https://github.com/galaxychuck/images/blob/master/6.jpg)

@@ -1,6 +1,6 @@
 	<footer class="ui-footer">
 		<div class="container">
-			<marquee>&copy; {$config["appName"]}  <a href="/staff">STAFF</a> Google提供雲計算服務,伺服器位於台灣,遵守台灣法律法規<marquee> {if $config["enable_analytics_code"] == 'true'}{include file='analytics.tpl'}{/if}
+			<marquee>&copy; {$config["appName"]}歡迎使用 {$config["appName"]} 本服務建立於美國,遵守美國法律法規<marquee> {if $config["enable_analytics_code"] == 'true'}{include file='analytics.tpl'}{/if}
 		</div>
 	</footer>
 
