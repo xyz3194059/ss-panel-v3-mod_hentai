@@ -344,6 +344,13 @@
 					<li>
 						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_me">我的</a>
 						<ul class="menu-collapse collapse in" id="ui_menu_me">
+						{if $user->isAdmin()}
+							<li>
+								<a href="/admin">
+									<i class="icon icon-lg">person_pin</i>&nbsp;管理面板
+								</a>
+							</li>
+						{/if}
 							<li>
 								<a href="/user">
 									<i class="icon icon-lg">account_balance_wallet</i>&nbsp;用户中心
@@ -411,26 +418,6 @@
 								</a>
 							</li>
 						</ul>
-
-					<!--	<a class="waves-attach" data-toggle="collapse" href="#ui_menu_detect">审计</a>
-						<ul class="menu-collapse collapse in" id="ui_menu_detect">
-							<li><a href="/user/detect"><i class="icon icon-lg">account_balance</i>&nbsp;审计规则</a></li>
-							<li><a href="/user/detect/log"><i class="icon icon-lg">assignment_late</i>&nbsp;审计记录</a></li>
-						</ul> 
-						
-						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_trade">帮助</a>
-						<ul class="menu-collapse collapse in" id="ui_menu_trade">
-							{if $config['enable_wecenter']=='true'}
-							<li>
-								<a href="{$config["wecenter_url"]}" target="_blank">
-									<i class="icon icon-lg">help</i>&nbsp;问答系统
-								</a>
-							</li>
-							{/if}-->
-							
-
-					
-
 						
 						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_help">商店</a>
 						<ul class="menu-collapse collapse in" id="ui_menu_help">
@@ -460,18 +447,22 @@
 							{/if} 
                           
 						</ul>
-
-						
-						{if $user->isAdmin()}
+						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_detect">审计</a>
+						<ul class="menu-collapse collapse in" id="ui_menu_detect">
+							<li><a href="/user/detect"><i class="icon icon-lg">account_balance</i>&nbsp;审计规则</a></li>
+							<li><a href="/user/detect/log"><i class="icon icon-lg">assignment_late</i>&nbsp;审计记录</a></li>
+						</ul> 
+						{if $config['enable_wecenter']=='true'}
+						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_trade">帮助</a>
+						<ul class="menu-collapse collapse in" id="ui_menu_trade">
+							
 							<li>
-								<a href="/admin">
-									<i class="icon icon-lg">person_pin</i>&nbsp;管理面板
+								<a href="{$config["wecenter_url"]}" target="_blank">
+									<i class="icon icon-lg">help</i>&nbsp;问答系统
 								</a>
 							</li>
-						{/if}
-						
-
-						
+							{/if}
+		
 					</li>
 				</ul>
 			</div>

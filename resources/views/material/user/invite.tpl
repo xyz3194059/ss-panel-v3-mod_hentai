@@ -41,7 +41,7 @@
 								<div class="card-inner">
 									<div class="card-inner">
 										<p class="card-heading">说明</p>
-										<p>当您的余额达到100可发工单请求提现。</p>
+										<p>当您的余额达到100可发<a href="/user/ticket">工单</a>请求提现。</p>
 										<p>您每拉一位用户注册，对方充值时您就会获得对方充值金额的 <code>{$config["code_payback"]} %</code> 的提成。</p>
 									</div>
 									
@@ -57,6 +57,7 @@
 									<div class="card-inner">
 										<p class="card-heading">邀请</p>
 										<p>当前您可以生成<code>{$user->invite_num}</code>个邀请码。 </p>
+										<p>如果您的朋友较多，可以提<a href="/user/ticket">工单</a>说明来增加您的账号邀请码。</p>
 									</div>
 									{if $user->invite_num }
 									<div class="card-action">

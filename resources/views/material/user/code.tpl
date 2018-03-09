@@ -67,6 +67,7 @@
 											<div class="table-responsive">
 												{$codes->render()}
 												<table class="table table-hover">
+												    <p class="card-heading">消费记录</p>
 													<tr>
 													<!--<th>ID</th> -->
 														<th>代码</th>
@@ -79,7 +80,7 @@
 														{if $code->type!=-2}
 															<tr>
 															<!--	<td>#{$code->id}</td>  -->
-																<td>{$code->code}</td>
+																<td><code>{$code->code}</code></td>
 																{if $code->type==-1}
 																<td>金额充值</td>
 																{/if}

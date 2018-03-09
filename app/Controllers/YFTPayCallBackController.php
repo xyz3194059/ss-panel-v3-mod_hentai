@@ -51,11 +51,11 @@ class YFTPayCallBackController
                 $orderInfo = new YftOrder();
                 $orderInfo = $orderInfo->where("ss_order", "=", $ss_order_no)->first();
                 if ($orderInfo == "" || $orderInfo == null) {
-                    return "fail";
+                    return "订单不存在！";
                 }
 
                 if ($orderInfo->price != $total_fee) {
-                    return "fail";
+                    return "订单信息异常！";
                 }
 
                 $userInfo = new User();
@@ -94,15 +94,16 @@ class YFTPayCallBackController
                         }
                     }
                 } else {
-                    return "success";
+                    return "订单号异常或交易已完成!";
                 }
-                return "success";
+                header("location:" . $request->getUri()->getScheme() . "://" . $request->getUri()->getHost() . "/user/code");
+                return "支付成功";
             } else {
-                return "fail";
+                return "支付失败";
             }
         } else {
             //验证失败
-            return "fail";
+            return "订单信息异常！请联系管理员";
         }
     }
 

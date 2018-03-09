@@ -66,7 +66,7 @@ class TelegramProcess
                     break;
                 default:
                     if ($message->getPhoto() != null) {
-                        $bot->sendMessage($message->getChat()->getId(), "正在解码，请稍候。。。");
+                        $bot->sendMessage($message->getChat()->getId(), "正在解码，请稍候。。。(过长时间说明识别错误)");
                         $bot->sendChatAction($message->getChat()->getId(), 'typing');
                         $photos = $message->getPhoto();
                         $photo_size_array = array();
@@ -121,7 +121,7 @@ class TelegramProcess
                                         $bot->sendMessage($message->getChat()->getId(), "登录验证失败，二维码无效。".substr($qrcode_text, 12));
                                     }
                                 } else {
-                                    $bot->sendMessage($message->getChat()->getId(), "登录验证失败，您未绑定仟佰星云账号。".substr($qrcode_text, 12));
+                                    $bot->sendMessage($message->getChat()->getId(), "登录验证失败，您未绑定{{}}账号。".substr($qrcode_text, 12));
                                 }
                             }
                             break;
@@ -136,7 +136,7 @@ class TelegramProcess
                                     $bot->sendMessage($message->getChat()->getId(), "登录验证失败，数字无效。");
                                 }
                             } else {
-                                $bot->sendMessage($message->getChat()->getId(), "登录验证失败，您未绑定仟佰星云账号。");
+                                $bot->sendMessage($message->getChat()->getId(), "登录验证失败，您未绑定Config::get('appName')账号。");
                             }
                             break;
                         }
@@ -152,6 +152,9 @@ class TelegramProcess
                 case 'ping':
                     $bot->sendMessage($message->getChat()->getId(), 'Pong!这个群组的 ID 是 '.$message->getChat()->getId().'!', $parseMode = null, $disablePreview = false, $replyToMessageId = $message->getMessageId());
                     break;
+		case 'tb':
+		     $bot->sendMessage($message->getChat()->getId(),"大爷，不支持淘宝了，请直接捐献！");
+		     break;
                 case 'chat':
                     if ($message->getChat()->getId() == Config::get('telegram_chatid')) {
                         $bot->sendMessage($message->getChat()->getId(), Tuling::chat($message->getFrom()->getId(), substr($message->getText(), 5)), $parseMode = null, $disablePreview = false, $replyToMessageId = $message->getMessageId());

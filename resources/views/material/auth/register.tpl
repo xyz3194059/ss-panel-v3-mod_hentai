@@ -33,27 +33,26 @@
 												</div>
 											</div>
 										</div>
-										{*
-
-
-
+                                  
+                                  
+                                  
                                   			<!--<div class="form-group form-group-label">
 											<div class="row">
 												<div class="col-md-10 col-md-push-1">
 											<label class="floating-label" for="theme">主题</label>
 											<select id="theme" class="form-control">
-
+												
 													<option value="{$theme}">{$theme}</option>
-
+												
 													</select>
 												</div>
 											</div>
 										</div>-->
-
-
-
-
-                                  *}
+										
+                                  
+                                  
+                                  
+                                  
 										{if $enable_email_verify == 'true'}
 										<div class="form-group form-group-label">
 											<div class="row">
@@ -64,10 +63,10 @@
 												</div>
 											</div>
 										</div>
-
+                                  
                                   {/if}
 
-
+										
 										<div class="form-group form-group-label">
 											<div class="row">
 												<div class="col-md-10 col-md-push-1">
@@ -76,7 +75,7 @@
 												</div>
 											</div>
 										</div>
-
+										
 										<div class="form-group form-group-label">
 											<div class="row">
 												<div class="col-md-10 col-md-push-1">
@@ -85,8 +84,8 @@
 												</div>
 											</div>
 										</div>
-
-
+										
+										
 										<div class="form-group form-group-label">
 											<div class="row">
 												<div class="col-md-10 col-md-push-1">
@@ -101,8 +100,8 @@
 												</div>
 											</div>
 										</div>
-
-
+										
+										
 										<div class="form-group form-group-label">
 											<div class="row">
 												<div class="col-md-10 col-md-push-1">
@@ -111,20 +110,25 @@
 												</div>
 											</div>
 										</div>
-
-
-
-									<!--	{if $enable_invite_code == 'true'}  -->
+										
+										
+										
+										{if $enable_invite_code == 'true'}  
 											<div class="form-group form-group-label">
+											
 												<div class="row">
 													<div class="col-md-10 col-md-push-1">
-														<label class="floating-label" for="code">邀请码(可选)</label>
+														<label class="floating-label" for="code">邀请码</label>
+														
 														<input class="form-control" id="code" type="text" value="{$code}">
+														
+														<button class="btn btn-block btn-brand-accent waves-attach waves-light" onclick="javascript:window.open('/code');">查看公共邀请码</button>														
+														
 													</div>
 												</div>
 											</div>
-								<!--		{/if}   -->
-
+										{/if}  
+										
 										{if $geetest_html != null}
 											<div class="form-group form-group-label">
 												<div class="row">
@@ -134,7 +138,7 @@
 												</div>
 											</div>
 										{/if}
-
+										
 										<div class="form-group">
 											<div class="row">
 												<div class="col-md-10 col-md-push-1">

@@ -85,7 +85,7 @@ class Job
         system("rm -rf /tmp/ssmodbackup", $ret);
         system("rm /tmp/ssmodbackup.zip", $ret);
 
-        Telegram::Send("备份完毕了喵~今天又是安全祥和的一天呢。");
+        Telegram::Send("备份完毕");
     }
 
     public static function SyncDuoshuo()
@@ -142,7 +142,7 @@ class Job
         DetectLog::where("datetime", "<", time()-86400*3)->delete();
         Speedtest::where("datetime", "<", time()-86400*3)->delete();
         EmailVerify::where("expire_in", "<", time()-86400*3)->delete();
-        Telegram::Send("姐姐姐姐，数据库被清理了，感觉身体被掏空了呢~");
+        Telegram::Send("数据库清理完毕");
 
         //auto reset
         $boughts=Bought::all();
@@ -264,12 +264,13 @@ class Job
 
         Job::updatedownload();
     }
-//   注释該代碼：會導致重置流量任務失效
- //   public static function updatedownload()
- //   {
- //     system('cd '.BASE_PATH."/public/ssr-download/ && git pull", $ret);
- //       echo $ret;
-  //  }
+
+/*   注释該代碼：會導致重置流量任務失效
+      public static function updatedownload()
+    {
+        system('cd '.BASE_PATH."/public/ssr-download/ && git pull", $ret);
+        echo $ret;
+    }*/
 
     public static function CheckJob()
     {
@@ -453,7 +454,7 @@ class Job
                         echo "Send mail to user: ".$user->id;
                         $subject = Config::get('appName')."-系统提示";
                         $to = $user->email;
-                        $text = "管理员您好，系统发现有了新版本，您可以到 <a href=\"https://github.com/NimaQu/ss-panel-v3-mod_UIChanges/wiki/%E5%8D%87%E7%B4%9A%E7%89%88%E6%9C%AC\">https://github.com/NimaQu/ss-panel-v3-mod_UIChanges/wiki/%E5%8D%87%E7%B4%9A%E7%89%88%E6%9C%AC</a> 按照步骤进行升级。" ;
+                        $text = "管理员您好，系统发现有了新版本，您可以到 <a href=\"https://github.com/ZBrettonYe/ss-panel-v3-mod_hentai">https://github.com/ZBrettonYe/ss-panel-v3-mod_hentai</a> 按照步骤进行升级。" ;
                         try {
                             Mail::send($to, $subject, 'news/warn.tpl', [
                                 "user" => $user,"text" => $text
@@ -464,7 +465,7 @@ class Job
                         }
                     }
 
-                    Telegram::Send("姐姐姐姐，面板程序有更新了呢~看看你的邮箱吧~");
+                    Telegram::Send("面板程序有新版本，亲即使查阅");
 
                     $myfile = fopen(BASE_PATH."/storage/update.md5", "w+") or die("Unable to open file!");
                     $txt = "1";
@@ -485,7 +486,7 @@ class Job
                         echo "Send offline mail to user: ".$user->id;
                         $subject = Config::get('appName')."-系统警告";
                         $to = $user->email;
-                        $text = "管理员您好，系统发现节点 ".$node->name." 掉线了，请您及时处理。" ;
+                        $text = "系统发现节点 ".$node->name." 掉线了，请及时处理。" ;
                         try {
                             Mail::send($to, $subject, 'news/warn.tpl', [
                                 "user" => $user,"text" => $text
@@ -527,11 +528,11 @@ class Job
                                         $api->record->recordUpdate($domain_id, $record->host, $Temp_node->server, 'CNAME', 55, 60, 1, '', $record_id);
                                     }
 
-                                    $notice_text = "喵喵喵~ ".$node->name." 节点掉线了喵~域名解析被切换到了 ".$Temp_node->name." 上了喵~";
+                                    $notice_text = "opps~ 与【".$node->name."】节点失去联系了，域名解析被切换到了 ".$Temp_node->name." 上了";
                                 }
                             }
                         } else {
-                            $notice_text = "喵喵喵~ ".$node->name." 节点掉线了喵~";
+                            $notice_text = "opps~ 与【".$node->name."】节点失去联系";
                         }
                     }
 
@@ -551,7 +552,7 @@ class Job
                         echo "Send offline mail to user: ".$user->id;
                         $subject = Config::get('appName')."-系统提示";
                         $to = $user->email;
-                        $text = "管理员您好，系统发现节点 ".$node->name." 恢复上线了。" ;
+                        $text = "系统发现节点 ".$node->name." 恢复上线了。" ;
                         try {
                             Mail::send($to, $subject, 'news/warn.tpl', [
                                 "user" => $user,"text" => $text
@@ -588,9 +589,9 @@ class Job
                             }
 
 
-                            $notice_text = "喵喵喵~ ".$node->name." 节点恢复了喵~域名解析被切换回来了喵~";
+                            $notice_text = "yes~ 与【".$node->name."】 节点恢复通讯了，域名解析被切换回来了";
                         } else {
-                            $notice_text = "喵喵喵~ ".$node->name." 节点恢复了喵~";
+                            $notice_text = "yes~ 与【".$node->name."】 节点恢复通讯";
                         }
                     }
 

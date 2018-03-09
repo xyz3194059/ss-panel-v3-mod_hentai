@@ -18,6 +18,27 @@
 				<h1 class="content-heading">节点列表</h1>
 			</div>
 		</div>
+                        <div class="container">
+					<div class="col-lg-12 col-md-12">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+                                <p class="card-heading"> <i class="icon icon-md">notifications_active</i>提示</p>
+                                <p>延迟大不代表速度慢；</p>
+                                <p>而延迟好看并不代表速度快；</p>
+                                <p>游戏往往更需要延迟稳定，而并不是超大带宽。</p>
+                                <li>如果你是手机打开页面，请切换到【桌面版网站】查看完整页面，并且注意节点倍率</li>
+                                <p>节点倍率：例0.5倍率，相当于你用100M流量，只计算50M流量</p>
+                                <p>限速单纯是单个账户限制的速度，不是节点总速度。</p>
+                                
+                                <p>{$ann->content}</p>
+                                
+                               
+                            </div>
+                           </div>
+                        </div>
+                    </div>
+                    </div>
 		<div class="container">
 			<section class="content-inner margin-top-no">
 			

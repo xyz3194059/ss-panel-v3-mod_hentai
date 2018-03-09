@@ -22,7 +22,7 @@
 					<div class="card">
 						<div class="card-main">
 							<div class="card-inner">
-								<p>有任何问题请直接右下角的+号提交新问题</p>
+								<p>您发出的工单</p>
 							</div>
 						</div>
 					</div>
@@ -31,23 +31,24 @@
 						{$tickets->render()}
                         <table class="table">
                             <tr>
-								
-                              <!--  <th>ID</th>   -->
-                                <th>发起日期</th>
-                                <th>工单标题</th>
-								<th>工单状态</th>
-                               <th>操作</th>
+								<th>操作</th>
+                                <th>ID</th>
+                                <th>日期</th>
+                                <th>标题</th>
+								<th>状态</th>
                             </tr>
                             {foreach $tickets as $ticket}
                                 <tr>
-									
-                                 <!--   <td>#{$ticket->id}</td>  -->
+									<td>
+										<a class="btn btn-brand" href="/user/ticket/{$ticket->id}/view">查看</a>
+									</td>
+                                    <td>#{$ticket->id}</td>
                                     <td>{$ticket->datetime()}</td>
                                     <td>{$ticket->title}</td>
 									{if $ticket->status==1}
-									<td>工单服务中</td>
+									<td>开启</td>
 									{else}
-									<td>工单已结束</td>
+									<td>关闭</td>
 									{/if}
                                      <td>
 										<a class="btn btn-brand" href="/user/ticket/{$ticket->id}/view">查看</a>

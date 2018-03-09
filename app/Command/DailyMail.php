@@ -1,5 +1,8 @@
 <?php
+
+
 namespace App\Command;
+
 use App\Models\User;
 use App\Models\Ann;
 use App\Services\Config;
@@ -7,6 +10,7 @@ use App\Services\Mail;
 use App\Utils\Telegram;
 use App\Utils\Tools;
 use App\Services\Analytics;
+
 class DailyMail
 {
     public static function sendDailyMail()
@@ -31,7 +35,7 @@ class DailyMail
                 echo "Send daily mail to user: ".$user->id;
                 $subject = Config::get('appName')."-每日流量报告以及当前最新公告";
                 $to = $user->email;
-                $text = "下面是本站目前の公告:<br><br>".$text1."<br><br>晚安！";
+                $text = "下面是本站当前の公告:<br><br>".$text1."<br><br>晚安！";
                 
                 try {
                     Mail::send($to, $subject, 'news/daily-traffic-report.tpl', [
@@ -47,13 +51,14 @@ class DailyMail
         
         $sts = new Analytics();
         
-        Telegram::Send("各位老爷少奶奶，我来为大家报告一下系统今天的运行状况哈~".
+        Telegram::Send("各位dalao，我来为大家报告一下系统今天的运行状况哈~".
         PHP_EOL.
         "今日签到人数:".$sts->getTodayCheckinUser().PHP_EOL.
         "今日使用总流量:".Tools::flowAutoShow($lastday_total).PHP_EOL.
         "晚安~"
         );
     }
+
 
     public static function reall()
     {

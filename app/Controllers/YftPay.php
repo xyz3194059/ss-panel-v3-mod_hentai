@@ -141,11 +141,11 @@ class YftPay extends BaseController
                     return $newResponse;
                 }
 
-                echo "success";
-                return "success";
+                echo "支付成功";
+                return $newResponse;
             } else {
-                echo "fail";
-                return "fail";
+                echo "支付失败";
+                return $newResponse;
             }
 
         } else {

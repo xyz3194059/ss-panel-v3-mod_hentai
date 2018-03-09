@@ -299,6 +299,9 @@
 				form .field.half.first {
 					padding: 0 0.75rem 0 0;
 				}
+				form .field.half.last {
+					padding: 0 2.00rem 0 0;
+				}
 
 		form > .actions {
 			margin: 1.875rem 0 0 0 !important;
@@ -317,6 +320,9 @@
 					form .field.half.first {
 						padding: 0 0.5625rem 0 0;
 					}
+        		  form .field.half.last {
+					padding: 0 2.00rem 0 0;
+				}
 
 			form > .actions {
 				margin: 1.5rem 0 0 0 !important;

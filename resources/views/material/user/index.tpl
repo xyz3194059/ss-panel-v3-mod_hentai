@@ -3,7 +3,17 @@
 
 {include file='user/main.tpl'}
 {$ssr_prefer = URL::SSRCanConnect($user, 0)}
+<style>
+    .kaobei {
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+    }
 
+        .kaobei:hover {
+            background-color: #ff7ffe; /* prink */
+            color: white;
+        }
+</style>
 
 	<main class="content">
 
@@ -111,7 +121,7 @@
                                                       <p><a href="/user/announcement">点击这里查看Linux傻瓜式教程</a></p> 
 													</div>
 													<div class="tab-pane fade" id="all_ssr_ios">
-                                                        <p><span class="icon icon-lg text-white">looks_one</span> 切换<code>App Store</code>账号-ID:<code>XXXXXXX@icloud.com</code> 密码<code>XXXXXXXX</code>注意特殊符号与大小写,如果显示需要解锁账号，请提交工单或邮件。（千万不要试图登陆iCloud，会上传您的照片与通讯录到这个账户上）</p>
+                                                        <p><span class="icon icon-lg text-white">looks_one</span> 切换<code>App Store</code>账号-ID:<code>shz7348@icloud.com</code> 密码<code>Qq#123456</code>注意特殊符号与大小写,如果显示需要解锁账号，请提交工单或邮件。（千万不要试图登陆iCloud，会上传您的照片与通讯录到这个账户上）</p>
                                                          <p><span class="icon icon-lg text-white">looks_two</span> 商店搜索<code>Shadowrocket</code>下载安装</p>
                                                       	<p><span class="icon icon-lg text-white">looks_3</span> 安装完成后切换回您自己的账号。（请务必切换回您自己的账户）</p>
                                                       <!--  <p>两种方式导入所有节点</p> 
@@ -128,10 +138,10 @@
                                                       <p><span class="icon icon-lg text-white">filter_2</span> 打开App，点击右下角的<span class="icon icon-lg text-white">add</span>号图标</p>
                                                         <p><span class="icon icon-lg text-white">filter_3</span> 添加/升级 SSR订阅</p>
                                                           <p><span class="icon icon-lg text-white">filter_4</span> 添加订阅地址，输入以下订阅地址后确定</p>
-                                                      <p><span class="icon icon-lg text-white">filter_5</span> 订阅出现系统自带的与仟佰星云，请把系统自带的无效订阅左滑删除（自带影响订阅更新速度）</p>
+                                                      <p><span class="icon icon-lg text-white">filter_5</span> 订阅出现系统自带的订阅，请把系统自带的无效订阅<code>左滑删除</code>（自带影响订阅更新速度</p>
                                                        <p><span class="icon icon-lg text-white">filter_6</span> 点击确定并升级</p>
                                                       <p><span class="icon icon-lg text-white">filter_7</span> 选择任意节点</p>
-                                                      <p><span class="icon icon-lg text-white">filter_8</span> 路由选择：略过区域网路以及中国大陆</p>
+                                                      <p><span class="icon icon-lg text-white">filter_8</span> 路由选择：绕过局域网以及中国大陆</p>
                                                         <p><span class="icon icon-lg text-white">filter_9</span> 点击右上角的纸飞机图标即可连接</p>
                                                  <!--       <p>两种方式导入所有节点</p>
                                                          <p>1、在手机上默认浏览器中点击<a href="{$ssr_url_all}">这个链接（普通端口）</a>或者<a href="{$ssr_url_all_mu}">这个链接（单端口多用户）</a>，然后点击确定，批量添加完节点，然后路由选择<code>绕过局域网和大陆</code>，右上角开启就可以上网了。同时提供一个 ACL (看您的需要)地址，<a href="/link/{$acl_token}">长按复制地址</a>到客户端里应用即可。</p> 

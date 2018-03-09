@@ -27,7 +27,7 @@
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
 										<p class="card-heading">注意！</p>
-										<p>下面为您的 VPN 配置。</p>
+										<p>下面为您的 服务 配置。</p>
 									</div>
 									
 								</div>
