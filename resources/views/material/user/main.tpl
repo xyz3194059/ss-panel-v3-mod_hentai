@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-cmn-Hans">
+<html lang="zh-cn">
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,shrink-to-fit=no">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
 	<meta name="theme-color" content="#ff9800">
 	<title>{$config["appName"]}</title>
 
@@ -306,7 +306,8 @@
 				<a class="dropdown-toggle padding-left-no padding-right-no" data-toggle="dropdown">
 				{if $user->isLogin}
 					<span class="access-hide">{$user->user_name}</span>
-					<span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="{$user->gravatar}"></span>
+              	    <span class="icon icon-cd margin-right">account_circle</span>
+				<!--	<span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="{$user->gravatar}"></span>  -->
 					</a>
 					<ul class="dropdown-menu dropdown-menu-right">
 						<li>

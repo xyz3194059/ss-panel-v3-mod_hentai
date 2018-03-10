@@ -265,11 +265,12 @@ class Job
         Job::updatedownload();
     }
 
-    public static function updatedownload()
+/*   注释該代碼：會導致重置流量任務失效
+      public static function updatedownload()
     {
         system('cd '.BASE_PATH."/public/ssr-download/ && git pull", $ret);
         echo $ret;
-    }
+    }*/
 
     public static function CheckJob()
     {
@@ -438,7 +439,7 @@ class Job
 
         $adminUser = User::where("is_admin", "=", "1")->get();
 
-        $latest_content = file_get_contents("https://raw.githubusercontent.com/ZBrettonYe/ss-panel-v3-mod_hentai/master/bootstrap.php");
+        $latest_content = file_get_contents("https://raw.githubusercontent.com/NimaQu/ss-panel-v3-mod_UIChanges/master/bootstrap.php");
         $newmd5 = md5($latest_content);
         $oldmd5 = md5(file_get_contents(BASE_PATH."/bootstrap.php"));
 
@@ -527,11 +528,11 @@ class Job
                                         $api->record->recordUpdate($domain_id, $record->host, $Temp_node->server, 'CNAME', 55, 60, 1, '', $record_id);
                                     }
 
-                                    $notice_text = "warning~与【".$node->name."】节点失联，域名解析被切换到了 ".$Temp_node->name." 上了";
+                                    $notice_text = "opps~ 与【".$node->name."】节点失去联系了，域名解析被切换到了 ".$Temp_node->name." 上了";
                                 }
                             }
                         } else {
-                            $notice_text = "warning~ 与【".$node->name."】节点失联";
+                            $notice_text = "opps~ 与【".$node->name."】节点失去联系";
                         }
                     }
 
@@ -588,9 +589,9 @@ class Job
                             }
 
 
-                            $notice_text = "与【".$node->name."】 节点恢复通讯，域名解析被切换回来了";
+                            $notice_text = "yes~ 与【".$node->name."】 节点恢复通讯了，域名解析被切换回来了";
                         } else {
-                            $notice_text = "与【".$node->name."】 节点恢复通讯";
+                            $notice_text = "yes~ 与【".$node->name."】 节点恢复通讯";
                         }
                     }
 

@@ -1,76 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>{$config["appName"]}</title>
+        <meta name="keywords" content=""/>
+        <meta name="description" content=""/>
+        <meta charset="utf-8" />
+        <link rel="shortcut icon" href="/favicon.ico"/>
+        <link rel="bookmark" href="/favicon.ico"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<link rel="stylesheet" href="assets/css/main.css"/>
+        <noscript><link rel="stylesheet" href="./assets/css/noscript.css" /></noscript>   
 
-
-
-
-{include file='header.tpl'}
-
-
-
-
-
-
-	<main class="content">
-		<div class="content-header ui-content-header">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12 col-lg-push-0 col-sm-12 col-sm-push-0">
-						<h1 class="content-heading">邀请码</h1>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="container">
-				<section class="content-inner margin-top-no">
-				
-					<div class="card">
-						<div class="card-main">
-							<div class="card-inner">
-								<p>{$config["appName"]} 的邀请码，没了的话就烧纸吧。</p>
-							</div>
-						</div>
-					</div>
-				
-					
-					
-					
-					<div class="card">
-						<div class="card-main">
-							<div class="card-inner margin-bottom-no">
-								<p class="card-heading">邀请码</p>
-								<div class="card-table">
-									<div class="table-responsive">
-										<table class="table">
+  </head>
+  
+       <body>
+			<div id="wrapper">
+              <!--首页开始-->
+                          <div class="content">
+							<div class="inner">
+								<h1>邀请码管理</h1>
+                          </div>
+                        </div>
+								<p>{$config["appName"]} 的邀请码(点击或复制邀请码直接注册)</p>
+                                   <div class="table-wrapper">
+										<table>
 											<thead>
-											<tr>
-												<th>###</th>
-												<th>邀请码 (点击邀请码进入注册页面)</th>
-												<th>状态</th>
-											</tr>
+												<tr>
+													<th>邀请码</th>
+                                                  <th>状态</th>
+												</tr>
 											</thead>
+                                             {foreach $codes as $code}
 											<tbody>
-											{foreach $codes as $code}
+												<tr>
 											<tr>
-												<td>{$code->id}</td>
 												<td><a href="/auth/register?code={$code->code}">{$code->code}</a></td>
 												<td>可用</td>
 											</tr>
 											{/foreach}
-											</tbody>
+                                              	</tbody>
 										</table>
 									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				
-					
-					
-					
-							
-			
-			
-		</div>
-	</main>
-
-
-{include file='footer.tpl'}
+ 
+                                        
+                             <!--底页按钮-->
+                           <nav>
+							<ul>  
+                          <a href="/" class="button">返回首页</a>
+                           </ul>
+						</nav>
+                 
+            
+                     <!-- 版权底部 -->
+                      <footer id="footer">
+                   <p class="copyright">&copy;2015-2017 {$config["appName"]}</p>
+                      </footer>
+              <!-- 版权结束 -->
+			 </div>
+                <!-- BG -->
+			<div id="bg"></div>
+	        	<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+         <script src="assets/js/main.js"></script>
+	</body>
+</html>
