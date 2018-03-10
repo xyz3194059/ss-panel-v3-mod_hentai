@@ -111,7 +111,7 @@ class XCat
 
     public function initdownload()
     {
-        system('git clone https://github.com/esdeathlove/panel-download.git '.BASE_PATH."/public/ssr-download/", $ret);
+        system('git clone https://github.com/ZBrettonYe/ss-panel-v3-mod_hentai.git '.BASE_PATH."/public/ssr-download/", $ret);
         echo $ret;
     }
 

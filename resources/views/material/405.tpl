@@ -1,40 +1,62 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>您的访问方式不正确 - {$config["appName"]} </title>
-      <meta name="keywords" content=""/>
-      <meta name="description" content=""/>
-      <meta charset="utf-8" />
-      <link rel="shortcut icon" href="/favicon.ico"/>
-      <link rel="bookmark" href="/favicon.ico" type="image/x-icon"/>
-      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-	<link rel="shortcut icon" type="image/ico" href="images/ssr.ico">
-      <link rel="stylesheet" href="assets/css/main.css" />
 
-      <noscript>
-        <link rel="stylesheet" href="assets/css/noscript.css" />
-      </noscript>
-  </head>	
-<body>
-			<div id="wrapper">
-					<header id="header">
-						<div class="logo">
-							<span class="icon fa-rocket"></span></div>
-						<div class="content">
-							<div class="inner">
-								<h1>405错误</h1>
-								<p>您的访问方式不正确。</p></div></div>	
-						<nav>
-							<ul>
-								<li><a href="./#">返回首页</a></li>
-							</ul>
-						</nav>
-              </header>
-					 <footer id="footer"><p class="copyright">&copy;2017-2018 {$config["appName"]} </p></footer>
+
+
+
+
+{include file='header.tpl'}
+
+
+	<main class="content">
+		<div class="content-header ui-content-header">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-lg-push-0 col-sm-12 col-sm-push-0">
+						<h1 class="content-heading">405</h1>
+					</div>
+				</div>
 			</div>
-			<div id="bg"></div>
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-</body></html>
+		</div>
+		<div class="container">
+						<section class="content-inner margin-top-no">
+							
+							
+							<div class="card">
+								<div class="card-main">
+									<div class="card-inner">
+										<p>您的访问方式不正确。如果您认为这个错误不该发生，<a href="https://github.com/glzjin/ss-panel-v3-mod/issues">请到 Github 提交 issue</a>。</p>
+									</div>
+									
+									<div class="card-action">
+										<div class="card-action-btn pull-left">
+											<a class="btn btn-flat waves-attach" href="javascript:history.back()"><span class="icon">backspace</span>&nbsp;返回</a>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+
+								
+							<div class="card">
+								<div class="card-main">
+									<div class="card-inner">
+											<div class="card-img">
+												<img src="{$pic}" style="width: 100%;">
+											</div>
+									</div>
+									
+									
+								</div>
+							</div>
+							
+
+		
+							
+						</section>
+			
+			
+			
+		</div>
+	</main>
+
+
+{include file='footer.tpl'}

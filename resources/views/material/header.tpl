@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 	<meta charset="UTF-8">
-	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0，shrink-to-fit=no">
 	<meta name="theme-color" content="#3f51b5">
 	<title>{$config["appName"]}</title>
 	<!-- css -->
@@ -22,7 +22,7 @@
 		<ul class="nav nav-list pull-left">
 			<li>
 				<a data-toggle="menu" href="#ui_menu">
-					<span class="icon icon-lg">format_align_justify</span>
+					<span class="icon icon-lg">menu</span>
 				</a>
 			</li>
 		</ul>
