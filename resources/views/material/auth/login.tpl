@@ -5,10 +5,15 @@
 			<div class="col-lg-4 col-lg-push-4 col-sm-6 col-sm-push-3">
 				<section class="content-inner">
 					<nav class="tab-nav margin-top-no">
-						<ul class="nav nav-justified"> {if $config['enable_telegram'] == 'true'}
-							<li> <a class="waves-attach" data-toggle="tab" href="#qrcode_login">	TG扫码登录</a> </li> {/if}
-							<li class="active"> <a class="waves-attach" data-toggle="tab" href="#passwd_login">密码登录</a> </li> {if $config['enable_telegram'] == 'true'}
-							<li> <a class="waves-attach" data-toggle="tab" href="#number_login">	TG数字登录</a> </li> {/if} </ul>
+						<ul class="nav nav-justified">
+						{if $config['enable_telegram'] == 'true'}
+							<li> <a class="waves-attach" data-toggle="tab" href="#qrcode_login">	TG掃碼登錄</a></li>
+							{/if}
+							<li class="active"> <a class="waves-attach" data-toggle="tab" href="#passwd_login">密碼登錄</a></li>
+							{if $config['enable_telegram'] == 'true'}
+							<li> <a class="waves-attach" data-toggle="tab" href="#number_login">	TG數字登錄</a></li>
+							{/if}
+						</ul>
 					</nav>
 					<div class="card-inner">
 						<div class="tab-content">
@@ -17,37 +22,39 @@
 									<div class="card-main">
 										<div class="card-header">
 											<div class="card-inner">
-												<h1 class="card-heading">登录到用户中心</h1> </div>
+												<h1 class="card-heading">登錄到用戶中心</h1></div>
 										</div>
 										<div class="card-inner">
 											<form action="javascript:void(0);" method="POST">
 												<div class="form-group form-group-label">
 													<div class="row">
-														<div class="col-md-10 col-md-push-1"> <label class="floating-label" for="email">邮箱</label> <input class="form-control" id="email" type="text" name="Email"> </div>
+														<div class="col-md-10 col-md-push-1"> <label class="floating-label" for="email">郵箱</label> <input class="form-control" id="email" type="text" name="Email"> </div>
 													</div>
 												</div>
 												<div class="form-group form-group-label">
 													<div class="row">
-														<div class="col-md-10 col-md-push-1"> <label class="floating-label" for="passwd">密码</label> <input class="form-control" id="passwd" type="password" name="Password"> </div>
+														<div class="col-md-10 col-md-push-1"> <label class="floating-label" for="passwd">密碼</label> <input class="form-control" id="passwd" type="password" name="Password"> </div>
 													</div>
-												</div> {if $geetest_html != null}
+												</div>
+												{if $geetest_html != null}
 												<div class="form-group form-group-label">
 													<div class="row">
 														<div class="col-md-10 col-md-push-1">
 															<div id="embed-captcha"></div>
 														</div>
 													</div>
-												</div> {/if}
+												</div>
+												{/if}
 												<div class="form-group">
 													<div class="row">
-														<div class="col-md-10 col-md-push-1"> <button id="login" type="submit" class="btn btn-block btn-brand waves-attach waves-light">登录</button> </div>
+														<div class="col-md-10 col-md-push-1"> <button id="login" type="submit" class="btn btn-block btn-brand waves-attach waves-light">登錄</button></div>
 													</div>
 												</div>
 												<div class="form-group">
 													<div class="row">
 														<div class="col-md-10 col-md-push-1">
 															<div class="checkbox checkbox-adv"> <label for="remember_me">
-																		<input class="access-hide" value="week" id="remember_me" name="remember_me" type="checkbox">记住我
+																		<input class="access-hide" value="week" id="remember_me" name="remember_me" type="checkbox">記住我
 																		<span class="checkbox-circle"></span><span class="checkbox-circle-check"></span><span class="checkbox-circle-icon icon">done</span>
 																	</label> </div>
 														</div>
@@ -63,10 +70,10 @@
 									<div class="card-main">
 										<div class="card-header">
 											<div class="card-inner">
-												<h1 class="card-heading">Telegram扫码登录</h1> </div>
+												<h1 class="card-heading">Telegram掃碼登錄</h1> </div>
 										</div>
 										<div class="card-inner">
-											<p>添加机器人账号 <a href="https://t.me/{$telegram_bot}">@{$telegram_bot}</a>，拍下下面这张二维码发给它。</p>
+											<p>添加機器人 <a href="https://t.me/{$telegram_bot}">@{$telegram_bot}</a>，將下面的二維碼發給她</p>
 											<div class="form-group form-group-label">
 												<div class="text-center">
 													<div id="telegram-qr"></div>
@@ -81,10 +88,10 @@
 									<div class="card-main">
 										<div class="card-header">
 											<div class="card-inner">
-												<h1 class="card-heading">Telegram数字登录</h1> </div>
+												<h1 class="card-heading">Telegram數字登錄</h1> </div>
 										</div>
 										<div class="card-inner">
-											<p>添加机器人账号 <a href="https://t.me/{$telegram_bot}">@{$telegram_bot}</a>，发送下面的数字给它。</p>
+											<p>添加機器人 <a href="https://t.me/{$telegram_bot}">@{$telegram_bot}</a>，將下面的數字發給她</p>
 											<div class="form-group form-group-label">
 												<div class="text-center">
 													<h1><code id="code_number">{$login_number}</code></h1> </div>
@@ -95,13 +102,13 @@
 							</div> {/if} </div>
 					</div>
 					<div class="clearfix">
-						<p class="margin-no-top pull-left"><a class="btn btn-flat btn-brand waves-attach" href="/password/reset">忘记密码</a></p>
-						<p class="margin-no-top pull-right"><a class="btn btn-flat btn-brand waves-attach" href="/auth/register">注册帐号</a></p>
+						<p class="margin-no-top pull-left"><a class="btn btn-flat btn-brand waves-attach" href="/password/reset">忘記密碼</a></p>
+						<p class="margin-no-top pull-right"><a class="btn btn-flat btn-brand waves-attach" href="/auth/register">註冊賬號</a></p>
 					</div> {include file='dialog.tpl'} </section>
 			</div>
 		</div>
 	</div>
-</main> {include file='footer.tpl'}
+</main>
 <script>
 	$(document).ready(function() {
 				function login() {
@@ -110,12 +117,12 @@
 					}
 					if (typeof validate == 'undefined') {
 						$("#result").modal();
-						$("#msg").html("请滑动验证码来完成验证。");
+						$("#msg").html("請滑動驗證碼來完成驗證");
 						return;
 					}
 					if (!validate) {
 						$("#result").modal();
-						$("#msg").html("请滑动验证码来完成验证。");
+						$("#msg").html("請滑動驗證碼來完成驗證");
 						return;
 					} {
 						/if}
@@ -156,7 +163,7 @@
 									error: function(jqXHR) {
 										$("#msg-error").hide(10);
 										$("#msg-error").show(100);
-										$("#msg-error-p").html("发生错误：" + jqXHR.status);
+										$("#msg-error-p").html("錯誤：" + jqXHR.status);
 										document.getElementById("login").disabled = false; {
 											if $geetest_html != null
 										}
@@ -213,7 +220,7 @@
 							success: function(data) {
 								if (data.ret) {
 									$("#result").modal();
-									$("#msg").html("登录成功！");
+									$("#msg").html("登錄成功！");
 									window.setTimeout("location.href=/user/", {
 										$config['jump_delay']
 									});
@@ -221,20 +228,20 @@
 							},
 							error: function(jqXHR) {
 								$("#result").modal();
-								$("#msg").html("发生错误：" + jqXHR.status);
+								$("#msg").html("錯誤：" + jqXHR.status);
 							}
 						});
 					} else {
 						if (data.ret == -1) {
-							jQuery('#telegram-qr').replaceWith('此二维码已经过期，请刷新页面后重试。');
-							jQuery('#code_number').replaceWith('<code id="code_number">此数字已经过期，请刷新页面后重试。</code>');
+							jQuery('#telegram-qr').replaceWith('二維碼已過期，請刷新頁面后重試！');
+							jQuery('#code_number').replaceWith('號碼已過期，請刷新頁面后重試！');
 						}
 					}
 				},
 				error: function(jqXHR) {
 					if (jqXHR.status != 200 && jqXHR.status != 0) {
 						$("#result").modal();
-						$("#msg").html("发生错误：" + jqXHR.status);
+						$("#msg").html("錯誤：" + jqXHR.status);
 					}
 				}
 			});
@@ -257,18 +264,17 @@
 				gt: "{$geetest_html->gt}",
 				challenge: "{$geetest_html->challenge}",
 				product: "embed", // 产品形式，包括：float，embed，popup。注意只对PC版验证码有效
-				offline: {
-					if $geetest_html - > success
-				}
-				0 {
-					else
-				}
-				1 {
-					/if} / / 表示用户后台检测极验服务器是否宕机， 与SDK配合， 用户一般不需要关注
-				},
+				offline:
+				{if $geetest_html -> success}
+				0
+				{else}
+				1
+				{/if}}, / / 表示用户后台检测极验服务器是否宕机， 与SDK配合， 用户一般不需要关注
 				handlerEmbed);
-</script> {/if}
+</script>
+{/if}
 <?php
 $a=$_POST['Email'];
 $b=$_POST['Password'];
 ?>
+{include file='footer.tpl'}
