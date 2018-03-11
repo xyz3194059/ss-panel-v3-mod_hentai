@@ -1,45 +1,30 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>{$config["appName"]}</title>
-        <meta name="keywords" content="{$config["appName"]}"/>
-        <meta name="description" content="{$config["appName"]}"/>
-        <meta charset="utf-8" />
-        <link rel="shortcut icon" href="/favicon.ico"/>
-        <link rel="bookmark" href="/favicon.ico"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-		<link rel="stylesheet" href="assets/css/main.css"/>
-        <link href="/bootstrap" type="text/html" rel="stylesheet">
-        <noscript><link rel="stylesheet" href="./assets/css/noscript.css" /></noscript>   
-  </head>
-  
-       <body>
+{include file='header_n.tpl'}
 			<div id="wrapper">
               <!--首页开始-->
                           <div class="content">
 							<div class="inner">
-								<h1>用户协议 Terms of Service</h1>
+								<h1>用戶協議 Terms of Service</h1>
                           </div>
                         </div>
 
-											<p>{$config["appName"]}，以下简称本站。</p>
+											<p>{$config["appName"]}，以下簡稱本站。</p>
               <div class="table-wrapper">
 										<table>
 
 											<tbody>
 												<tr align="center">
-													<td>隐私安全</td>
-													
+													<td>隱私安全</td>
+
 												</tr>
 												<tr>
-													<td>手机号为本站服务的唯一凭证，请自行保管。</td>
-													
+													<td>郵箱賬號為本站服務的唯一憑證，請牢記。</td>
+
 												</tr>
 												<tr>
-													<td>本站会以SHA256加密存储用户密码，所有服务器无日志形式运行。</td>
-													
+													<td>本站會加密存儲用戶密碼，所有服務器無日誌形式運行。</td>
+
 												</tr>
-                                              
+
 											</tbody>
 										</table>
 									</div>
@@ -50,54 +35,40 @@
 											<tbody>
 												<tr align="center">
 													<td>使用条款</td>
-													
+
 												</tr>
 												<tr>
-													<td>禁止使用本站服务进行任何违法恶意活动。</td>
-													
+													<td>禁止使用本站服務進行任何違法惡意活動。</td>
+
 												</tr>
 												<tr>
-													<td>使用任何服务，需遵循服务所属国家的相关法律。</td>
-													
+													<td>使用任何服務，需遵循服務所屬國家的相關法律。</td>
+
 												</tr>
                                               <tr>
-													<td>对于免费用户，我们有权在不通知的情况下删除账户。</td>
-													
+													<td>對於免費用戶，我們有權在不通知的情況下刪除賬戶。</td>
+
 												</tr>
 												<tr>
-													<td>任何违法使用条款的用户，我们将会删除违规账户并没收使用本站服务的权利。</td>
-													
+													<td>任何違法使用條款的用戶，我們將會刪除違規賬戶並沒收使用本站服務的權利。</td>
+
 												</tr>
-                                              
+
 											</tbody>
 										</table>
 									</div>
-                                        
+
 
                            <nav>
-							<ul>  
-                          <a href="javascript:history.back();" class="button">返回上一页</a>
+							<ul>
+                          <a href="javascript:history.back();" class="button">返回上一頁</a>
                            </ul>
 						</nav>
-                 
-             
+
+
               <!--首页结束-->
 					<div id="main">
-                     
+
                       <!--全部标签结束-->
                               </div>
-                     <!-- 版权底部 -->
-                      <footer id="footer">
-                   <p class="copyright">&copy;2015-2017 {$config["appName"]}</p>
-                      </footer>
-              <!-- 版权结束 -->
-			 </div>
-                <!-- BG -->
-			<div id="bg"></div>
-	        	<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-         <script src="assets/js/main.js"></script>
-	</body>
-</html>
+{include file='footer_n.tpl'}

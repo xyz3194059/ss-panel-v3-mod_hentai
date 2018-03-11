@@ -1,21 +1,5 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>该网页无法正常运作 - {$config["appName"]}</title>
-      <meta name="keywords" content=""/>
-      <meta name="description" content=""/>
-      <meta charset="utf-8" />
-      <link rel="shortcut icon" href="/favicon.ico"/>
-      <link rel="bookmark" href="/favicon.ico" type="image/x-icon"/>
-      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-	<link rel="shortcut icon" type="image/ico" href="images/ssr.ico">
-      <link rel="stylesheet" href="assets/css/main.css" />
+{include file='header_n.tpl'}
 
-      <noscript>
-        <link rel="stylesheet" href="assets/css/noscript.css" />
-      </noscript>
-  </head>
-<body>
 	<div id="wrapper">
 		<header id="header">
 			<div class="logo">
@@ -23,24 +7,15 @@
 			</div>
 			<div class="content">
 				<div class="inner">
-					<h1>500错误</h1>
-					<p>服务娘崩溃了呢... TwT</p>
-					<p>这件事儿不应该发生的...如果反复出现可以提交一下工单联系站主.</p>
+					<h1>500錯誤</h1>
+					<p>服務娘崩潰了</p>
+					<p>這件事兒不應該發生的...如果反復出現請聯繫一下管理員</p>
 				</div>
 			</div>
 			<nav>
 				<ul>
-					<li><a href="./#">返回首页</a></li>
+					<li><a href="./#">返回首頁</a></li>
 				</ul>
 			</nav>
 		</header>
-		<footer id="footer">
-			<p class="copyright">&copy;2017-2018 {$config["appName"]} </p>
-		</footer>
-	</div>
-	<div id="bg"></div>
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/skel.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-</body></html>
+{include file='footer_n.tpl'}

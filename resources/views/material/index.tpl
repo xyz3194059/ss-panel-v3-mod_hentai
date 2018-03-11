@@ -1,24 +1,4 @@
-<!DOCTYPE HTML> 
-<!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>{$config["appName"]}</title>
-        <meta name="keywords" content=""/>
-        <meta name="description" content=""/>
-        <meta charset="utf-8" />
-        <link rel="shortcut icon" href="/favicon.ico"/>
-        <link rel="bookmark" href="/favicon.ico"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-		<link rel="stylesheet" href="assets/css/main.css"/>
-		<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-        <noscript><link rel="stylesheet" href="./assets/css/noscript.css" /></noscript>   
-  </head>
-  
-       <body>
+{include file='header_n.tpl'}
 			<div id="wrapper">
               <!--首页开始-->
 					<header id="header">
@@ -43,7 +23,7 @@
                                   已用流量：<code>{$user->usedTraffic()}</code>
                                   剩餘流量：<code>{$user->unusedTraffic()}</code></p>
                           </div>
-                      </div>	
+                      </div>
 					  	<nav>
 							<ul>
                                 <li><a href="#1">簡介</a></li>
@@ -57,7 +37,7 @@
 								<h1>{$config["appName"]}</h1>
 								<p>帶你瀏覽無疆的海洋</p>
                           </div>
-                      </div>	
+                      </div>
                               <nav>
 							<ul>
                                <li><a href="#1">簡介</a></li>
@@ -65,12 +45,12 @@
 								<li><a href="/auth/register">註冊</a></li>
                               	<li><a href="#4">聯系</a></li>
 								<li><a href="#5">下載</a></li>
-                              
+
                            </ul>
 						</nav>
                               {/if}
 
-              </header> 
+              </header>
               <!--首页结束-->
 					<div id="main">
                       <!--标签1开始-->
@@ -104,12 +84,12 @@
 							  <li><a href="/ssr-download/ssr-android.apk" class="icon fa-android"><span class="label">Android</span> Android</a></li>
 							  <li><a href="#ios" class="icon fa-apple"><span class="label">iOS</span> iOS</a></li>
                               <li><a href="/ssr-download/SSTap.7z" class="icon fa-gamepad"><span class="label">Win游戏专用</span> Win游戏专用</a></li>
-                            
+
 	                         </ul>
                              </article>
                             <!--标签5开始-->
-                      	<article id="login">  
-		
+                      	<article id="login">
+
 								<h2 class="major">登录</h2>
 								<form method="post" action="javascript:void(0);">
 									<div class="field half first">
@@ -120,13 +100,13 @@
 										<label for="passwd">密码</label>
 										<input type="password" name="Password" id="passwd" />
 									</div>
-									
+
 									<ul class="actions">
 										<li><input id="login" type="submit" value="登录" class="special" /></li>
 										<li><input type="reset" value="清空" /></li>
 									</ul>
 								</form>
-						
+
 
                              	<div class="field half">
 											<input value="week" id="remember_me" name="remember_me" type="checkbox" checked>
@@ -139,22 +119,8 @@
 								<div id="result" role="dialog" >
 													<p color class="h5 margin-top-sm text-black-hint" id="msg"></p>
 								</div>
-						</article> 
+						</article>
                       <!--全部标签结束-->
-                      
+
                               </div>
-                     <!-- 版权底部 -->
-                      <footer id="footer">
-                   <p class="copyright">&copy;2015-2017 {$config["appName"]}</p>
-                      </footer>
-              <!-- 版权结束 -->
-			 </div>
-                <!-- BG -->
-			<div id="bg"></div>
-	        	<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-         <script src="assets/js/main.js"></script>
-	</body>
-</html>
+{include file='footer_n.tpl'}

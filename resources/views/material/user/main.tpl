@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 	<meta charset="UTF-8">
-	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<meta content="ie=edge,chrome=1" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" name="viewport">
 	<meta name="theme-color" content="#ff9800">
 	<title>{$config["appName"]}</title>
 
