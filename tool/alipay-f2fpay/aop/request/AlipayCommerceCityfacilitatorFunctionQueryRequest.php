@@ -7,7 +7,7 @@
  */
 class AlipayCommerceCityfacilitatorFunctionQueryRequest
 {
-	/** 
+	/**
 	 * 基于设备和城市查询当前支持的功能
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayCommerceCityfacilitatorFunctionQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

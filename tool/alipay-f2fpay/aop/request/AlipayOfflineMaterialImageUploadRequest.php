@@ -7,22 +7,22 @@
  */
 class AlipayOfflineMaterialImageUploadRequest
 {
-	/** 
+	/**
 	 * 图片二进制内容
 	 **/
 	private $imageContent;
-	
-	/** 
+
+	/**
 	 * 图片名称
 	 **/
 	private $imageName;
-	
-	/** 
+
+	/**
 	 * 用于显示指定图片所属的partnerId（支付宝内部使用，外部商户无需填写此字段）
 	 **/
 	private $imagePid;
-	
-	/** 
+
+	/**
 	 * 图片格式
 	 **/
 	private $imageType;
@@ -36,7 +36,7 @@ class AlipayOfflineMaterialImageUploadRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setImageContent($imageContent)
 	{
 		$this->imageContent = $imageContent;

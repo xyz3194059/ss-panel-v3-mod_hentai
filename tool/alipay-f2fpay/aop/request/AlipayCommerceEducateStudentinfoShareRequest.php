@@ -17,7 +17,7 @@ class AlipayCommerceEducateStudentinfoShareRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function getApiMethodName()
 	{
 		return "alipay.commerce.educate.studentinfo.share";

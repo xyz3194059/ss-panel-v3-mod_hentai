@@ -7,7 +7,7 @@
  */
 class AlipayOfflineMarketShopQuerydetailRequest
 {
-	/** 
+	/**
 	 * 系统商通过该接口可以查询单个门店的详细信息，包括门店基础信息，门店状态等信息
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOfflineMarketShopQuerydetailRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

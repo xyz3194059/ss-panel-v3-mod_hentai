@@ -18,7 +18,7 @@ class Wecenter
         if (Config::get('enable_wecenter')=='true') {
             $email=$user->email;
             $exists=WecenterUser::where("email", $email)->first();
-            
+
             if ($exists==null) {
                 $exists=new WecenterUser();
                 $exists->password=md5(md5($pwd).Config::get('salt'));
@@ -34,20 +34,20 @@ class Wecenter
             }
         }
     }
-    
-    
+
+
     public static function Delete($email)
     {
         if (Config::get('enable_wecenter')=='true') {
             WecenterUser::where("email", $email)->delete();
         }
     }
-    
+
     public static function ChangeUserName($email1, $email2, $pwd, $username)
     {
         if (Config::get('enable_wecenter')=='true') {
             $exists=WecenterUser::where("email", $email1)->first();
-            
+
             if ($exists!=null) {
                 $exists->password=md5(md5($pwd).Config::get('salt'));
                 $exists->user_name=$username;
@@ -65,15 +65,15 @@ class Wecenter
             }
         }
     }
-    
+
     public static function Login($user, $pwd, $time)
     {
         if (Config::get('enable_wecenter')=='true') {
             $email=$user->email;
             $exists=WecenterUser::where("email", $email)->first();
-            
+
             $expire_in = $time+time();
-            
+
             Utils\Cookie::setwithdomain([Config::get('wecenter_cookie_prefix')."_user_login"=>Wecenter::encode_hash(json_encode(array(
                                 'uid' => $exists->uid,
                                 'user_name' => $user->email,
@@ -81,15 +81,15 @@ class Wecenter
                             )), md5(Config::get('wecenter_cookie_key') . $_SERVER['HTTP_USER_AGENT']))], $expire_in, Config::get('wecenter_system_main_domain'));
         }
     }
-    
-    
+
+
     public static function Loginout()
     {
         if (Config::get('enable_wecenter')=='true') {
             Utils\Cookie::setwithdomain([Config::get('wecenter_cookie_prefix')."_user_login"=>"loginout"], time()-86400, Config::get('wecenter_system_main_domain'));
         }
     }
-    
+
     public static function encode_hash($hash_data, $hash_key = null)
     {
         $mcrypt = mcrypt_module_open(Wecenter::get_algorithms(), '', MCRYPT_MODE_ECB, '');
@@ -103,8 +103,8 @@ class Wecenter
 
         return Wecenter::get_algorithms() . '|' . Wecenter::str_to_hex($result);
     }
-    
-    
+
+
     private static function get_key($mcrypt, $key = null)
     {
         if (!$key) {

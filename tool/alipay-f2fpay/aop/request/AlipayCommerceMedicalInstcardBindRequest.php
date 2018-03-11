@@ -7,7 +7,7 @@
  */
 class AlipayCommerceMedicalInstcardBindRequest
 {
-	/** 
+	/**
 	 * 用于支付宝用户通过医院服务窗绑定当地社保卡
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayCommerceMedicalInstcardBindRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

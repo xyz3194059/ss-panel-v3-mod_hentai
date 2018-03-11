@@ -7,7 +7,7 @@
  */
 class AlipaySecurityProdAlipaySecurityProdTestRequest
 {
-	/** 
+	/**
 	 * 安全业务操作
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipaySecurityProdAlipaySecurityProdTestRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

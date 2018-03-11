@@ -7,7 +7,7 @@
  */
 class AlipayMobilePublicMenuDeleteRequest
 {
-	/** 
+	/**
 	 * 菜单唯一标识
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayMobilePublicMenuDeleteRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

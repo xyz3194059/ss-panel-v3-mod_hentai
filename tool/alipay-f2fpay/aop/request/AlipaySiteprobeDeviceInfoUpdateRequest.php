@@ -7,7 +7,7 @@
  */
 class AlipaySiteprobeDeviceInfoUpdateRequest
 {
-	/** 
+	/**
 	 * Json格式的业务参数，其中:
 device_id ：设备Id
 ssid ：WiFi名称
@@ -29,7 +29,7 @@ status ：1 - 上架，2 - 不上架
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

@@ -7,7 +7,7 @@
  */
 class AlipayMobileStdPublicFollowListRequest
 {
-	/** 
+	/**
 	 * 当nextUserId为空时,代表查询第一组,如果有值时以当前值为准查询下一组
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayMobileStdPublicFollowListRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

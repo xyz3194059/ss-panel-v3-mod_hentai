@@ -7,7 +7,7 @@
  */
 class AlipayOfflineSaleleadsInfoQuerybypageRequest
 {
-	/** 
+	/**
 	 * 服务商按照条件分页查询leads信息
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOfflineSaleleadsInfoQuerybypageRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

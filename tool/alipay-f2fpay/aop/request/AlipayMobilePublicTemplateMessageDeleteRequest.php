@@ -7,7 +7,7 @@
  */
 class AlipayMobilePublicTemplateMessageDeleteRequest
 {
-	/** 
+	/**
 	 * 模板id
 	 **/
 	private $templateId;
@@ -21,7 +21,7 @@ class AlipayMobilePublicTemplateMessageDeleteRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setTemplateId($templateId)
 	{
 		$this->templateId = $templateId;

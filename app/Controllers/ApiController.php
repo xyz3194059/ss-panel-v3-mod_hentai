@@ -41,7 +41,7 @@ class ApiController extends BaseController
     {
         // $data = $request->post('sdf');
         $email =  $request->getParam('email');
-        
+
         $email = strtolower($email);
         $passwd = $request->getParam('passwd');
 
@@ -86,14 +86,14 @@ class ApiController extends BaseController
                     ->orWhere("node_group", "=", 0);
             }
         )->get();
-        
+
         $mu_nodes = Node::where('sort', 9)->where('node_class', '<=', $user->class)->where("type", "1")->where(
             function ($query) use ($user) {
                 $query->where("node_group", "=", $user->node_group)
                     ->orWhere("node_group", "=", 0);
             }
         )->get();
-        
+
         $temparray=array();
         foreach ($nodes as $node) {
             if ($node->mu_only == 0) {
@@ -112,12 +112,12 @@ class ApiController extends BaseController
                                             "obfs_udp"=>false,
                                             "enable"=>true));
             }
-            
+
             if ($node->custom_rss == 1) {
                 foreach ($mu_nodes as $mu_node) {
                     $mu_user = User::where('port', '=', $mu_node->server)->first();
                     $mu_user->obfs_param = $user->getMuMd5();
-                    
+
                     array_push($temparray, array("remarks"=>$node->name."- ".$mu_node->server." 单端口",
                                         "server"=>$node->server,
                                         "server_port"=>$mu_user->port,
@@ -135,7 +135,7 @@ class ApiController extends BaseController
                 }
             }
         }
-        
+
         $res['ret'] = 1;
         $res['msg'] = "ok";
         $res['data'] = $temparray;

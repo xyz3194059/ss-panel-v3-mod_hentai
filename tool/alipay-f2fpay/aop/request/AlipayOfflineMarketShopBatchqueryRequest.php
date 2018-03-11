@@ -7,7 +7,7 @@
  */
 class AlipayOfflineMarketShopBatchqueryRequest
 {
-	/** 
+	/**
 	 * 系统商通过该接口可以查询所有门店的外部门店编号（系统商的门店编号）
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOfflineMarketShopBatchqueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

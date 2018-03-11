@@ -7,7 +7,7 @@
  */
 class AlipayMobilePublicLabelUserDeleteRequest
 {
-	/** 
+	/**
 	 * json串，<a href="https://doc.open.alipay.com/doc2/detail.htm?spm=a219a.7386797.0.0.1l7WMo&treeId=53&articleId=103510&docType=1">详情请见</a>
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayMobilePublicLabelUserDeleteRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

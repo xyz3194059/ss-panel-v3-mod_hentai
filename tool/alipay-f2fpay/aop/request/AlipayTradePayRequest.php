@@ -7,7 +7,7 @@
  */
 class AlipayTradePayRequest
 {
-	/** 
+	/**
 	 * 用于在线下场景交易一次创建并支付掉
 修改路由策略到R
 	 **/
@@ -22,7 +22,7 @@ class AlipayTradePayRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

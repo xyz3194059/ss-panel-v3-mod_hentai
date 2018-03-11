@@ -7,17 +7,17 @@
  */
 class AlipayFlashsalesStockSyncUpdateRequest
 {
-	/** 
+	/**
 	 * 商户的商品id
 	 **/
 	private $outProductId;
-	
-	/** 
+
+	/**
 	 * 服务窗id
 	 **/
 	private $publicId;
-	
-	/** 
+
+	/**
 	 * 库存数量
 	 **/
 	private $stock;
@@ -31,7 +31,7 @@ class AlipayFlashsalesStockSyncUpdateRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setOutProductId($outProductId)
 	{
 		$this->outProductId = $outProductId;

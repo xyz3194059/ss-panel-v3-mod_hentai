@@ -7,7 +7,7 @@
  */
 class AlipayMobileBeaconDeviceDeleteRequest
 {
-	/** 
+	/**
 	 * 删除的设备的UUID
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayMobileBeaconDeviceDeleteRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

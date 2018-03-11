@@ -7,7 +7,7 @@
  */
 class AlipayDataDataserviceBillDownloadurlQueryRequest
 {
-	/** 
+	/**
 	 * 无授权模式的查询对账单下载地址
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayDataDataserviceBillDownloadurlQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

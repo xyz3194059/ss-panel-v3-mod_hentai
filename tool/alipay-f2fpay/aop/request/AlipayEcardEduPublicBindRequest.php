@@ -7,32 +7,32 @@
  */
 class AlipayEcardEduPublicBindRequest
 {
-	/** 
+	/**
 	 * 机构编码
 	 **/
 	private $agentCode;
-	
-	/** 
+
+	/**
 	 * 公众账号协议Id
 	 **/
 	private $agreementId;
-	
-	/** 
+
+	/**
 	 * 支付宝userId
 	 **/
 	private $alipayUserId;
-	
-	/** 
+
+	/**
 	 * 一卡通姓名
 	 **/
 	private $cardName;
-	
-	/** 
+
+	/**
 	 * 一卡通卡号
 	 **/
 	private $cardNo;
-	
-	/** 
+
+	/**
 	 * 公众账号id
 	 **/
 	private $publicId;
@@ -46,7 +46,7 @@ class AlipayEcardEduPublicBindRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setAgentCode($agentCode)
 	{
 		$this->agentCode = $agentCode;

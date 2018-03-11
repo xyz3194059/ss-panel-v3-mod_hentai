@@ -7,27 +7,27 @@
  */
 class AlipayEbppBillPayRequest
 {
-	/** 
+	/**
 	 * 支付宝的业务订单号，具有唯一性。
 	 **/
 	private $alipayOrderNo;
-	
-	/** 
+
+	/**
 	 * openapi的spanner上增加规则转发到pcimapi集群上
 	 **/
 	private $dispatchClusterTarget;
-	
-	/** 
+
+	/**
 	 * 扩展字段
 	 **/
 	private $extend;
-	
-	/** 
+
+	/**
 	 * 输出机构的业务流水号，需要保证唯一性。
 	 **/
 	private $merchantOrderNo;
-	
-	/** 
+
+	/**
 	 * 支付宝订单类型。公共事业缴纳JF,信用卡还款HK
 	 **/
 	private $orderType;
@@ -41,7 +41,7 @@ class AlipayEbppBillPayRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setAlipayOrderNo($alipayOrderNo)
 	{
 		$this->alipayOrderNo = $alipayOrderNo;

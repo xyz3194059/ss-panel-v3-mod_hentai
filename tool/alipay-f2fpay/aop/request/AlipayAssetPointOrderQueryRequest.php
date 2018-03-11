@@ -7,7 +7,7 @@
  */
 class AlipayAssetPointOrderQueryRequest
 {
-	/** 
+	/**
 	 * 商户在调用集分宝发放接口后可以通过此接口查询发放情况
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayAssetPointOrderQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

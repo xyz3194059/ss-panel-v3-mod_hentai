@@ -7,7 +7,7 @@
  */
 class AlipayOfflineProviderStaffUpdateRequest
 {
-	/** 
+	/**
 	 * 云纵员工信息同步到口碑
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOfflineProviderStaffUpdateRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

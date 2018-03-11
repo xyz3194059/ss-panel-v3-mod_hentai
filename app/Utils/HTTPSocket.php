@@ -27,7 +27,7 @@ namespace App\Utils;
 class HTTPSocket
 {
     public $version = '2.7.2';
-    
+
     /* all vars are private except $error, $query_cache, and $doFollowLocationHeader */
 
     public $method = 'GET';
@@ -254,7 +254,7 @@ class HTTPSocket
                 $this->lastTransferSpeed = $length/1024;
             }
         }
-        
+
         list($this->result_header, $this->result_body) = preg_split("/\r\n\r\n/", $this->result, 2);
 
         if ($this->bind_host) {
@@ -377,7 +377,7 @@ class HTTPSocket
     public function fetch_header($header = '')
     {
         $array_headers = preg_split("/\r\n/", $this->result_header);
-        
+
         $array_return = array( 0 => $array_headers[0] );
         unset($array_headers[0]);
 

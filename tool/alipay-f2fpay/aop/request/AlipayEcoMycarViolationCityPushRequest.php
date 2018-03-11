@@ -7,7 +7,7 @@
  */
 class AlipayEcoMycarViolationCityPushRequest
 {
-	/** 
+	/**
 	 * 推送新支持违章查询的城市
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayEcoMycarViolationCityPushRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

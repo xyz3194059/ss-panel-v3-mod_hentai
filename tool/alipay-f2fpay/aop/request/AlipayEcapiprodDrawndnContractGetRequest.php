@@ -7,27 +7,27 @@
  */
 class AlipayEcapiprodDrawndnContractGetRequest
 {
-	/** 
+	/**
 	 * 支用编号
 	 **/
 	private $drawndnNo;
-	
-	/** 
+
+	/**
 	 * 客户身份证号码，为18位，最后X必须为大写
 	 **/
 	private $entityCode;
-	
-	/** 
+
+	/**
 	 * 客户姓名
 	 **/
 	private $entityName;
-	
-	/** 
+
+	/**
 	 * 融资平台分配给ISV的编码
 	 **/
 	private $isvCode;
-	
-	/** 
+
+	/**
 	 * 融资平台分配给小贷公司的机构编码
 	 **/
 	private $orgCode;
@@ -41,7 +41,7 @@ class AlipayEcapiprodDrawndnContractGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setDrawndnNo($drawndnNo)
 	{
 		$this->drawndnNo = $drawndnNo;

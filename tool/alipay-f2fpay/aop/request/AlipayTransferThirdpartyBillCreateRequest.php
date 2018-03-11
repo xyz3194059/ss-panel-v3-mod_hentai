@@ -7,48 +7,48 @@
  */
 class AlipayTransferThirdpartyBillCreateRequest
 {
-	/** 
+	/**
 	 * 收款金额，单位：分
 	 **/
 	private $amount;
-	
-	/** 
+
+	/**
 	 * 收款币种，默认为156（人民币）目前只允许转账人民币
 	 **/
 	private $currency;
-	
-	/** 
+
+	/**
 	 * 扩展参数
 	 **/
 	private $extParam;
-	
-	/** 
+
+	/**
 	 * 转账备注
 	 **/
 	private $memo;
-	
-	/** 
+
+	/**
 	 * 合作方的支付宝帐号UID
 	 **/
 	private $partnerId;
-	
-	/** 
+
+	/**
 	 * 外部系统收款方UID，付款人和收款人不能是同一个帐户
 	 **/
 	private $payeeAccount;
-	
-	/** 
+
+	/**
 	 * （同payer_type所列举的）
 目前限制payer_type和payee_type必须一致
 	 **/
 	private $payeeType;
-	
-	/** 
+
+	/**
 	 * 外部系统付款方的UID
 	 **/
 	private $payerAccount;
-	
-	/** 
+
+	/**
 	 * 1-支付宝帐户
 2-淘宝帐户
 10001-新浪微博帐户
@@ -56,20 +56,20 @@ class AlipayTransferThirdpartyBillCreateRequest
 （1、2目前对外不可见、不可用）
 	 **/
 	private $payerType;
-	
-	/** 
+
+	/**
 	 * 发起支付交易来源方定义的交易ID，用于将支付回执通知给来源方。不同来源方给出的ID可以重复，同一个来源方给出的ID唯一性由来源方保证。
 	 **/
 	private $paymentId;
-	
-	/** 
+
+	/**
 	 * 支付来源
 10001-新浪微博
 10002-阿里云
 	 **/
 	private $paymentSource;
-	
-	/** 
+
+	/**
 	 * 支付款项的标题
 	 **/
 	private $title;
@@ -83,7 +83,7 @@ class AlipayTransferThirdpartyBillCreateRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setAmount($amount)
 	{
 		$this->amount = $amount;

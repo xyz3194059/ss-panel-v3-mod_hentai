@@ -17,7 +17,7 @@ class Analytics
     {
         return User::where('last_check_in_time', '>', 0)->count();
     }
-    
+
     public function getTodayCheckinUser()
     {
         return User::where('last_check_in_time', '>', strtotime('today'))->count();
@@ -28,52 +28,52 @@ class Analytics
         $total = User::sum('u') + User::sum('d');
         return Tools::flowAutoShow($total);
     }
-    
+
     public function getTodayTrafficUsage()
     {
         $total = User::sum('u') + User::sum('d') - User::sum('last_day_t');
         return Tools::flowAutoShow($total);
     }
-    
-    
+
+
     public function getRawTodayTrafficUsage()
     {
         $total = User::sum('u') + User::sum('d') - User::sum('last_day_t');
         return $total;
     }
-    
+
     public function getLastTrafficUsage()
     {
         $total = User::sum('last_day_t');
         return Tools::flowAutoShow($total);
     }
-    
-    
+
+
     public function getRawLastTrafficUsage()
     {
         $total = User::sum('last_day_t');
         return $total;
     }
-    
+
     public function getUnusedTrafficUsage()
     {
         $total = User::sum('transfer_enable') - User::sum('u') - User::sum('d');
         return Tools::flowAutoShow($total);
     }
-    
+
     public function getRawUnusedTrafficUsage()
     {
         $total = User::sum('transfer_enable') - User::sum('u') - User::sum('d');
         return $total;
     }
-    
-    
+
+
     public function getTotalTraffic()
     {
         $total = User::sum('transfer_enable');
         return Tools::flowAutoShow($total);
     }
-    
+
     public function getRawTotalTraffic()
     {
         $total = User::sum('transfer_enable');
@@ -85,7 +85,7 @@ class Analytics
         $time = time() - $time;
         return User::where('t', '>', $time)->count();
     }
-    
+
     public function getUnusedUser()
     {
         return User::where('t', '=', 0)->count();
@@ -95,7 +95,7 @@ class Analytics
     {
         return Node::count();
     }
-    
+
     public function getTotalSSNode()
     {
         return Node::where('node_heartbeat', '>', 0)->where(
@@ -105,7 +105,7 @@ class Analytics
                     }
                 )->count();
     }
-    
+
     public function getAliveSSNode()
     {
         return Node::where(

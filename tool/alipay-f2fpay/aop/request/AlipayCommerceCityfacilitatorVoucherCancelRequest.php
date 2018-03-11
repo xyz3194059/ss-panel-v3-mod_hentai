@@ -7,7 +7,7 @@
  */
 class AlipayCommerceCityfacilitatorVoucherCancelRequest
 {
-	/** 
+	/**
 	 * 钱包中地铁票购票，获得核销码，线下渠道商凭核销码撤销该笔交易
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayCommerceCityfacilitatorVoucherCancelRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

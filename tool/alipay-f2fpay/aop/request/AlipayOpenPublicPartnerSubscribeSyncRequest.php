@@ -7,7 +7,7 @@
  */
 class AlipayOpenPublicPartnerSubscribeSyncRequest
 {
-	/** 
+	/**
 	 * 用于为服务窗合作伙伴（如YunOS），提供订阅关系（关注与取消关注）同步功能
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOpenPublicPartnerSubscribeSyncRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

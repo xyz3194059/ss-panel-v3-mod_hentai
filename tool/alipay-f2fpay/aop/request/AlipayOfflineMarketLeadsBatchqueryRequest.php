@@ -7,7 +7,7 @@
  */
 class AlipayOfflineMarketLeadsBatchqueryRequest
 {
-	/** 
+	/**
 	 * 通过该接口多组合条件查询口碑线下Leads信息
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOfflineMarketLeadsBatchqueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

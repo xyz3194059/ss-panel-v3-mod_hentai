@@ -7,7 +7,7 @@
  */
 class AlipayAppTokenGetRequest
 {
-	/** 
+	/**
 	 * 应用安全码
 	 **/
 	private $secret;
@@ -21,7 +21,7 @@ class AlipayAppTokenGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setSecret($secret)
 	{
 		$this->secret = $secret;

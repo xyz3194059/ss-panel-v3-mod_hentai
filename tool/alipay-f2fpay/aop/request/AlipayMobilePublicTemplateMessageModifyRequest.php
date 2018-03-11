@@ -7,12 +7,12 @@
  */
 class AlipayMobilePublicTemplateMessageModifyRequest
 {
-	/** 
+	/**
 	 * 模板id
 	 **/
 	private $templateId;
-	
-	/** 
+
+	/**
 	 * 行业设置
 	 **/
 	private $tradeSetting;
@@ -26,7 +26,7 @@ class AlipayMobilePublicTemplateMessageModifyRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setTemplateId($templateId)
 	{
 		$this->templateId = $templateId;

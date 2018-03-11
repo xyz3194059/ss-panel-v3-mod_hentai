@@ -1,6 +1,6 @@
 <?php
 /**
- *  TODO 补充说明 
+ *  TODO 补充说明
  *
  * User: jiehua
  * Date: 16/3/30
@@ -16,4 +16,4 @@ class EncryptParseItem {
 
 	public $encryptContent;
 
-} 
+}

@@ -7,7 +7,7 @@
  */
 class AlipayMobileBeaconDeviceModifyRequest
 {
-	/** 
+	/**
 	 * 设备信息，格式为JSON字符串
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayMobileBeaconDeviceModifyRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

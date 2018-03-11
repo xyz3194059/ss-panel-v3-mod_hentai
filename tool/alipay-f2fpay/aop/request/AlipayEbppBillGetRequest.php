@@ -7,12 +7,12 @@
  */
 class AlipayEbppBillGetRequest
 {
-	/** 
+	/**
 	 * 输出机构的业务流水号，需要保证唯一性。
 	 **/
 	private $merchantOrderNo;
-	
-	/** 
+
+	/**
 	 * 支付宝订单类型。公共事业缴纳JF,信用卡还款HK
 	 **/
 	private $orderType;
@@ -26,7 +26,7 @@ class AlipayEbppBillGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setMerchantOrderNo($merchantOrderNo)
 	{
 		$this->merchantOrderNo = $merchantOrderNo;

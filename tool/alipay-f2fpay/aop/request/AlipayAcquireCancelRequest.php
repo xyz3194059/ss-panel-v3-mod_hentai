@@ -7,25 +7,25 @@
  */
 class AlipayAcquireCancelRequest
 {
-	/** 
+	/**
 	 * 操作员ID。
 	 **/
 	private $operatorId;
-	
-	/** 
+
+	/**
 	 * 操作员的类型：
 0：支付宝操作员
 1：商户的操作员
 如果传入其它值或者为空，则默认设置为1
 	 **/
 	private $operatorType;
-	
-	/** 
+
+	/**
 	 * 支付宝合作商户网站唯一订单号。
 	 **/
 	private $outTradeNo;
-	
-	/** 
+
+	/**
 	 * 该交易在支付宝系统中的交易流水号。
 最短16位，最长64位。
 如果同时传了out_trade_no和trade_no，则以trade_no为准。
@@ -41,7 +41,7 @@ class AlipayAcquireCancelRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setOperatorId($operatorId)
 	{
 		$this->operatorId = $operatorId;

@@ -7,12 +7,12 @@
  */
 class AlipayMobileShakeUserQueryRequest
 {
-	/** 
+	/**
 	 * 动态ID
 	 **/
 	private $dynamicId;
-	
-	/** 
+
+	/**
 	 * 动态ID类型：
 wave_code：声波
 qr_code：二维码
@@ -29,7 +29,7 @@ bar_code：条码
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setDynamicId($dynamicId)
 	{
 		$this->dynamicId = $dynamicId;

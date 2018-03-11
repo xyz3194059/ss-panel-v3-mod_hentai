@@ -7,7 +7,7 @@
  */
 class MonitorHeartbeatSynRequest
 {
-	/** 
+	/**
 	 * 验签时该参数不做任何处理
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class MonitorHeartbeatSynRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

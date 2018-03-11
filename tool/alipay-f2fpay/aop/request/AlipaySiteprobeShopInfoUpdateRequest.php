@@ -7,7 +7,7 @@
  */
 class AlipaySiteprobeShopInfoUpdateRequest
 {
-	/** 
+	/**
 	 * Json格式的业务参数，其中
 shop_id ：店铺Id（必须）
 shop_notice ：店铺公告
@@ -25,7 +25,7 @@ h5_rul ：广告页URL（可选，如果未绑定则不包含该字段）
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

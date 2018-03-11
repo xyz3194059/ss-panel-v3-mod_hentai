@@ -7,47 +7,47 @@
  */
 class AlipayEcapiprodDataPutRequest
 {
-	/** 
+	/**
 	 * 数据类型
 	 **/
 	private $category;
-	
-	/** 
+
+	/**
 	 * 数据字符编码，默认UTF-8
 	 **/
 	private $charSet;
-	
-	/** 
+
+	/**
 	 * 数据采集平台生成的采集任务编号
 	 **/
 	private $collectingTaskId;
-	
-	/** 
+
+	/**
 	 * 身份证，工商注册号等
 	 **/
 	private $entityCode;
-	
-	/** 
+
+	/**
 	 * 姓名或公司名等，name和code不能同时为空
 	 **/
 	private $entityName;
-	
-	/** 
+
+	/**
 	 * 人或公司等
 	 **/
 	private $entityType;
-	
-	/** 
+
+	/**
 	 * 渠道商
 	 **/
 	private $isvCode;
-	
-	/** 
+
+	/**
 	 * 数据主体,以json格式传输的数据
 	 **/
 	private $jsonData;
-	
-	/** 
+
+	/**
 	 * 数据合作方
 	 **/
 	private $orgCode;
@@ -61,7 +61,7 @@ class AlipayEcapiprodDataPutRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setCategory($category)
 	{
 		$this->category = $category;

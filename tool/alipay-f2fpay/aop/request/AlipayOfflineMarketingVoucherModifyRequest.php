@@ -7,7 +7,7 @@
  */
 class AlipayOfflineMarketingVoucherModifyRequest
 {
-	/** 
+	/**
 	 * 券修改
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOfflineMarketingVoucherModifyRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

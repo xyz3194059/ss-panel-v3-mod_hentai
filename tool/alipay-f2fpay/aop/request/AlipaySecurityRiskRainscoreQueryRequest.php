@@ -7,7 +7,7 @@
  */
 class AlipaySecurityRiskRainscoreQueryRequest
 {
-	/** 
+	/**
 	 * RAIN （Risk of Activity, Identity and Network）是蚁盾旗下产品，专业提供风险评分服务，是一套能够对手机号进行风险预测、风险解释的评分体系。
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipaySecurityRiskRainscoreQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

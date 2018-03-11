@@ -17,7 +17,7 @@ class AlipayMobilePublicContactFollowListRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function getApiMethodName()
 	{
 		return "alipay.mobile.public.contact.follow.list";

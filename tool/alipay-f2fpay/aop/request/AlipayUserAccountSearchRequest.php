@@ -7,32 +7,32 @@
  */
 class AlipayUserAccountSearchRequest
 {
-	/** 
+	/**
 	 * 查询的结束时间
 	 **/
 	private $endTime;
-	
-	/** 
+
+	/**
 	 * 需要过滤的字符
 	 **/
 	private $fields;
-	
-	/** 
+
+	/**
 	 * 查询的页数
 	 **/
 	private $pageNo;
-	
-	/** 
+
+	/**
 	 * 每页的条数
 	 **/
 	private $pageSize;
-	
-	/** 
+
+	/**
 	 * 查询的开始时间
 	 **/
 	private $startTime;
-	
-	/** 
+
+	/**
 	 * 查询账务的类型
 	 **/
 	private $type;
@@ -46,7 +46,7 @@ class AlipayUserAccountSearchRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setEndTime($endTime)
 	{
 		$this->endTime = $endTime;

@@ -7,12 +7,12 @@
  */
 class AlipayMemberCardDeletecardRequest
 {
-	/** 
+	/**
 	 * 商户端删卡业务流水号
 	 **/
 	private $bizSerialNo;
-	
-	/** 
+
+	/**
 	 * 发卡商户信息，json格式。
 目前仅支持如下key：
 &#61548;	merchantUniId：商户唯一标识
@@ -22,8 +22,8 @@ UID：商户的支付宝用户号，以2088开头的16位纯数字组成；
 BINDING_MOBILE：商户支付宝账号绑定的手机号。
 	 **/
 	private $cardMerchantInfo;
-	
-	/** 
+
+	/**
 	 * 删卡扩展参数，json格式。
 用于商户的特定业务信息的传递，只有商户与支付宝约定了传递此参数且约定了参数含义，此参数才有效。
 目前支持如下key：
@@ -31,19 +31,19 @@ newCardNo：新卡号
 doneeUserId：受赠人userId
 	 **/
 	private $extInfo;
-	
-	/** 
+
+	/**
 	 * 商户会员卡号
 	 **/
 	private $externalCardNo;
-	
-	/** 
+
+	/**
 	 * CANCEL：销户
 PRESENT：转赠
 	 **/
 	private $reasonCode;
-	
-	/** 
+
+	/**
 	 * 请求来源
 	 **/
 	private $requestFrom;
@@ -57,7 +57,7 @@ PRESENT：转赠
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizSerialNo($bizSerialNo)
 	{
 		$this->bizSerialNo = $bizSerialNo;

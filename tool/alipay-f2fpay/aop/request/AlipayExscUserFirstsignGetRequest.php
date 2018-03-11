@@ -7,7 +7,7 @@
  */
 class AlipayExscUserFirstsignGetRequest
 {
-	/** 
+	/**
 	 * 支付宝 cif的accountNo 格式：支付宝userId+0156
 	 **/
 	private $alipayId;
@@ -21,7 +21,7 @@ class AlipayExscUserFirstsignGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setAlipayId($alipayId)
 	{
 		$this->alipayId = $alipayId;

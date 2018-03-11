@@ -17,7 +17,7 @@ class AlipayOfflineMaterialImageQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function getApiMethodName()
 	{
 		return "alipay.offline.material.image.query";

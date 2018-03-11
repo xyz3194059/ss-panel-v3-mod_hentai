@@ -7,7 +7,7 @@
  */
 class AlipaySiteprobeDeviceInfoDeleteRequest
 {
-	/** 
+	/**
 	 * 设备Id
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipaySiteprobeDeviceInfoDeleteRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

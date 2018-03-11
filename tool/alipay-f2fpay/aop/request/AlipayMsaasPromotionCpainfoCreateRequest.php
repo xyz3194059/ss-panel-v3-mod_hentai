@@ -7,7 +7,7 @@
  */
 class AlipayMsaasPromotionCpainfoCreateRequest
 {
-	/** 
+	/**
 	 * 此api为了让第三方渠道端调用 ，记录他们的调用数据，然后根据数据比对进行计费功能
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayMsaasPromotionCpainfoCreateRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

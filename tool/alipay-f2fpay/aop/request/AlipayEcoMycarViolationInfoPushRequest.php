@@ -7,7 +7,7 @@
  */
 class AlipayEcoMycarViolationInfoPushRequest
 {
-	/** 
+	/**
 	 * ISV推送新违章信息
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayEcoMycarViolationInfoPushRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

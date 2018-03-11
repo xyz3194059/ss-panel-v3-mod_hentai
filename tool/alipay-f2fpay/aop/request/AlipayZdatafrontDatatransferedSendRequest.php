@@ -7,17 +7,17 @@
  */
 class AlipayZdatafrontDatatransferedSendRequest
 {
-	/** 
+	/**
 	 * 数据字段，identity对应的其他数据字段。使用json格式组织，且仅支持字符串类型，其他类型请转为字符串。
 	 **/
 	private $data;
-	
-	/** 
+
+	/**
 	 * 合作伙伴的主键数据，同一合作伙伴要保证该字段唯一，若出现重复，后入数据会覆盖先入数据。使用json格式组织，且仅支持字符串类型，其他类型请转为字符串。
 	 **/
 	private $identity;
-	
-	/** 
+
+	/**
 	 * 合作伙伴标识字段，用来区分数据来源。建议使用公司域名或公司名。
 	 **/
 	private $typeId;
@@ -31,7 +31,7 @@ class AlipayZdatafrontDatatransferedSendRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setData($data)
 	{
 		$this->data = $data;

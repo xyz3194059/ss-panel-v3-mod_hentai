@@ -7,7 +7,7 @@
  */
 class AlipayOfflineSaleleadsMerchantEquipmentQueryRequest
 {
-	/** 
+	/**
 	 * 商户门店机具查询
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOfflineSaleleadsMerchantEquipmentQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

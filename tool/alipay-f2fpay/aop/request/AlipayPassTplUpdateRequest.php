@@ -7,12 +7,12 @@
  */
 class AlipayPassTplUpdateRequest
 {
-	/** 
+	/**
 	 * 模版内容
 	 **/
 	private $tplContent;
-	
-	/** 
+
+	/**
 	 * 模版ID
 	 **/
 	private $tplId;
@@ -26,7 +26,7 @@ class AlipayPassTplUpdateRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setTplContent($tplContent)
 	{
 		$this->tplContent = $tplContent;

@@ -5,7 +5,7 @@ use App\Services\Config;
 class TelegramProcess
 {
     private static function needbind_method($bot, $message, $command, $user, $reply_to = null)
-    { 
+    {
         if ($user != null) {
             switch ($command) {
                 case 'cq':

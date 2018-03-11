@@ -7,13 +7,13 @@
  */
 class AlipayPassTplAddRequest
 {
-	/** 
+	/**
 	 * 支付宝pass模版内容【JSON格式】
 具体格式可参考https://alipass.alipay.com中文档中心-格式说明
 	 **/
 	private $tplContent;
-	
-	/** 
+
+	/**
 	 * 模版外部唯一标识：商户用于控制模版的唯一性。
 	 **/
 	private $uniqueId;
@@ -27,7 +27,7 @@ class AlipayPassTplAddRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setTplContent($tplContent)
 	{
 		$this->tplContent = $tplContent;

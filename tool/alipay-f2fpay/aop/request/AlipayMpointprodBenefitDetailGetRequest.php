@@ -7,7 +7,7 @@
  */
 class AlipayMpointprodBenefitDetailGetRequest
 {
-	/** 
+	/**
 	 * 消息体内容，JSON格式，不含换行、空格
 参数:
 userId: 支付用户ID, 可以直接传递openId
@@ -25,7 +25,7 @@ benefitStatus: 状态只支持(VALID:生效、WAIT:待生效、INVALID:失效), 
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

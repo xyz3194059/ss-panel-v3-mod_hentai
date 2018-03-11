@@ -7,7 +7,7 @@
  */
 class AlipayCommerceCityfacilitatorDepositCancelRequest
 {
-	/** 
+	/**
 	 * 合作渠道可通过该接口补登扣款取消请求，以帮助支付宝将用户的资金退给用户
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayCommerceCityfacilitatorDepositCancelRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

@@ -7,7 +7,7 @@
  */
 class AlipayMobilePublicTemplateMessageGetRequest
 {
-	/** 
+	/**
 	 * 消息母板id
 	 **/
 	private $templateId;
@@ -21,7 +21,7 @@ class AlipayMobilePublicTemplateMessageGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setTemplateId($templateId)
 	{
 		$this->templateId = $templateId;

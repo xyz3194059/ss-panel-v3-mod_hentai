@@ -7,7 +7,7 @@
  */
 class AlipayOfflineMarketShopCreateRequest
 {
-	/** 
+	/**
 	 * 系统商需要通过该接口在口碑平台帮助商户创建门店信息。
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOfflineMarketShopCreateRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

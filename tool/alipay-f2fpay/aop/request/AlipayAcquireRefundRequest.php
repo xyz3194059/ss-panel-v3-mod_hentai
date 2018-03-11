@@ -7,46 +7,46 @@
  */
 class AlipayAcquireRefundRequest
 {
-	/** 
+	/**
 	 * 卖家的操作员ID。
 	 **/
 	private $operatorId;
-	
-	/** 
+
+	/**
 	 * 操作员的类型：
 0：支付宝操作员
 1：商户的操作员
 如果传入其它值或者为空，则默认设置为1。
 	 **/
 	private $operatorType;
-	
-	/** 
+
+	/**
 	 * 商户退款请求单号，用以标识本次交易的退款请求。
 如果不传入本参数，则以out_trade_no填充本参数的值。同时，认为本次请求为全额退款，要求退款金额和交易支付金额一致。
 	 **/
 	private $outRequestNo;
-	
-	/** 
+
+	/**
 	 * 商户网站唯一订单号
 	 **/
 	private $outTradeNo;
-	
-	/** 
+
+	/**
 	 * 业务关联ID集合，用于放置商户的退款单号、退款流水号等信息，json格式
 	 **/
 	private $refIds;
-	
-	/** 
+
+	/**
 	 * 退款金额；退款金额不能大于订单金额，全额退款必须与订单金额一致。
 	 **/
 	private $refundAmount;
-	
-	/** 
+
+	/**
 	 * 退款原因说明。
 	 **/
 	private $refundReason;
-	
-	/** 
+
+	/**
 	 * 该交易在支付宝系统中的交易流水号。
 最短16位，最长64位。
 如果同时传了out_trade_no和trade_no，则以trade_no为准
@@ -62,7 +62,7 @@ class AlipayAcquireRefundRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setOperatorId($operatorId)
 	{
 		$this->operatorId = $operatorId;

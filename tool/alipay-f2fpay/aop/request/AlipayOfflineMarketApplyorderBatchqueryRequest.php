@@ -7,7 +7,7 @@
  */
 class AlipayOfflineMarketApplyorderBatchqueryRequest
 {
-	/** 
+	/**
 	 * 分页查询Leads、门店、商品相关操作流水信息
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOfflineMarketApplyorderBatchqueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

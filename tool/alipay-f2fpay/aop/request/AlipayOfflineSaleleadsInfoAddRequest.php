@@ -7,7 +7,7 @@
  */
 class AlipayOfflineSaleleadsInfoAddRequest
 {
-	/** 
+	/**
 	 * 第三方服务商添加lead同步至口碑平台
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOfflineSaleleadsInfoAddRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

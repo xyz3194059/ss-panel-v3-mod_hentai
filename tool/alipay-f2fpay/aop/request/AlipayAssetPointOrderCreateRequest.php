@@ -7,7 +7,7 @@
  */
 class AlipayAssetPointOrderCreateRequest
 {
-	/** 
+	/**
 	 * 商户在采购完集分宝后可以通过此接口发放集分宝
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayAssetPointOrderCreateRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

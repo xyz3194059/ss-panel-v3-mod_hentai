@@ -7,7 +7,7 @@
  */
 class AlipayMobilePublicAccountDeleteRequest
 {
-	/** 
+	/**
 	 * 协议号等相关参数
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayMobilePublicAccountDeleteRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

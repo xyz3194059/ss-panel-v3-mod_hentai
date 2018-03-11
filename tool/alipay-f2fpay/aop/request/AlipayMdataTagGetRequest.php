@@ -7,12 +7,12 @@
  */
 class AlipayMdataTagGetRequest
 {
-	/** 
+	/**
 	 * 所需标签列表.
 	 **/
 	private $requiredTags;
-	
-	/** 
+
+	/**
 	 * 用户的支付宝Id
 	 **/
 	private $userId;
@@ -26,7 +26,7 @@ class AlipayMdataTagGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setRequiredTags($requiredTags)
 	{
 		$this->requiredTags = $requiredTags;

@@ -6,7 +6,6 @@ use App\Models\DetectLog;
 use App\Models\DetectRule;
 use App\Utils\Telegram;
 use App\Controllers\AdminController;
-
 use Ozdemir\Datatables\Datatables;
 use App\Utils\DatatablesHelper;
 

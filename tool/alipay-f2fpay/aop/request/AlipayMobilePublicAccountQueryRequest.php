@@ -7,7 +7,7 @@
  */
 class AlipayMobilePublicAccountQueryRequest
 {
-	/** 
+	/**
 	 * 业务信息：userId，这是个json字段
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayMobilePublicAccountQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

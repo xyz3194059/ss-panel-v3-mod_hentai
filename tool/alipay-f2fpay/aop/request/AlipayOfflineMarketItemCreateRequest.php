@@ -7,7 +7,7 @@
  */
 class AlipayOfflineMarketItemCreateRequest
 {
-	/** 
+	/**
 	 * 系统商需要通过该接口在口碑平台帮助商户创建商品。
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOfflineMarketItemCreateRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

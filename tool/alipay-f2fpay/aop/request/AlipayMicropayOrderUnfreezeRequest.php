@@ -7,12 +7,12 @@
  */
 class AlipayMicropayOrderUnfreezeRequest
 {
-	/** 
+	/**
 	 * 冻结资金流水号,在创建资金订单时支付宝返回的流水号
 	 **/
 	private $alipayOrderNo;
-	
-	/** 
+
+	/**
 	 * 冻结备注
 	 **/
 	private $memo;
@@ -26,7 +26,7 @@ class AlipayMicropayOrderUnfreezeRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setAlipayOrderNo($alipayOrderNo)
 	{
 		$this->alipayOrderNo = $alipayOrderNo;

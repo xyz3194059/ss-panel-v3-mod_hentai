@@ -29,22 +29,22 @@ class Cookie extends Base
         $uid = Utils\Cookie::get('uid');
         $key = Utils\Cookie::get('key');
         $ip = Utils\Cookie::get('ip');
-        
+
         $expire_in = Utils\Cookie::get('expire_in');
-        
+
         if ($uid == null) {
             $user = new User();
             $user->isLogin = false;
             return $user;
         }
-        
+
         $nodes=Node::where("node_ip", "=", $_SERVER["REMOTE_ADDR"])->first();
         if ($ip != md5($_SERVER["REMOTE_ADDR"].Config::get('key').$uid.$expire_in) && $nodes==null && Config::get('enable_login_bind_ip')=='true') {
             $user = new User();
             $user->isLogin = false;
             return $user;
         }
-        
+
         if ($expire_in<time()) {
             $user = new User();
             $user->isLogin = false;

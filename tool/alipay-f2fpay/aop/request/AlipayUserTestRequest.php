@@ -7,7 +7,7 @@
  */
 class AlipayUserTestRequest
 {
-	/** 
+	/**
 	 * 顶顶顶
 	 **/
 	private $userinfo;
@@ -21,7 +21,7 @@ class AlipayUserTestRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setUserinfo($userinfo)
 	{
 		$this->userinfo = $userinfo;

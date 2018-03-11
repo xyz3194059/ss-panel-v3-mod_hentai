@@ -7,117 +7,117 @@
  */
 class AlipaySecurityInfoAnalysisRequest
 {
-	/** 
+	/**
 	 * 客户端的基带版本
 	 **/
 	private $envClientBaseBand;
-	
-	/** 
+
+	/**
 	 * 客户端连接的基站信息
 	 **/
 	private $envClientBaseStation;
-	
-	/** 
+
+	/**
 	 * 客户端的经纬度坐标
 	 **/
 	private $envClientCoordinates;
-	
-	/** 
+
+	/**
 	 * 操作的客户端的imei
 	 **/
 	private $envClientImei;
-	
-	/** 
+
+	/**
 	 * 操作的客户端的imsi
 	 **/
 	private $envClientImsi;
-	
-	/** 
+
+	/**
 	 * IOS设备的UDID
 	 **/
 	private $envClientIosUdid;
-	
-	/** 
+
+	/**
 	 * 操作的客户端ip
 	 **/
 	private $envClientIp;
-	
-	/** 
+
+	/**
 	 * 操作的客户端mac
 	 **/
 	private $envClientMac;
-	
-	/** 
+
+	/**
 	 * 操作的客户端分辨率，格式为：水平像素^垂直像素；如：800^600
 	 **/
 	private $envClientScreen;
-	
-	/** 
+
+	/**
 	 * 客户端设备的统一识别码UUID
 	 **/
 	private $envClientUuid;
-	
-	/** 
+
+	/**
 	 * JS SDK生成的 tokenID
 	 **/
 	private $jsTokenId;
-	
-	/** 
+
+	/**
 	 * 签约的支付宝账号对应的支付宝唯一用户号
 	 **/
 	private $partnerId;
-	
-	/** 
+
+	/**
 	 * 场景编码
 	 **/
 	private $sceneCode;
-	
-	/** 
+
+	/**
 	 * 卖家账户ID
 	 **/
 	private $userAccountNo;
-	
-	/** 
+
+	/**
 	 * 用户绑定银行卡号
 	 **/
 	private $userBindBankcard;
-	
-	/** 
+
+	/**
 	 * 用户绑定银行卡的卡类型
 	 **/
 	private $userBindBankcardType;
-	
-	/** 
+
+	/**
 	 * 用户绑定手机号
 	 **/
 	private $userBindMobile;
-	
-	/** 
+
+	/**
 	 * 用户证件类型
 	 **/
 	private $userIdentityType;
-	
-	/** 
+
+	/**
 	 * 用户真实姓名
 	 **/
 	private $userRealName;
-	
-	/** 
+
+	/**
 	 * 用户注册时间
 	 **/
 	private $userRegDate;
-	
-	/** 
+
+	/**
 	 * 用户注册Email
 	 **/
 	private $userRegEmail;
-	
-	/** 
+
+	/**
 	 * 用户注册手机号
 	 **/
 	private $userRegMobile;
-	
-	/** 
+
+	/**
 	 * 用户证件号码
 	 **/
 	private $userrIdentityNo;
@@ -131,7 +131,7 @@ class AlipaySecurityInfoAnalysisRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setEnvClientBaseBand($envClientBaseBand)
 	{
 		$this->envClientBaseBand = $envClientBaseBand;

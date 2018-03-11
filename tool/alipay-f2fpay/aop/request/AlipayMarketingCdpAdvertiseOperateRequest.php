@@ -7,7 +7,7 @@
  */
 class AlipayMarketingCdpAdvertiseOperateRequest
 {
-	/** 
+	/**
 	 * 提供给ISV、开发者操作广告的接口
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayMarketingCdpAdvertiseOperateRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

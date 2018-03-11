@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 	<meta charset="UTF-8">
-	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<meta content="ie=edge,chrome=1" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" name="viewport">
 	<meta name="theme-color" content="#4caf50">
 	<meta http-equiv="X-Frame-Options" content="sameorigin">
 	<title>{$config["appName"]}</title>
 
-	
-	
+
+
 	<!-- css -->
 	<link href="/theme/material/css/base.min.css" rel="stylesheet">
 	<link href="/theme/material/css/project.min.css" rel="stylesheet">
-	
+	<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 
-	
+
 	<!-- favicon -->
 	<!-- ... -->
 	<style>
@@ -121,10 +121,10 @@
 			cursor:not-allowed;
 			background-color:#fff
 		}
-		
-		
-		
-		
+
+
+
+
 		.pagination>li>a,
 		.pagination>li>span {
 		  border: 1px solid white;
@@ -133,13 +133,13 @@
 		  background: #f50057;
 		  color: #fff;
 		}
-		
+
 		.pagination>li>a {
 		  background: white;
 		  color: #000;
 		}
-		
-		
+
+
 		.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
 			color: #fff;
 			background-color: #000;
@@ -150,24 +150,24 @@
 		  color: #fff;
 		  border-color: #fff;
 		}
-		
-		
-		
+
+
+
 		.pagination > .disabled > span {
 		  border-color: #fff;
 		}
-		
-		
+
+
 		pre {
 			white-space: pre-wrap;
 			word-wrap: break-word;
 		}
-		
+
 		.page-green .ui-content-header {
 			background-image: url(/theme/material/css/images/bg/amber.jpg);
 		}
-		
-		
+
+
 		.content-header-green, .page-green .content-header {
 			background-color: #459f47;
 			color: #fff;
@@ -175,4 +175,3 @@
 	</style>
 </head>
 <body class="page-green">
-	

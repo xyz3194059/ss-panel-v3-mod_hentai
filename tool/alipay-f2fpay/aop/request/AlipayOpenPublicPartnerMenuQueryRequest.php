@@ -7,7 +7,7 @@
  */
 class AlipayOpenPublicPartnerMenuQueryRequest
 {
-	/** 
+	/**
 	 * 为服务窗合作伙伴（如YunOS），提供查询所有服务窗的菜单的功能
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOpenPublicPartnerMenuQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

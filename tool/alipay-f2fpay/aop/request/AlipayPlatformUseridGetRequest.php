@@ -7,7 +7,7 @@
  */
 class AlipayPlatformUseridGetRequest
 {
-	/** 
+	/**
 	 * 根据OpenId获取UserId
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayPlatformUseridGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

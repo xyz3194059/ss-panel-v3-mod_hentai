@@ -7,7 +7,7 @@
  */
 class AlipaySecurityProdAmlriskQueryRequest
 {
-	/** 
+	/**
 	 * 该API用于外部商户准入时的反洗钱风险分析。
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipaySecurityProdAmlriskQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

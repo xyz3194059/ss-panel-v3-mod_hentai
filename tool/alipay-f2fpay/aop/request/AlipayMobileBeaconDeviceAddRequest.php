@@ -7,7 +7,7 @@
  */
 class AlipayMobileBeaconDeviceAddRequest
 {
-	/** 
+	/**
 	 * 蓝牙设备信息
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayMobileBeaconDeviceAddRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

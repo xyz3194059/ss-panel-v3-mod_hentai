@@ -7,7 +7,7 @@
  */
 class AlipayCommerceMedicalInstcardCreateandpayRequest
 {
-	/** 
+	/**
 	 * 根据用户已经在支付宝绑定过的医保卡为医疗行业提供收单支付服务。同时支持自费支付服务
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayCommerceMedicalInstcardCreateandpayRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

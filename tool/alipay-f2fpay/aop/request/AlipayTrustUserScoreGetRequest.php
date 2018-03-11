@@ -17,7 +17,7 @@ class AlipayTrustUserScoreGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function getApiMethodName()
 	{
 		return "alipay.trust.user.score.get";

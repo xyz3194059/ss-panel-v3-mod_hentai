@@ -7,7 +7,7 @@
  */
 class AlipayOfflineSaleleadsClaimstatusRequest
 {
-	/** 
+	/**
 	 * crmhome中leads认领\分配\释放
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOfflineSaleleadsClaimstatusRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

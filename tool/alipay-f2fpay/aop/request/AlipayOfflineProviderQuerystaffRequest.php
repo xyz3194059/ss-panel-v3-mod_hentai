@@ -7,7 +7,7 @@
  */
 class AlipayOfflineProviderQuerystaffRequest
 {
-	/** 
+	/**
 	 * 只能查询到服务商自己下面的员工
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOfflineProviderQuerystaffRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

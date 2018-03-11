@@ -7,7 +7,7 @@
  */
 class AlipayCommerceCityfacilitatorDepositQueryRequest
 {
-	/** 
+	/**
 	 * 商户查询用户的充值转账记录
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayCommerceCityfacilitatorDepositQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

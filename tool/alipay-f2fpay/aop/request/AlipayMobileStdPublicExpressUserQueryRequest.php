@@ -7,7 +7,7 @@
  */
 class AlipayMobileStdPublicExpressUserQueryRequest
 {
-	/** 
+	/**
 	 * 查询请求，用户id
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayMobileStdPublicExpressUserQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

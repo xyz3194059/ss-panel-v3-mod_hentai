@@ -7,7 +7,7 @@
  */
 class AlipayPassInstanceAddRequest
 {
-	/** 
+	/**
 	 * 详见<a href="https://doc.open.alipay.com/doc2/detail.htm?treeId=50&articleId=103401&docType=1">文档中心文档</a>
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayPassInstanceAddRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

@@ -7,7 +7,7 @@
  */
 class AlipayZmscoreZrankGetRequest
 {
-	/** 
+	/**
 	 * 用户ID
 	 **/
 	private $userId;
@@ -21,7 +21,7 @@ class AlipayZmscoreZrankGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setUserId($userId)
 	{
 		$this->userId = $userId;

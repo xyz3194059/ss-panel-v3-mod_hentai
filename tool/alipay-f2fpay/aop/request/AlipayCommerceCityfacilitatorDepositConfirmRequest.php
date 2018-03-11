@@ -7,7 +7,7 @@
  */
 class AlipayCommerceCityfacilitatorDepositConfirmRequest
 {
-	/** 
+	/**
 	 * 合作渠道可通过该接口补登单笔圈存确认扣款请求，以帮助支付宝将用户的资金结算给指定的渠道，不支持单笔拆分
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayCommerceCityfacilitatorDepositConfirmRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

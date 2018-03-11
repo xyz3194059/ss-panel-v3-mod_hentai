@@ -7,282 +7,282 @@
  */
 class AlipaySecurityRiskDetectRequest
 {
-	/** 
+	/**
 	 * 买家账户编号
 	 **/
 	private $buyerAccountNo;
-	
-	/** 
+
+	/**
 	 * 买家绑定银行卡号
 	 **/
 	private $buyerBindBankcard;
-	
-	/** 
+
+	/**
 	 * 买家绑定银行卡的卡类型
 	 **/
 	private $buyerBindBankcardType;
-	
-	/** 
+
+	/**
 	 * 买家绑定手机号
 	 **/
 	private $buyerBindMobile;
-	
-	/** 
+
+	/**
 	 * 买家账户在商家的等级，范围：VIP（高级买家）, NORMAL(普通买家）。为空默认NORMAL
 	 **/
 	private $buyerGrade;
-	
-	/** 
+
+	/**
 	 * 买家证件号码
 	 **/
 	private $buyerIdentityNo;
-	
-	/** 
+
+	/**
 	 * 买家证件类型
 	 **/
 	private $buyerIdentityType;
-	
-	/** 
+
+	/**
 	 * 买家真实姓名
 	 **/
 	private $buyerRealName;
-	
-	/** 
+
+	/**
 	 * 买家注册时间
 	 **/
 	private $buyerRegDate;
-	
-	/** 
+
+	/**
 	 * 买家注册时留的Email
 	 **/
 	private $buyerRegEmail;
-	
-	/** 
+
+	/**
 	 * 买家注册手机号
 	 **/
 	private $buyerRegMobile;
-	
-	/** 
+
+	/**
 	 * 买家业务处理时使用的银行卡号
 	 **/
 	private $buyerSceneBankcard;
-	
-	/** 
+
+	/**
 	 * 买家业务处理时使用的银行卡类型
 	 **/
 	private $buyerSceneBankcardType;
-	
-	/** 
+
+	/**
 	 * 买家业务处理时使用的邮箱
 	 **/
 	private $buyerSceneEmail;
-	
-	/** 
+
+	/**
 	 * 买家业务处理时使用的手机号
 	 **/
 	private $buyerSceneMobile;
-	
-	/** 
+
+	/**
 	 * 币种
 	 **/
 	private $currency;
-	
-	/** 
+
+	/**
 	 * 客户端的基带版本
 	 **/
 	private $envClientBaseBand;
-	
-	/** 
+
+	/**
 	 * 客户端连接的基站信息,格式为：CELLID^LAC
 	 **/
 	private $envClientBaseStation;
-	
-	/** 
+
+	/**
 	 * 客户端的经纬度坐标,格式为：精度^维度
 	 **/
 	private $envClientCoordinates;
-	
-	/** 
+
+	/**
 	 * 操作的客户端的imei
 	 **/
 	private $envClientImei;
-	
-	/** 
+
+	/**
 	 * 操作的客户端IMSI识别码
 	 **/
 	private $envClientImsi;
-	
-	/** 
+
+	/**
 	 * IOS设备的UDID
 	 **/
 	private $envClientIosUdid;
-	
-	/** 
+
+	/**
 	 * 操作的客户端ip
 	 **/
 	private $envClientIp;
-	
-	/** 
+
+	/**
 	 * 操作的客户端mac
 	 **/
 	private $envClientMac;
-	
-	/** 
+
+	/**
 	 * 操作的客户端分辨率，格式为：水平像素^垂直像素；如：800^600
 	 **/
 	private $envClientScreen;
-	
-	/** 
+
+	/**
 	 * 客户端设备的统一识别码UUID
 	 **/
 	private $envClientUuid;
-	
-	/** 
+
+	/**
 	 * 订单产品数量，购买产品的数量（不可为小数）
 	 **/
 	private $itemQuantity;
-	
-	/** 
+
+	/**
 	 * 订单产品单价，取值范围为[0.01,100000000.00]，精确到小数点后两位。 curren...
 	 **/
 	private $itemUnitPrice;
-	
-	/** 
+
+	/**
 	 * JS SDK生成的 tokenID
 	 **/
 	private $jsTokenId;
-	
-	/** 
+
+	/**
 	 * 订单总金额，取值范围为[0.01,100000000.00]，精确到小数点后两位。
 	 **/
 	private $orderAmount;
-	
-	/** 
+
+	/**
 	 * 订单商品所在类目
 	 **/
 	private $orderCategory;
-	
-	/** 
+
+	/**
 	 * 订单下单时间
 	 **/
 	private $orderCredateTime;
-	
-	/** 
+
+	/**
 	 * 订单商品所在城市
 	 **/
 	private $orderItemCity;
-	
-	/** 
+
+	/**
 	 * 订单产品名称
 	 **/
 	private $orderItemName;
-	
-	/** 
+
+	/**
 	 * 商户订单唯一标识号
 	 **/
 	private $orderNo;
-	
-	/** 
+
+	/**
 	 * 签约的支付宝账号对应的支付宝唯一用户号
 	 **/
 	private $partnerId;
-	
-	/** 
+
+	/**
 	 * 订单收货人地址
 	 **/
 	private $receiverAddress;
-	
-	/** 
+
+	/**
 	 * 订单收货人地址城市
 	 **/
 	private $receiverCity;
-	
-	/** 
+
+	/**
 	 * 订单收货人地址所在区
 	 **/
 	private $receiverDistrict;
-	
-	/** 
+
+	/**
 	 * 订单收货人邮箱
 	 **/
 	private $receiverEmail;
-	
-	/** 
+
+	/**
 	 * 订单收货人手机
 	 **/
 	private $receiverMobile;
-	
-	/** 
+
+	/**
 	 * 订单收货人姓名
 	 **/
 	private $receiverName;
-	
-	/** 
+
+	/**
 	 * 订单收货人地址省份
 	 **/
 	private $receiverState;
-	
-	/** 
+
+	/**
 	 * 订单收货人地址邮编
 	 **/
 	private $receiverZip;
-	
-	/** 
+
+	/**
 	 * 场景编码
 	 **/
 	private $sceneCode;
-	
-	/** 
+
+	/**
 	 * 卖家账户编号
 	 **/
 	private $sellerAccountNo;
-	
-	/** 
+
+	/**
 	 * 卖家绑定银行卡号
 	 **/
 	private $sellerBindBankcard;
-	
-	/** 
+
+	/**
 	 * 卖家绑定的银行卡的卡类型
 	 **/
 	private $sellerBindBankcardType;
-	
-	/** 
+
+	/**
 	 * 卖家绑定手机号
 	 **/
 	private $sellerBindMobile;
-	
-	/** 
+
+	/**
 	 * 卖家证件号码
 	 **/
 	private $sellerIdentityNo;
-	
-	/** 
+
+	/**
 	 * 卖家证件类型
 	 **/
 	private $sellerIdentityType;
-	
-	/** 
+
+	/**
 	 * 卖家真实姓名
 	 **/
 	private $sellerRealName;
-	
-	/** 
+
+	/**
 	 * 卖家注册时间,格式为：yyyy-MM-dd。
 	 **/
 	private $sellerRegDate;
-	
-	/** 
+
+	/**
 	 * 卖家注册Email
 	 **/
 	private $sellerRegEmail;
-	
-	/** 
+
+	/**
 	 * 卖家注册手机号
 	 **/
 	private $sellerRegMoile;
-	
-	/** 
+
+	/**
 	 * 订单物流方式
 	 **/
 	private $transportType;
@@ -296,7 +296,7 @@ class AlipaySecurityRiskDetectRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBuyerAccountNo($buyerAccountNo)
 	{
 		$this->buyerAccountNo = $buyerAccountNo;

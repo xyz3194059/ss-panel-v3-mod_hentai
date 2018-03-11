@@ -7,7 +7,7 @@
  */
 class AlipayCommerceCityfacilitatorScriptQueryRequest
 {
-	/** 
+	/**
 	 * 查询城市一卡通的判卡、读卡脚本
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayCommerceCityfacilitatorScriptQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

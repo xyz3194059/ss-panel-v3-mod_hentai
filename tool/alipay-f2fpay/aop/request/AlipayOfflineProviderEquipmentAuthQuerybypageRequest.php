@@ -7,7 +7,7 @@
  */
 class AlipayOfflineProviderEquipmentAuthQuerybypageRequest
 {
-	/** 
+	/**
 	 * 解绑查询接口
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOfflineProviderEquipmentAuthQuerybypageRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

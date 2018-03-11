@@ -8,7 +8,6 @@
 
 namespace App\Controllers\Client;
 
-
 use App\Controllers\BaseController;
 use App\Controllers\LinkController;
 use App\Models\Ann;

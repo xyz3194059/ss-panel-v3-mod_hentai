@@ -7,17 +7,17 @@
  */
 class AlipayOfflineMarketingVoucherCodeUploadRequest
 {
-	/** 
+	/**
 	 * 约定的扩展参数
 	 **/
 	private $extendParams;
-	
-	/** 
+
+	/**
 	 * 文件编码
 	 **/
 	private $fileCharset;
-	
-	/** 
+
+	/**
 	 * 文件二进制内容
 	 **/
 	private $fileContent;
@@ -31,7 +31,7 @@ class AlipayOfflineMarketingVoucherCodeUploadRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setExtendParams($extendParams)
 	{
 		$this->extendParams = $extendParams;

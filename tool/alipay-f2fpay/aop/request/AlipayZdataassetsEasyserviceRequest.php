@@ -7,7 +7,7 @@
  */
 class AlipayZdataassetsEasyserviceRequest
 {
-	/** 
+	/**
 	 * biz_content
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayZdataassetsEasyserviceRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

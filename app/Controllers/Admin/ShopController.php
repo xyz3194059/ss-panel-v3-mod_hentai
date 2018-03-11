@@ -5,7 +5,6 @@ namespace App\Controllers\Admin;
 use App\Models\Shop;
 use App\Models\Bought;
 use App\Controllers\AdminController;
-
 use Ozdemir\Datatables\Datatables;
 use App\Utils\DatatablesHelper;
 

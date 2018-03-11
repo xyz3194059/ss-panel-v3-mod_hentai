@@ -7,7 +7,7 @@
  */
 class AlipayOfflineMaterialImageDownloadRequest
 {
-	/** 
+	/**
 	 * 图片id列表
 	 **/
 	private $imageIds;
@@ -21,7 +21,7 @@ class AlipayOfflineMaterialImageDownloadRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setImageIds($imageIds)
 	{
 		$this->imageIds = $imageIds;

@@ -4,16 +4,12 @@ namespace App\Controllers\Admin;
 
 use App\Models\Ticket;
 use App\Models\User;
-
 use voku\helper\AntiXSS;
 use App\Services\Auth;
-
 use App\Services\Mail;
 use App\Services\Config;
-
 use Ozdemir\Datatables\Datatables;
 use App\Utils\DatatablesHelper;
-
 use App\Controllers\AdminController;
 
 class TicketController extends AdminController

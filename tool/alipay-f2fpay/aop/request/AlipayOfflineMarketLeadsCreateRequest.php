@@ -7,7 +7,7 @@
  */
 class AlipayOfflineMarketLeadsCreateRequest
 {
-	/** 
+	/**
 	 * 创建私海leads
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOfflineMarketLeadsCreateRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

@@ -7,12 +7,12 @@
  */
 class AlipayTrustUserReportGetRequest
 {
-	/** 
+	/**
 	 * 指定该接口在商户端的使用场景。具体枚举值在样例代码中给出
 	 **/
 	private $scene;
-	
-	/** 
+
+	/**
 	 * FN_S（金融简版）
 	 **/
 	private $type;
@@ -26,7 +26,7 @@ class AlipayTrustUserReportGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setScene($scene)
 	{
 		$this->scene = $scene;

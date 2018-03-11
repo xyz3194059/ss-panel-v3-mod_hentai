@@ -7,7 +7,7 @@
  */
 class AlipayDataDataserviceChinaremodelQueryRequest
 {
-	/** 
+	/**
 	 * 中再核保结果查询
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayDataDataserviceChinaremodelQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

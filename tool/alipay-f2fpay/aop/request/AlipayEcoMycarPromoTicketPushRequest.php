@@ -7,7 +7,7 @@
  */
 class AlipayEcoMycarPromoTicketPushRequest
 {
-	/** 
+	/**
 	 * 车主营销平台券核销结果通知
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayEcoMycarPromoTicketPushRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

@@ -7,7 +7,7 @@
  */
 class AlipayTrustUserStandardVerifyGetRequest
 {
-	/** 
+	/**
 	 * 详见说明文档和代码样例
 	 **/
 	private $aliTrustUserInfo;
@@ -21,7 +21,7 @@ class AlipayTrustUserStandardVerifyGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setAliTrustUserInfo($aliTrustUserInfo)
 	{
 		$this->aliTrustUserInfo = $aliTrustUserInfo;

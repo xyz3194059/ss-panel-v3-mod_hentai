@@ -4,7 +4,6 @@ namespace App\Controllers\Admin;
 
 use App\Models\Auto;
 use App\Controllers\AdminController;
-
 use Ozdemir\Datatables\Datatables;
 use App\Utils\DatatablesHelper;
 

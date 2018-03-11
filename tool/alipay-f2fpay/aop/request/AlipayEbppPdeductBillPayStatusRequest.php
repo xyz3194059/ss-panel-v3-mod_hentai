@@ -7,12 +7,12 @@
  */
 class AlipayEbppPdeductBillPayStatusRequest
 {
-	/** 
+	/**
 	 * 支付宝代扣协议ID
 	 **/
 	private $agreementId;
-	
-	/** 
+
+	/**
 	 * 商户代扣业务流水
 	 **/
 	private $outOrderNo;
@@ -26,7 +26,7 @@ class AlipayEbppPdeductBillPayStatusRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setAgreementId($agreementId)
 	{
 		$this->agreementId = $agreementId;

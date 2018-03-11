@@ -32,7 +32,7 @@
 				cursor: 'move',
 				cursorAt: {
 					top: 0,
-					left: 0 
+					left: 0
 				},
 				delay: 100,
 				helper: function () {

@@ -7,7 +7,7 @@
  */
 class AlipayMobilePublicMenuUserQueryRequest
 {
-	/** 
+	/**
 	 * 用户openId
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayMobilePublicMenuUserQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

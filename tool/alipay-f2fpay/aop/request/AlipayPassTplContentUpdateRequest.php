@@ -7,32 +7,32 @@
  */
 class AlipayPassTplContentUpdateRequest
 {
-	/** 
+	/**
 	 * 代理商代替商户发放卡券后，再代替商户更新卡券时，此值为商户的pid/appid
 	 **/
 	private $channelId;
-	
-	/** 
+
+	/**
 	 * 支付宝pass唯一标识
 	 **/
 	private $serialNumber;
-	
-	/** 
+
+	/**
 	 * 券状态,支持更新为USED,CLOSED两种状态
 	 **/
 	private $status;
-	
-	/** 
+
+	/**
 	 * 模版动态参数信息【支付宝pass模版参数键值对JSON字符串】
 	 **/
 	private $tplParams;
-	
-	/** 
+
+	/**
 	 * 核销码串值【当状态变更为USED时，建议传入】
 	 **/
 	private $verifyCode;
-	
-	/** 
+
+	/**
 	 * 核销方式，目前支持：wave（声波方式）、qrcode（二维码方式）、barcode（条码方式）、input（文本方式，即手工输入方式）。pass和verify_type不能同时为空
 	 **/
 	private $verifyType;
@@ -46,7 +46,7 @@ class AlipayPassTplContentUpdateRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setChannelId($channelId)
 	{
 		$this->channelId = $channelId;

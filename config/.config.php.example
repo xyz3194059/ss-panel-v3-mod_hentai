@@ -1,12 +1,11 @@
 <?php
 
-//  ss-panel v3 配置
 //
 // !!! 修改此key为随机字符串确保网站安全 !!!
-$System_Config['key'] = '(2)s^21m(&21jn1(H282';
+$System_Config['key'] = '';
 $System_Config['debug'] =  'false';  //  正式环境请确保为false
 $System_Config['appName'] = '';             //站点名称
-$System_Config['baseUrl'] = 'https://url.com';            // 站点地址
+$System_Config['baseUrl'] = '';           // 站点地址
 $System_Config['timeZone'] = 'PRC';        // PRC 天朝时间  UTC 格林时间
 $System_Config['pwdMethod'] = 'sha256';       // 密码加密   可选 md5,sha256
 $System_Config['salt'] = '';               // 密码加密用，从旧版升级请留空
@@ -93,8 +92,6 @@ $System_Config['radius_db_password']='';
 $System_Config['radius_secret']='';
 
 
-
-
 #多说设置
 $System_Config['duoshuo_shortname']="";
 $System_Config['duoshuo_apptoken']="";
@@ -175,6 +172,9 @@ $System_Config['enable_email_verify']='true';
 
 #邮箱验证码有效期
 $System_Config['email_verify_ttl']='3600';
+
+#是否允许用户注销账户
+$System_Config['enable_kill']='true';
 
 #单IP可请求验证码次数（上面那个周期内）
 $System_Config['email_verify_iplimit']='10';

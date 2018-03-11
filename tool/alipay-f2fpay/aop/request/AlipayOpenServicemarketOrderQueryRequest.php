@@ -7,7 +7,7 @@
  */
 class AlipayOpenServicemarketOrderQueryRequest
 {
-	/** 
+	/**
 	 * 用于服务商回查服务市场订单明细信息
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOpenServicemarketOrderQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

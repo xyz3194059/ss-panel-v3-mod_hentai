@@ -7,7 +7,7 @@
  */
 class AlipayOpenAuthIndustryPlatformCreateTokenRequest
 {
-	/** 
+	/**
 	 * 行业平台获取授权码
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOpenAuthIndustryPlatformCreateTokenRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

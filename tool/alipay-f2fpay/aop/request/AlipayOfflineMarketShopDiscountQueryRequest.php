@@ -7,7 +7,7 @@
  */
 class AlipayOfflineMarketShopDiscountQueryRequest
 {
-	/** 
+	/**
 	 * 基于门店id的优惠查询服务
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOfflineMarketShopDiscountQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

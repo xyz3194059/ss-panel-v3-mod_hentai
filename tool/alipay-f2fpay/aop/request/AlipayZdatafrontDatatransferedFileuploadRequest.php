@@ -7,42 +7,42 @@
  */
 class AlipayZdatafrontDatatransferedFileuploadRequest
 {
-	/** 
+	/**
 	 * 合作伙伴上传文件中的各字段,使用英文半角","分隔，file_type为json_data时必选
 	 **/
 	private $columns;
-	
-	/** 
+
+	/**
 	 * 二进制字节数组，由文件转出
 	 **/
 	private $file;
-	
-	/** 
+
+	/**
 	 * 文件描述信息，非解析数据类型必选
 	 **/
 	private $fileDescription;
-	
-	/** 
+
+	/**
 	 * 文件摘要，算法SHA
 	 **/
 	private $fileDigest;
-	
-	/** 
+
+	/**
 	 * 描述上传文件的类型
 	 **/
 	private $fileType;
-	
-	/** 
+
+	/**
 	 * 上传数据文件的主键字段，注意该pk若出现重复则后入数据会覆盖前面的，file_type为json_data时必选
 	 **/
 	private $primaryKey;
-	
-	/** 
+
+	/**
 	 * 上传数据文件包含的记录数，file_type为json_data时必选
 	 **/
 	private $records;
-	
-	/** 
+
+	/**
 	 * 外部公司的数据源标识信息，由联接网络分配
 	 **/
 	private $typeId;
@@ -56,7 +56,7 @@ class AlipayZdatafrontDatatransferedFileuploadRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setColumns($columns)
 	{
 		$this->columns = $columns;

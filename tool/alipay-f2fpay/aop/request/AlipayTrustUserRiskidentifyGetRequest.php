@@ -7,7 +7,7 @@
  */
 class AlipayTrustUserRiskidentifyGetRequest
 {
-	/** 
+	/**
 	 * 行业关注名单类型，具体类型见对接文档或样例代码
 	 **/
 	private $type;
@@ -21,7 +21,7 @@ class AlipayTrustUserRiskidentifyGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setType($type)
 	{
 		$this->type = $type;

@@ -7,7 +7,7 @@
  */
 class AlipayMobileCodeQueryRequest
 {
-	/** 
+	/**
 	 * 二维码的码值或者包含业务信息的二维码
 	 **/
 	private $qrToken;
@@ -21,7 +21,7 @@ class AlipayMobileCodeQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setQrToken($qrToken)
 	{
 		$this->qrToken = $qrToken;

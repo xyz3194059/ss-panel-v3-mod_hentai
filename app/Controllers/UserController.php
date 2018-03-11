@@ -21,9 +21,7 @@ use App\Utils\Wecenter;
 use App\Models\RadiusBan;
 use App\Models\DetectLog;
 use App\Models\DetectRule;
-
 use voku\helper\AntiXSS;
-
 use App\Models\User;
 use App\Models\Code;
 use App\Models\Ip;
@@ -1651,10 +1649,26 @@ class UserController extends BaseController
             return $this->echoJson($response, $res);
         }
 
- //       Auth::logout();
-   //     $user->kill_user();
-        $res['ret'] = 1;
-        $res['msg'] = "您没有使用此功能的权限。";
+        if ((float)$user->money > '1') {
+            $res['ret'] = 0;
+            $res['msg'] = "您的賬號還有 [".$user->money."]元，本操作需要聯繫管理員進行。";
+         } else {
+            if ($user->class != '0') {
+                $res['ret'] = 0;
+                $res['msg'] = "您的服務還未過期，本操作需要聯繫管理員進行。";
+            } else {
+                if (Config::get('enable_kill') == 'true') {
+                    Auth::logout();
+                    $user->kill_user();
+                    $res['ret'] = 1;
+                    $res['msg'] = "您的賬號已經刪除，歡迎下次光臨！";
+                    } else {
+                    $res['ret'] = 0;
+                    $res['msg'] = "管理員不允許此操作，如需刪除請聯繫管理員。";
+                }
+            }
+
+        }
         return $this->echoJson($response, $res);
     }
 

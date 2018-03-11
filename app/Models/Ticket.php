@@ -15,7 +15,7 @@ class Ticket extends Model
     {
         return date("Y-m-d H:i:s", $this->attributes['datetime']);
     }
-    
+
     public function User()
     {
         $user = User::where("id", $this->attributes['userid'])->first();

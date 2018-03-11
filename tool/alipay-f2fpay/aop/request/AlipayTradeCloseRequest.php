@@ -7,7 +7,7 @@
  */
 class AlipayTradeCloseRequest
 {
-	/** 
+	/**
 	 * 统一收单交易关闭接口
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayTradeCloseRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

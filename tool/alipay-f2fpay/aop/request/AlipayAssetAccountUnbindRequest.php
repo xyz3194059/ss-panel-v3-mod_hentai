@@ -7,12 +7,12 @@
  */
 class AlipayAssetAccountUnbindRequest
 {
-	/** 
+	/**
 	 * 业务参数 使用该app提供用户信息的商户在支付宝签约时的支付宝账户userID，可以和app相同。
 	 **/
 	private $providerId;
-	
-	/** 
+
+	/**
 	 * 用户在商户网站的会员标识。商户需确保其唯一性，不可变更。
 	 **/
 	private $providerUserId;
@@ -26,7 +26,7 @@ class AlipayAssetAccountUnbindRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setProviderId($providerId)
 	{
 		$this->providerId = $providerId;

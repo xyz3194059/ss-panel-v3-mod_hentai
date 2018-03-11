@@ -7,26 +7,26 @@
  */
 class AlipayAssetAccountBindRequest
 {
-	/** 
+	/**
 	 * 绑定场景，目前仅支持如下：
 wechat：微信公众平台；
 transport：物流转运平台；
-appOneBind：一对一app绑定； 
+appOneBind：一对一app绑定；
 注意：必须是这些值，区分大小写。
 	 **/
 	private $bindScene;
-	
-	/** 
+
+	/**
 	 * 使用该app提供用户信息的商户，可以和app相同。
 	 **/
 	private $providerId;
-	
-	/** 
+
+	/**
 	 * 用户在商户网站的会员标识。商户需确保其唯一性，不可变更。
 	 **/
 	private $providerUserId;
-	
-	/** 
+
+	/**
 	 * 用户在商户网站的会员名（登录号或昵称）。
 	 **/
 	private $providerUserName;
@@ -40,7 +40,7 @@ appOneBind：一对一app绑定；
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBindScene($bindScene)
 	{
 		$this->bindScene = $bindScene;

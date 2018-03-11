@@ -7,29 +7,29 @@
  */
 class AlipayMemberConsumeNotifyRequest
 {
-	/** 
+	/**
 	 * 实付金额
 	 **/
 	private $actPayAmount;
-	
-	/** 
+
+	/**
 	 * 会员卡卡号
 	 **/
 	private $bizCardNo;
-	
-	/** 
+
+	/**
 	 * point:整数
 balance:金额格式
 level:String
 	 **/
 	private $cardInfo;
-	
-	/** 
+
+	/**
 	 * 商户给会员开设的卡号，最大长度不超过32
 	 **/
 	private $externalCardNo;
-	
-	/** 
+
+	/**
 	 * 获取权益列表，是指由于发生当前交易，而使用户最终获取到的特权列表信息，
 实际消耗的权益，这是个json字段
 &#61550;	卡面额权益说明（元为单位）
@@ -42,52 +42,52 @@ description：2元抵用券
 amount：10.00
 	 **/
 	private $gainBenefitList;
-	
-	/** 
+
+	/**
 	 * 备注信息，现有直接填写门店信息
 	 **/
 	private $memo;
-	
-	/** 
+
+	/**
 	 * 门店编号
 	 **/
 	private $shopCode;
-	
-	/** 
+
+	/**
 	 * ALIPAY：支付宝电子卡
 ENTITY：实体卡
 OTHER：其他
 	 **/
 	private $swipeCertType;
-	
-	/** 
+
+	/**
 	 * 交易金额：本次交易的实际总金额（可认为标价金额）
 	 **/
 	private $tradeAmount;
-	
-	/** 
+
+	/**
 	 * 交易名称
 	 **/
 	private $tradeName;
-	
-	/** 
+
+	/**
 	 * 商户端对当前消费交易的单据号
 	 **/
 	private $tradeNo;
-	
-	/** 
+
+	/**
 	 * 交易事件
 	 **/
 	private $tradeTime;
-	
-	/** 
+
+	/**
 	 * 交易类型
 消费：TRADE
 充值：DEPOSIT
 	 **/
 	private $tradeType;
-	
-	/** 
+
+	/**
 	 * 实际消耗的权益，这是个json字段
 &#61550;	卡面额权益说明（元为单位）
 benefitType：PRE_FUND（卡面额）
@@ -114,7 +114,7 @@ description：2元抵用券
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setActPayAmount($actPayAmount)
 	{
 		$this->actPayAmount = $actPayAmount;

@@ -7,17 +7,17 @@
  */
 class AlipayPromorulecenterRuleAnalyzeRequest
 {
-	/** 
+	/**
 	 * 业务id
 	 **/
 	private $bizId;
-	
-	/** 
+
+	/**
 	 * 规则id
 	 **/
 	private $ruleUuid;
-	
-	/** 
+
+	/**
 	 * 支付宝用户id
 	 **/
 	private $userId;
@@ -31,7 +31,7 @@ class AlipayPromorulecenterRuleAnalyzeRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizId($bizId)
 	{
 		$this->bizId = $bizId;

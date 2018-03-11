@@ -7,7 +7,7 @@
  */
 class AlipayOfflineMarketReportGetRequest
 {
-	/** 
+	/**
 	 * 获取店铺信息
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOfflineMarketReportGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

@@ -17,7 +17,7 @@ class AlipayMobileStdPublicMenuQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function getApiMethodName()
 	{
 		return "alipay.mobile.std.public.menu.query";

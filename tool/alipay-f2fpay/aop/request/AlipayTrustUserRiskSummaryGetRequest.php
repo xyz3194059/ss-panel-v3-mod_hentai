@@ -7,7 +7,7 @@
  */
 class AlipayTrustUserRiskSummaryGetRequest
 {
-	/** 
+	/**
 	 * 描述用户信息
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayTrustUserRiskSummaryGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

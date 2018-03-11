@@ -7,17 +7,17 @@
  */
 class AlipayTrustUserZminfoPairGetRequest
 {
-	/** 
+	/**
 	 * 描述申请者的用户信息JSON串，身份证号，姓名等
 	 **/
 	private $applyUserInfo;
-	
-	/** 
+
+	/**
 	 * 被申请人的用户信息JSON串
 	 **/
 	private $ownerUserInfo;
-	
-	/** 
+
+	/**
 	 * 请求的芝麻信用信息类型，目前仅支持芝麻分
 	 **/
 	private $zmInfoType;
@@ -31,7 +31,7 @@ class AlipayTrustUserZminfoPairGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setApplyUserInfo($applyUserInfo)
 	{
 		$this->applyUserInfo = $applyUserInfo;

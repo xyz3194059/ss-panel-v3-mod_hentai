@@ -7,7 +7,7 @@
  */
 class AlipayMobilePublicMockListsmlistApiRequest
 {
-	/** 
+	/**
 	 * JSON
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayMobilePublicMockListsmlistApiRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

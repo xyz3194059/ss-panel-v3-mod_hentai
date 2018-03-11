@@ -7,7 +7,7 @@
  */
 class AlipayMobilePublicLabelUpdateRequest
 {
-	/** 
+	/**
 	 * json串，<a href="https://doc.open.alipay.com/doc2/detail.htm?spm=a219a.7386797.0.0.XbXiW8&treeId=53&articleId=103506&docType=1">详情请见</a>
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayMobilePublicLabelUpdateRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

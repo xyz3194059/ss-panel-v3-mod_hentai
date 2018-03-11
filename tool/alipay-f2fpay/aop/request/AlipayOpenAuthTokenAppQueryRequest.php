@@ -7,7 +7,7 @@
  */
 class AlipayOpenAuthTokenAppQueryRequest
 {
-	/** 
+	/**
 	 * 查询某个ISV下的指定app_auth_token的授权信息：授权者、授权接口列表、状态、过期时间等
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOpenAuthTokenAppQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

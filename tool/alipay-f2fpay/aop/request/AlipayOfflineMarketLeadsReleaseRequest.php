@@ -7,7 +7,7 @@
  */
 class AlipayOfflineMarketLeadsReleaseRequest
 {
-	/** 
+	/**
 	 * 服务商openApi操作私海leads释放
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOfflineMarketLeadsReleaseRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

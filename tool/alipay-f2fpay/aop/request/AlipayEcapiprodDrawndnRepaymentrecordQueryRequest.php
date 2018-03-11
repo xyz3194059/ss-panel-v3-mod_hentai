@@ -7,37 +7,37 @@
  */
 class AlipayEcapiprodDrawndnRepaymentrecordQueryRequest
 {
-	/** 
+	/**
 	 * 支用编号
 	 **/
 	private $drawndnNo;
-	
-	/** 
+
+	/**
 	 * 还款记录的终止时间，终止时间与起始时间的范围不能超过31天
 	 **/
 	private $end;
-	
-	/** 
+
+	/**
 	 * 客户身份证号码，为18位，最后X必须为大写
 	 **/
 	private $entityCode;
-	
-	/** 
+
+	/**
 	 * 客户的姓名
 	 **/
 	private $entityName;
-	
-	/** 
+
+	/**
 	 * 融资平台分配给ISV的编码
 	 **/
 	private $isvCode;
-	
-	/** 
+
+	/**
 	 * 融资平台分配给小贷公司的机构编码
 	 **/
 	private $orgCode;
-	
-	/** 
+
+	/**
 	 * 还款记录的起始时间（距离当前时间不能大于183天，只能在【0-183】之间）
 	 **/
 	private $start;
@@ -51,7 +51,7 @@ class AlipayEcapiprodDrawndnRepaymentrecordQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setDrawndnNo($drawndnNo)
 	{
 		$this->drawndnNo = $drawndnNo;

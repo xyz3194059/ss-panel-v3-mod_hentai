@@ -7,7 +7,7 @@
  */
 class AlipaySiteprobeShopPublicUnbindRequest
 {
-	/** 
+	/**
 	 * 店铺ID
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipaySiteprobeShopPublicUnbindRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

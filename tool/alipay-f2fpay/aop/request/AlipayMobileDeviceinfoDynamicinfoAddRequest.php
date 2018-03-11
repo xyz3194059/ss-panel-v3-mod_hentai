@@ -7,12 +7,12 @@
  */
 class AlipayMobileDeviceinfoDynamicinfoAddRequest
 {
-	/** 
+	/**
 	 * 蚂蚁金服集团生成的设备id
 	 **/
 	private $apdid;
-	
-	/** 
+
+	/**
 	 * 客户端采集的设备动态信息，格式为json串
 	 **/
 	private $dynamicinfo;
@@ -26,7 +26,7 @@ class AlipayMobileDeviceinfoDynamicinfoAddRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setApdid($apdid)
 	{
 		$this->apdid = $apdid;

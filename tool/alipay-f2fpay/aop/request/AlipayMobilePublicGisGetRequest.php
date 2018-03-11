@@ -7,7 +7,7 @@
  */
 class AlipayMobilePublicGisGetRequest
 {
-	/** 
+	/**
 	 * json串，<a href="https://doc.open.alipay.com/doc2/detail.htm?spm=a219a.7386797.0.0.aaN2CX&treeId=53&articleId=103526&docType=1">详情请见</a>
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayMobilePublicGisGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

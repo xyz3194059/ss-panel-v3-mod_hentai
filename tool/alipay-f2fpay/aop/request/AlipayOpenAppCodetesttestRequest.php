@@ -7,7 +7,7 @@
  */
 class AlipayOpenAppCodetesttestRequest
 {
-	/** 
+	/**
 	 * 统一对外错误码测试测试
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOpenAppCodetesttestRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

@@ -7,7 +7,7 @@
  */
 class AlipayTradeCancelRequest
 {
-	/** 
+	/**
 	 * 统一收单交易撤销接口
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayTradeCancelRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

@@ -7,7 +7,7 @@
  */
 class AlipayUserAccountUseridBatchqueryRequest
 {
-	/** 
+	/**
 	 * 业务统一入参，目前会传入用户的手机号作为查询参数
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayUserAccountUseridBatchqueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

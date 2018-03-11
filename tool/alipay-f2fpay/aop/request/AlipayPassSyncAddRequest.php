@@ -7,22 +7,22 @@
  */
 class AlipayPassSyncAddRequest
 {
-	/** 
+	/**
 	 * alipass文件Base64编码后的内容。
 	 **/
 	private $fileContent;
-	
-	/** 
+
+	/**
 	 * 商户外部交易号，由商户生成并确保其唯一性
 	 **/
 	private $outTradeNo;
-	
-	/** 
+
+	/**
 	 * 商户与支付宝签约时，分配的唯一ID。
 	 **/
 	private $partnerId;
-	
-	/** 
+
+	/**
 	 * 支付宝用户ID，即买家用户ID
 	 **/
 	private $userId;
@@ -36,7 +36,7 @@ class AlipayPassSyncAddRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setFileContent($fileContent)
 	{
 		$this->fileContent = $fileContent;

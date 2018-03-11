@@ -10,7 +10,6 @@ use App\Models\Coupon;
 use App\Models\User;
 use App\Utils\Tools;
 use App\Services\Analytics;
-
 use Ozdemir\Datatables\Datatables;
 use App\Utils\DatatablesHelper;
 

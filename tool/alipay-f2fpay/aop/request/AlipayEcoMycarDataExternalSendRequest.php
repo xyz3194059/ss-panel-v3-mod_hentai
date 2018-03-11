@@ -7,7 +7,7 @@
  */
 class AlipayEcoMycarDataExternalSendRequest
 {
-	/** 
+	/**
 	 * 行业平台写请求
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayEcoMycarDataExternalSendRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

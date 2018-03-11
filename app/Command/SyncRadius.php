@@ -32,7 +32,7 @@ class SyncRadius
             $email=Radius::GetUserName($email);
             $tempuserbox[$email]=$user->id;
         }
-        
+
         /*$tempnodebox=array();
         $nodes = Node::all();
         foreach($nodes as $node){
@@ -42,11 +42,11 @@ class SyncRadius
                 $tempnodebox[$ip]=$node->id;
             }
         }*/
-        
-        
-        
+
+
+
         $logs = RadiusRadPostauth::where('authdate', '<', date("Y-m-d H:i:s"))->where('authdate', '>', date("Y-m-d H:i:s", time()-60))->get();
-        
+
         foreach ($logs as $log) {
             if (isset($tempuserbox[$log->username])) {
                 $traffic = new TrafficLog();
@@ -58,7 +58,7 @@ class SyncRadius
                 $traffic->traffic = Tools::flowAutoShow(10000);
                 $traffic->log_time = time();
                 $traffic->save();
-                
+
                 $user=User::find($tempuserbox[$log->username]);
                 $user->t = time();
                 $user->u = $user->u + 0;
@@ -66,8 +66,8 @@ class SyncRadius
                 $user->save();
             }
         }
-        
-        
+
+
         /*$stmt = $db->query("SELECT * FROM `radacct` WHERE `acctstoptime`<'".date("Y-m-d H:i:s")."' AND `acctstoptime`>'".date("Y-m-d H:i:s",time()-60)."'");
         $result = $stmt->fetchAll();
 
@@ -89,14 +89,14 @@ class SyncRadius
             $user->save();
         }  */
     }
-    
-    
+
+
     public static function syncvpn()
     {
         if (Config::get('radius_db_host')=="") {
             return;
         }
-        
+
         $tempuserbox=array();
         $users = User::all();
         foreach ($users as $user) {
@@ -104,7 +104,7 @@ class SyncRadius
             $email=Radius::GetUserName($email);
             $tempuserbox[$email]=$user->id;
         }
-        
+
         /*$tempnodebox=array();
         $nodes = Node::all();
         foreach($nodes as $node){
@@ -114,7 +114,7 @@ class SyncRadius
                 $tempnodebox[$ip]=$node->id;
             }
         }*/
-        
+
         /*$stmt = $db->query("SELECT * FROM `radpostauth` WHERE `authdate`<'".date("Y-m-d H:i:s")."' AND`authdate`>'".date("Y-m-d H:i:s",time()-60)."'");
         $result = $stmt->fetchAll();
 
@@ -139,10 +139,10 @@ class SyncRadius
             }
         }
         */
-        
-        
+
+
         $logs = RadiusRadAcct::where('acctstoptime', '<', date("Y-m-d H:i:s"))->where('acctstoptime', '>', date("Y-m-d H:i:s", time()-60))->get();
-        
+
         foreach ($logs as $log) {
             $traffic = new TrafficLog();
             $traffic->user_id = $tempuserbox[$log->username];
@@ -153,7 +153,7 @@ class SyncRadius
             $traffic->traffic = Tools::flowAutoShow(($log->acctinputoctets + $log->acctoutputoctets));
             $traffic->log_time = time();
             $traffic->save();
-            
+
             $user=User::find($tempuserbox[$log->username]);
             $user->t = time();
             $user->u = $user->u + $log->acctinputoctets;
@@ -161,7 +161,7 @@ class SyncRadius
             $user->save();
         }
     }
-    
+
     public static function syncusers()
     {
         $users = User::all();
@@ -182,26 +182,26 @@ class SyncRadius
             }
         }
     }
-    
+
     public static function syncnas()
     {
         if (Config::get('radius_db_host')!="") {
             $md5txt="";
-            
+
             $nases = RadiusNas::all();
-        
+
             foreach ($nases as $nas) {
                 //if($row["pass"]!="")
                 {
                     $md5txt=$md5txt.$nas->id.$nas->nasname.$nas->shortname.$nas->secret.$nas->description;
                 }
             }
-            
+
             $md5=MD5($md5txt);
-            
-            
+
+
             $oldmd5=file_get_contents(BASE_PATH."/storage/nas.md5");
-            
+
             if ($oldmd5!=$md5) {
                 //Restart radius
                 $myfile = fopen(BASE_PATH."/storage/nas.md5", "w+") or die("Unable to open file!");
@@ -213,7 +213,7 @@ class SyncRadius
                 fclose($myfile);
             }
         }
-        
+
         $Nodes = Node::where('sort', 0)->where('node_ip', "<>", "")->where('node_ip', "<>", 'NULL')->get();
         foreach ($Nodes as $Node) {
             if (file_exists("/usr/local/psionic/portsentry/portsentry.ignore")) {

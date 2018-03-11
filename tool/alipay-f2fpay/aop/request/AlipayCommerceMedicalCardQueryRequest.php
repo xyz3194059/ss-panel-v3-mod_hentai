@@ -7,7 +7,7 @@
  */
 class AlipayCommerceMedicalCardQueryRequest
 {
-	/** 
+	/**
 	 * 医疗机构根据用户userId查询该账户的医保卡相关信息
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayCommerceMedicalCardQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

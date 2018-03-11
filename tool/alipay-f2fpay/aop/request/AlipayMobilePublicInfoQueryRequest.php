@@ -17,7 +17,7 @@ class AlipayMobilePublicInfoQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function getApiMethodName()
 	{
 		return "alipay.mobile.public.info.query";

@@ -7,7 +7,7 @@
  */
 class AlipayMarketingCdpRecommendQueryRequest
 {
-	/** 
+	/**
 	 * 外部应用根据用户当前地理位置查询附近商家信息
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayMarketingCdpRecommendQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

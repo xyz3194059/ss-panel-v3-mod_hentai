@@ -7,7 +7,7 @@
  */
 class AlipayMobilePublicMessagespecifyPushRequest
 {
-	/** 
+	/**
 	 * 业务内容JSON
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayMobilePublicMessagespecifyPushRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

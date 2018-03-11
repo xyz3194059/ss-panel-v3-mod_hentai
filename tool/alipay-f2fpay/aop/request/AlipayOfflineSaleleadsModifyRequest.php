@@ -7,7 +7,7 @@
  */
 class AlipayOfflineSaleleadsModifyRequest
 {
-	/** 
+	/**
 	 * leads信息修改
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOfflineSaleleadsModifyRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

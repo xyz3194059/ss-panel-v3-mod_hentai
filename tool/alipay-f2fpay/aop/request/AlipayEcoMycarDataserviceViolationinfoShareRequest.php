@@ -7,7 +7,7 @@
  */
 class AlipayEcoMycarDataserviceViolationinfoShareRequest
 {
-	/** 
+	/**
 	 * ISV获取违章车辆信息
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayEcoMycarDataserviceViolationinfoShareRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

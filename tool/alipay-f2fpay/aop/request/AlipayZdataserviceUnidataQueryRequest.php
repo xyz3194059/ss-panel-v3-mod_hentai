@@ -7,12 +7,12 @@
  */
 class AlipayZdataserviceUnidataQueryRequest
 {
-	/** 
+	/**
 	 * 通用的查询入参
 	 **/
 	private $queryCondition;
-	
-	/** 
+
+	/**
 	 * 返回数据的类型，内部业务系统分配
 	 **/
 	private $uniqKey;
@@ -26,7 +26,7 @@ class AlipayZdataserviceUnidataQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setQueryCondition($queryCondition)
 	{
 		$this->queryCondition = $queryCondition;

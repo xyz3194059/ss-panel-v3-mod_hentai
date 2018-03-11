@@ -7,7 +7,7 @@
  */
 class AlipayOfflineMarketLeadsQrcodeQueryRequest
 {
-	/** 
+	/**
 	 * 地推小二认领了Leads后申请创建开店二维码，提供给商户扫描开店。
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOfflineMarketLeadsQrcodeQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

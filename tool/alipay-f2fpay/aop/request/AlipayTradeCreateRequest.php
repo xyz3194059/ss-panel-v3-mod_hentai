@@ -7,7 +7,7 @@
  */
 class AlipayTradeCreateRequest
 {
-	/** 
+	/**
 	 * 商户通过该接口进行交易的创建下单
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayTradeCreateRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

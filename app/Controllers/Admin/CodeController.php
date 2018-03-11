@@ -7,7 +7,6 @@ use App\Models\User;
 use App\Controllers\AdminController;
 use App\Utils\Tools;
 use App\Services\Auth;
-
 use Ozdemir\Datatables\Datatables;
 use App\Utils\DatatablesHelper;
 

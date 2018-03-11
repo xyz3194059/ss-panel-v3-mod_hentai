@@ -8,7 +8,6 @@
 
 namespace App\Controllers\Client;
 
-
 use App\Controllers\BaseController;
 use App\Models\Code;
 use App\Models\Shop;

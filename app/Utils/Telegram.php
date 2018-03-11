@@ -8,7 +8,7 @@ class Telegram
 {
 
     /**
-     * ·¢ËÍÏûÏ¢
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
      */
     public static function Send($messageText)
     {
@@ -18,8 +18,8 @@ class Telegram
             $bot->sendMessage(Config::get('telegram_chatid'), $messageText);
         }
     }
-    
-    
+
+
     public static function SendMarkdown($messageText)
     {
         if (Config::get('enable_telegram') == 'true') {

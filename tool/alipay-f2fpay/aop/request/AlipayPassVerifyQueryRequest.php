@@ -7,7 +7,7 @@
  */
 class AlipayPassVerifyQueryRequest
 {
-	/** 
+	/**
 	 * Alipass对应的核销码串
 	 **/
 	private $verifyCode;
@@ -21,7 +21,7 @@ class AlipayPassVerifyQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setVerifyCode($verifyCode)
 	{
 		$this->verifyCode = $verifyCode;

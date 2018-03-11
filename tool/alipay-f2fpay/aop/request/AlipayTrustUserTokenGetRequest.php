@@ -7,7 +7,7 @@
  */
 class AlipayTrustUserTokenGetRequest
 {
-	/** 
+	/**
 	 * 入参json串
 	 **/
 	private $aliTrustUserInfo;
@@ -21,7 +21,7 @@ class AlipayTrustUserTokenGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setAliTrustUserInfo($aliTrustUserInfo)
 	{
 		$this->aliTrustUserInfo = $aliTrustUserInfo;

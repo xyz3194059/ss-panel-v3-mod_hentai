@@ -7,17 +7,17 @@
  */
 class AlipayEbppBillBatchPayurlGetRequest
 {
-	/** 
+	/**
 	 * 回调系统url
 	 **/
 	private $callbackUrl;
-	
-	/** 
+
+	/**
 	 * 订单类型
 	 **/
 	private $orderType;
-	
-	/** 
+
+	/**
 	 * alipayOrderNo-merchantOrderNo即业务流水号和业务订单号
 	 **/
 	private $payBillList;
@@ -31,7 +31,7 @@ class AlipayEbppBillBatchPayurlGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setCallbackUrl($callbackUrl)
 	{
 		$this->callbackUrl = $callbackUrl;

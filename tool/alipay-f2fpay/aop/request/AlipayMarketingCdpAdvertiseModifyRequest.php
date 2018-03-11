@@ -7,7 +7,7 @@
  */
 class AlipayMarketingCdpAdvertiseModifyRequest
 {
-	/** 
+	/**
 	 * 提供给ISV、开发者修改广告的接口，修改广告后投放渠道包括钱包APP，聚牛APP等，投放支持的APP应用
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayMarketingCdpAdvertiseModifyRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

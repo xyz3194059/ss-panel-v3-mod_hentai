@@ -7,7 +7,7 @@
  */
 class AlipayZdataassetsFcdatalabZdatamergetaskRequest
 {
-	/** 
+	/**
 	 * 业务参数
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayZdataassetsFcdatalabZdatamergetaskRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

@@ -7,7 +7,7 @@
  */
 class AlipayOfflineSaleleadsQuerybyidsRequest
 {
-	/** 
+	/**
 	 * crmhome提供leads分页查询功能
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOfflineSaleleadsQuerybyidsRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

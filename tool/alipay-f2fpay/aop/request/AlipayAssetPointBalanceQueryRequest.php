@@ -17,7 +17,7 @@ class AlipayAssetPointBalanceQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function getApiMethodName()
 	{
 		return "alipay.asset.point.balance.query";

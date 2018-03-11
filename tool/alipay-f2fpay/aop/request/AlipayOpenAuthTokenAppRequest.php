@@ -7,7 +7,7 @@
  */
 class AlipayOpenAuthTokenAppRequest
 {
-	/** 
+	/**
 	 * 用应用授权码（app_auth_code）换取或者刷新应用授权令牌(app_auth_token)
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOpenAuthTokenAppRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

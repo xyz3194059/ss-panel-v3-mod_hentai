@@ -7,7 +7,7 @@
  */
 class ZhimaMerchantTestPracticeRequest
 {
-	/** 
+	/**
 	 * asd
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class ZhimaMerchantTestPracticeRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

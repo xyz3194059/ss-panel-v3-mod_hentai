@@ -7,12 +7,12 @@
  */
 class AlipayMobilePublicTemplateMessageQueryRequest
 {
-	/** 
+	/**
 	 * 模板
 	 **/
 	private $template;
-	
-	/** 
+
+	/**
 	 * 模板id
 	 **/
 	private $templateId;
@@ -26,7 +26,7 @@ class AlipayMobilePublicTemplateMessageQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setTemplate($template)
 	{
 		$this->template = $template;

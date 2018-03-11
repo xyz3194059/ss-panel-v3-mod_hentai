@@ -7,7 +7,7 @@
  */
 class AlipayBossCsChannelQueryRequest
 {
-	/** 
+	/**
 	 * 云客服热线数据查询，云客服会有很多外部客服，他们需要查询落地在站内的自己公司的服务数据。
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayBossCsChannelQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

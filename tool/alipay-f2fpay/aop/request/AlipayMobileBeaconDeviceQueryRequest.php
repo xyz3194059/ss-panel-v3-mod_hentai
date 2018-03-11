@@ -7,7 +7,7 @@
  */
 class AlipayMobileBeaconDeviceQueryRequest
 {
-	/** 
+	/**
 	 * 设备的UUID
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayMobileBeaconDeviceQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

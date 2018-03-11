@@ -17,7 +17,7 @@ class AlipayUserUserinfoShareRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function getApiMethodName()
 	{
 		return "alipay.user.userinfo.share";

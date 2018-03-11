@@ -7,12 +7,12 @@
  */
 class AlipayAssetAccountGetRequest
 {
-	/** 
+	/**
 	 * 使用该app提供用户信息的商户，可以和app相同。
 	 **/
 	private $providerId;
-	
-	/** 
+
+	/**
 	 * 用户在商户网站的会员标识。商户需确保其唯一性，不可变更。
 注意：根据provider_user_id查询时该值不可空。
 	 **/
@@ -27,7 +27,7 @@ class AlipayAssetAccountGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setProviderId($providerId)
 	{
 		$this->providerId = $providerId;

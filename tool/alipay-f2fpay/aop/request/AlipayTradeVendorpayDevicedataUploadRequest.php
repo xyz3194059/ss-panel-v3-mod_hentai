@@ -7,7 +7,7 @@
  */
 class AlipayTradeVendorpayDevicedataUploadRequest
 {
-	/** 
+	/**
 	 * 厂商支付授权时上传设备数据接口，目前主要包含三星支付。com
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayTradeVendorpayDevicedataUploadRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

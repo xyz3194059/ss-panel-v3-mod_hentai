@@ -7,20 +7,20 @@
  */
 class AlipayPassFileAddRequest
 {
-	/** 
+	/**
 	 * 支付宝pass文件二进制Base64加密字符串
 	 **/
 	private $fileContent;
-	
-	/** 
+
+	/**
 	 * 支付宝用户识别信息：
 当 recognition_type=1时， recognition_info={“partner_id”:”2088102114633762”,“out_trade_no”:”1234567”}；
 当recognition_type=2时， recognition_info={“user_id”:”2088102114633761“}
 当recognition_type=3时，recognition_info={“mobile”:”136XXXXXXXX“}
 	 **/
 	private $recognitionInfo;
-	
-	/** 
+
+	/**
 	 * Alipass添加对象识别类型【1--订单信息；2--支付宝userId;3--支付宝绑定手机号】
 	 **/
 	private $recognitionType;
@@ -34,7 +34,7 @@ class AlipayPassFileAddRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setFileContent($fileContent)
 	{
 		$this->fileContent = $fileContent;

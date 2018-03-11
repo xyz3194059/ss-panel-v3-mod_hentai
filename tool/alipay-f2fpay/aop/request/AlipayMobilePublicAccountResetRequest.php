@@ -7,32 +7,32 @@
  */
 class AlipayMobilePublicAccountResetRequest
 {
-	/** 
+	/**
 	 * 协议号
 	 **/
 	private $agreementId;
-	
-	/** 
+
+	/**
 	 * 绑定账户
 	 **/
 	private $bindAccountNo;
-	
-	/** 
+
+	/**
 	 * json
 	 **/
 	private $bizContent;
-	
-	/** 
+
+	/**
 	 * 绑定账户的名
 	 **/
 	private $displayName;
-	
-	/** 
+
+	/**
 	 * 关注者标识
 	 **/
 	private $fromUserId;
-	
-	/** 
+
+	/**
 	 * 绑定账户的用户名
 	 **/
 	private $realName;
@@ -46,7 +46,7 @@ class AlipayMobilePublicAccountResetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setAgreementId($agreementId)
 	{
 		$this->agreementId = $agreementId;

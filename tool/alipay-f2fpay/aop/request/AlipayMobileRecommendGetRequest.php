@@ -7,27 +7,27 @@
  */
 class AlipayMobileRecommendGetRequest
 {
-	/** 
+	/**
 	 * 请求上下文扩展信息，需要与接口负责人约定。格式为json对象。
 	 **/
 	private $extInfo;
-	
-	/** 
+
+	/**
 	 * 期望获取的最多推荐数量, 默认获取一个推荐内容, 0表示获取所有推荐内容
 	 **/
 	private $limit;
-	
-	/** 
+
+	/**
 	 * 所使用的场景id，请向接口负责人申请
 	 **/
 	private $sceneId;
-	
-	/** 
+
+	/**
 	 * 获取推荐信息的开始位置, 默认从0开始
 	 **/
 	private $startIdx;
-	
-	/** 
+
+	/**
 	 * 用户openid
 	 **/
 	private $userId;
@@ -41,7 +41,7 @@ class AlipayMobileRecommendGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setExtInfo($extInfo)
 	{
 		$this->extInfo = $extInfo;

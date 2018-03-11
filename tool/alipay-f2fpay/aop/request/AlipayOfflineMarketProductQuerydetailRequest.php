@@ -7,7 +7,7 @@
  */
 class AlipayOfflineMarketProductQuerydetailRequest
 {
-	/** 
+	/**
 	 * 通过该接口可以查询商户录入的指定商品详细信息
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOfflineMarketProductQuerydetailRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

@@ -7,7 +7,7 @@
  */
 class AlipayOpenPublicTemplateMessageIndustryModifyRequest
 {
-	/** 
+	/**
 	 * 模板消息行业设置修改接口
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOpenPublicTemplateMessageIndustryModifyRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

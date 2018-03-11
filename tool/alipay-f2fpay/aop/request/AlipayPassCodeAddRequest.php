@@ -7,26 +7,26 @@
  */
 class AlipayPassCodeAddRequest
 {
-	/** 
+	/**
 	 * alipass文件Base64编码后的内容。
 	 **/
 	private $fileContent;
-	
-	/** 
+
+	/**
 	 * 识别信息
 当 recognition_type=1时， recognition_info={“partner_id”:”2088102114633762”,“out_trade_no”:”1234567”}
 当recognition_type=2时， recognition_info={“user_id”:”2088102114633761“ }
 	 **/
 	private $recognitionInfo;
-	
-	/** 
+
+	/**
 	 * 发放对象识别类型
 1-	订单信息
 2-	支付宝userId
 	 **/
 	private $recognitionType;
-	
-	/** 
+
+	/**
 	 * 该pass的核销方式,如果为空，则默认为["wave","qrcode"]
 	 **/
 	private $verifyType;
@@ -40,7 +40,7 @@ class AlipayPassCodeAddRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setFileContent($fileContent)
 	{
 		$this->fileContent = $fileContent;

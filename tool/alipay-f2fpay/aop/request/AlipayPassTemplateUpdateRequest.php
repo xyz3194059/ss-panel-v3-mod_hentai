@@ -7,7 +7,7 @@
  */
 class AlipayPassTemplateUpdateRequest
 {
-	/** 
+	/**
 	 * 详见<a href="https://doc.open.alipay.com/doc2/detail.htm?spm=a219a.7629140.0.0.LrFyGS&treeId=50&articleId=103396&docType=1">文档中心文档</a>
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayPassTemplateUpdateRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

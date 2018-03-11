@@ -344,4 +344,3 @@ if (!empty($_POST['out_trade_no'])&& trim($_POST['out_trade_no'])!="") {
 </div>
 </body>
 </html>
-

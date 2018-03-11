@@ -7,17 +7,17 @@
  */
 class AlipayMobileBksigntokenVerifyRequest
 {
-	/** 
+	/**
 	 * 设备标识
 	 **/
 	private $deviceid;
-	
-	/** 
+
+	/**
 	 * 调用来源
 	 **/
 	private $source;
-	
-	/** 
+
+	/**
 	 * 查询token
 	 **/
 	private $token;
@@ -31,7 +31,7 @@ class AlipayMobileBksigntokenVerifyRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setDeviceid($deviceid)
 	{
 		$this->deviceid = $deviceid;

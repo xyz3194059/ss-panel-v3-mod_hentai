@@ -7,15 +7,15 @@
  */
 class AlipayMemberCardQueryRequest
 {
-	/** 
+	/**
 	 * 支付宝会员卡卡号。
 
 注意：
 biz_card_no和card_user_info不能同时为空。
 	 **/
 	private $bizCardNo;
-	
-	/** 
+
+	/**
 	 * 发卡商户信息，json格式。
 目前仅支持如下key：
 merchantUniId：商户唯一标识
@@ -28,8 +28,8 @@ merchantUniIdType：支持以下3种取值。
 本参数主要用于发卡平台接入场景，request_from为PLATFORM时，不能为空。
 	 **/
 	private $cardMerchantInfo;
-	
-	/** 
+
+	/**
 	 * 持卡用户信息，json格式。
 目前仅支持如下key：
 userUniId：用户唯一标识
@@ -42,14 +42,14 @@ userUniIdType：支持以下3种取值。
 biz_card_no和card_user_info不能同时为空。
 	 **/
 	private $cardUserInfo;
-	
-	/** 
+
+	/**
 	 * 扩展参数，json格式。
 用于商户的特定业务信息的传递，只有商户与支付宝约定了传递此参数且约定了参数含义，此参数才有效。
 	 **/
 	private $extInfo;
-	
-	/** 
+
+	/**
 	 * 请求来源。
 PLATFORM：发卡平台商
 PARTNER：直联商户
@@ -65,7 +65,7 @@ PARTNER：直联商户
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizCardNo($bizCardNo)
 	{
 		$this->bizCardNo = $bizCardNo;

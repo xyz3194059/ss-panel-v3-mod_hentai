@@ -7,7 +7,7 @@
  */
 class AlipayUserContractGetRequest
 {
-	/** 
+	/**
 	 * 订购者支付宝ID。session与subscriber_user_id二选一即可。
 	 **/
 	private $subscriberUserId;
@@ -21,7 +21,7 @@ class AlipayUserContractGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setSubscriberUserId($subscriberUserId)
 	{
 		$this->subscriberUserId = $subscriberUserId;

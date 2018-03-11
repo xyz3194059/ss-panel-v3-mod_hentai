@@ -7,7 +7,7 @@
  */
 class AlipayEcoMycarCarlibInfoPushRequest
 {
-	/** 
+	/**
 	 * 同步车型库
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayEcoMycarCarlibInfoPushRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

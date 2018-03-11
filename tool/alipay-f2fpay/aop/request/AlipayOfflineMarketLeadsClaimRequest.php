@@ -7,7 +7,7 @@
  */
 class AlipayOfflineMarketLeadsClaimRequest
 {
-	/** 
+	/**
 	 * 公海认领leads
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOfflineMarketLeadsClaimRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

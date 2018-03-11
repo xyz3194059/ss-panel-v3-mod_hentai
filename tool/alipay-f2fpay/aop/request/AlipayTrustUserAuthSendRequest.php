@@ -7,7 +7,7 @@
  */
 class AlipayTrustUserAuthSendRequest
 {
-	/** 
+	/**
 	 * 申请授权的用户信息
 	 **/
 	private $aliTrustUserInfo;
@@ -21,7 +21,7 @@ class AlipayTrustUserAuthSendRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setAliTrustUserInfo($aliTrustUserInfo)
 	{
 		$this->aliTrustUserInfo = $aliTrustUserInfo;

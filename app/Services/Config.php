@@ -33,7 +33,7 @@ class Config
             "enable_telegram" => self::get("enable_telegram"),
 	    "inviteNumback" => self::get("inviteNumback"),
 	    "payment_system" => self::get("payment_system")
-			
+
          ];
     }
 

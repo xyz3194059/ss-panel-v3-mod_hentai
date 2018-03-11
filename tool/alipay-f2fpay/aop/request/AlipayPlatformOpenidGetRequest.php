@@ -7,7 +7,7 @@
  */
 class AlipayPlatformOpenidGetRequest
 {
-	/** 
+	/**
 	 * 业务内容，其中包括商户partner_id和用户ID列表user_ids两块
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayPlatformOpenidGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

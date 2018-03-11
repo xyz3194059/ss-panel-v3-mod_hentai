@@ -26,12 +26,12 @@ class Duoshuo
                 'email' => $user->email,
                 'role' => $role
                 );
-                
-            
-            
+
+
+
             $param = http_build_query($data, '', '&');
-            
-            
+
+
 
             $sock = new HTTPSocket;
             $sock->connect("api.duoshuo.com", 80);

@@ -7,7 +7,7 @@
  */
 class AlipayEcoMycarPromoTicketSyncRequest
 {
-	/** 
+	/**
 	 * ISV有新的卡券信息同步到车主服务平台
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayEcoMycarPromoTicketSyncRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

@@ -7,27 +7,27 @@
  */
 class AlipayEcapiprodDrawndnDrawndnlistQueryRequest
 {
-	/** 
+	/**
 	 * 授信编号
 	 **/
 	private $creditNo;
-	
-	/** 
+
+	/**
 	 * 身份证号码
 	 **/
 	private $entityCode;
-	
-	/** 
+
+	/**
 	 * 客户的姓名
 	 **/
 	private $entityName;
-	
-	/** 
+
+	/**
 	 * 融资平台分配给ISV的编码
 	 **/
 	private $isvCode;
-	
-	/** 
+
+	/**
 	 * 融资平台分配给小贷公司的机构编码
 	 **/
 	private $orgCode;
@@ -41,7 +41,7 @@ class AlipayEcapiprodDrawndnDrawndnlistQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setCreditNo($creditNo)
 	{
 		$this->creditNo = $creditNo;

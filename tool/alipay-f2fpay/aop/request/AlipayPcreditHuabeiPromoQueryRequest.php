@@ -7,7 +7,7 @@
  */
 class AlipayPcreditHuabeiPromoQueryRequest
 {
-	/** 
+	/**
 	 * 入参大字段
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayPcreditHuabeiPromoQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

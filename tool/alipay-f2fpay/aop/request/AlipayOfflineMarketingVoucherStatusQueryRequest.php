@@ -7,7 +7,7 @@
  */
 class AlipayOfflineMarketingVoucherStatusQueryRequest
 {
-	/** 
+	/**
 	 * 券状态查询
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOfflineMarketingVoucherStatusQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

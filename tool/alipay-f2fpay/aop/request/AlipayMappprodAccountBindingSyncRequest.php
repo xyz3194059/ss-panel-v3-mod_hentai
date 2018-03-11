@@ -7,12 +7,12 @@
  */
 class AlipayMappprodAccountBindingSyncRequest
 {
-	/** 
+	/**
 	 * 扩展数据，格式：JSON字符串。预留，暂时没用
 	 **/
 	private $extInfo;
-	
-	/** 
+
+	/**
 	 * 用户的商户会员号
 	 **/
 	private $userAccountNo;
@@ -26,7 +26,7 @@ class AlipayMappprodAccountBindingSyncRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setExtInfo($extInfo)
 	{
 		$this->extInfo = $extInfo;

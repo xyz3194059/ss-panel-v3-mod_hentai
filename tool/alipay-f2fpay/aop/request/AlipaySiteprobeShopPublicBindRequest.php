@@ -7,7 +7,7 @@
  */
 class AlipaySiteprobeShopPublicBindRequest
 {
-	/** 
+	/**
 	 * 店铺Id
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipaySiteprobeShopPublicBindRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

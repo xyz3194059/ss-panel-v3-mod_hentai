@@ -7,48 +7,48 @@
  */
 class AlipayMobileCodeCreateRequest
 {
-	/** 
+	/**
 	 * 业务关联ID。比如订单号,userId，业务连接等
 	 **/
 	private $bizLinkedId;
-	
-	/** 
+
+	/**
 	 * 类似产品名称，根据该值决定码存储类型；新接业务需要找码平台技术配置
 	 **/
 	private $bizType;
-	
-	/** 
+
+	/**
 	 * 业务自定义,码平台不用理解。一定要传json字符串。
 	 **/
 	private $contextStr;
-	
-	/** 
+
+	/**
 	 * 如果是true，则扫一扫下发跳转地址直接取自bizLinkedId
 否则，从路由信息里取跳转地址
 	 **/
 	private $isDirect;
-	
-	/** 
+
+	/**
 	 * 备注信息字段
 	 **/
 	private $memo;
-	
-	/** 
+
+	/**
 	 * 发码来源，业务自定
 	 **/
 	private $sourceId;
-	
-	/** 
+
+	/**
 	 * 编码启动时间（yyy-MM-dd hh:mm:ss），为空表示立即启用
 	 **/
 	private $startDate;
-	
-	/** 
+
+	/**
 	 * 超时时间,单位秒；若不传则为永久。发码超时时间需要找码平台技术评估
 	 **/
 	private $timeout;
-	
-	/** 
+
+	/**
 	 * 支付宝用户id
 	 **/
 	private $userId;
@@ -62,7 +62,7 @@ class AlipayMobileCodeCreateRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizLinkedId($bizLinkedId)
 	{
 		$this->bizLinkedId = $bizLinkedId;

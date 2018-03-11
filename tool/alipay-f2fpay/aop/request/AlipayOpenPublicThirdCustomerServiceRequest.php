@@ -7,7 +7,7 @@
  */
 class AlipayOpenPublicThirdCustomerServiceRequest
 {
-	/** 
+	/**
 	 * 服务窗第三方渠道商配置接口，用于记录服务窗商户授权的第三方渠道商
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOpenPublicThirdCustomerServiceRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

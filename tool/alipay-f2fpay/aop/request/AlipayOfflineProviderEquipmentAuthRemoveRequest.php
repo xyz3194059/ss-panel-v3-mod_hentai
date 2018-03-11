@@ -7,7 +7,7 @@
  */
 class AlipayOfflineProviderEquipmentAuthRemoveRequest
 {
-	/** 
+	/**
 	 * 天猫机具解绑接口
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOfflineProviderEquipmentAuthRemoveRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

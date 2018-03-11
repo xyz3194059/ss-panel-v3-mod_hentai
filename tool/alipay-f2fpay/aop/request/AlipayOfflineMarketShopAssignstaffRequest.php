@@ -7,7 +7,7 @@
  */
 class AlipayOfflineMarketShopAssignstaffRequest
 {
-	/** 
+	/**
 	 * 分配门店给员工
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayOfflineMarketShopAssignstaffRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

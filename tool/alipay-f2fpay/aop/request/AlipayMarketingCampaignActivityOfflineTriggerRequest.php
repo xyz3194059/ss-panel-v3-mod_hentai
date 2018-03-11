@@ -7,7 +7,7 @@
  */
 class AlipayMarketingCampaignActivityOfflineTriggerRequest
 {
-	/** 
+	/**
 	 * 商户创建活动后，需营销核心平台，来发奖。
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayMarketingCampaignActivityOfflineTriggerRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

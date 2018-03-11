@@ -6,16 +6,12 @@
 				<h1 class="content-heading">使用教程</h1>
 			</div>
 		</div>
-
 		<div class="container">
 			<section class="content-inner margin-top-no">
 				<div class="ui-card-wrap">
-
-
 						<div class="col-lg-12 col-md-12">
 							<div class="card">
 								<div class="card-main">
-
 									<div class="card-inner margin-bottom-no">
 										<nav class="tab-nav margin-top-no">
 														<ul class="nav nav-list">
@@ -25,7 +21,7 @@
 															<li>
 																<a class="waves-attach" data-toggle="tab" href="#all_ssr_mac"><i class="fas fa-laptop fa-lg"></i>&nbsp;MacOS</a>
 															</li>
-                                                          <li>
+															<li>
 																<a class="waves-attach" data-toggle="tab" href="#all_ssr_linux"><i class="fab fa-linux fa-lg"></i>&nbsp;Linux</a>
 															</li>
 															<li>

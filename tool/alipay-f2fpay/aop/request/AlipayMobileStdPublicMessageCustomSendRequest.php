@@ -7,7 +7,7 @@
  */
 class AlipayMobileStdPublicMessageCustomSendRequest
 {
-	/** 
+	/**
 	 * 业务内容，其中包括消息类型msgType、消息体和消息接受人toUserId三大块，具体参见“表1-2 服务窗单发客服消息的biz_content参数说明”。
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayMobileStdPublicMessageCustomSendRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

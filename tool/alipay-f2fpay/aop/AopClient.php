@@ -98,7 +98,7 @@ class AopClient {
 			$res = openssl_get_privatekey($priKey);
 		}
 
-		($res) or die('您使用的私钥格式错误，请检查RSA私钥配置'); 
+		($res) or die('您使用的私钥格式错误，请检查RSA私钥配置');
 
 		if ("RSA2" == $signType) {
 			openssl_sign($data, $sign, $res, OPENSSL_ALGO_SHA256);
@@ -206,16 +206,16 @@ class AopClient {
     /**
      * 生成用于调用收银台SDK的字符串
      * @param $request SDK接口的请求参数对象
-     * @return string 
+     * @return string
      * @author guofa.tgf
      */
 	public function sdkExecute($request) {
-		
+
 		$this->setupCharsets($request);
 
 		$params['app_id'] = $this->appId;
 		$params['method'] = $request->getApiMethodName();
-		$params['format'] = $this->format; 
+		$params['format'] = $this->format;
 		$params['sign_type'] = $this->signType;
 		$params['timestamp'] = date("Y-m-d H:i:s");
 		$params['alipay_sdk'] = $this->alipaySdkVersion;
@@ -238,7 +238,7 @@ class AopClient {
 		foreach ($params as &$value) {
 			$value = $this->characet($value, $params['charset']);
 		}
-		
+
 		return http_build_query($params);
 	}
 
@@ -311,7 +311,7 @@ class AopClient {
 
 		//print_r($apiParams);
 		$totalParams = array_merge($apiParams, $sysParams);
-		
+
 		//待签名字符串
 		$preSignStr = $this->getSignContent($totalParams);
 
@@ -322,7 +322,7 @@ class AopClient {
 
 			//拼接GET请求串
 			$requestUrl = $this->gatewayUrl."?".$preSignStr."&sign=".urlencode($totalParams["sign"]);
-			
+
 			return $requestUrl;
 		} else {
 			//拼接表单字符串
@@ -338,7 +338,7 @@ class AopClient {
      * @return 提交表单HTML文本
      */
 	protected function buildRequestForm($para_temp) {
-		
+
 		$sHtml = "<form id='alipaysubmit' name='alipaysubmit' action='".$this->gatewayUrl."?charset=".trim($this->postCharset)."' method='POST'>";
 		while (list ($key, $val) = each ($para_temp)) {
 			if (false === $this->checkEmpty($val)) {
@@ -351,9 +351,9 @@ class AopClient {
 
 		//submit按钮控件请不要含有name属性
         $sHtml = $sHtml."<input type='submit' value='ok' style='display:none;''></form>";
-		
+
 		$sHtml = $sHtml."<script>document.forms['alipaysubmit'].submit();</script>";
-		
+
 		return $sHtml;
 	}
 
@@ -514,7 +514,7 @@ class AopClient {
 	 * @return string
 	 */
 	function characet($data, $targetCharset) {
-		
+
 		if (!empty($data)) {
 			$fileType = $this->fileCharset;
 			if (strcasecmp($fileType, $targetCharset) != 0) {
@@ -602,7 +602,7 @@ class AopClient {
 			$res = openssl_get_publickey($pubKey);
 		}
 
-		($res) or die('支付宝RSA公钥错误。请检查公钥文件格式是否正确');  
+		($res) or die('支付宝RSA公钥错误。请检查公钥文件格式是否正确');
 
 		//调用openssl内置方法验签，返回bool值
 

@@ -7,7 +7,7 @@
  */
 class AlipaySiteprobeShopInfoAddRequest
 {
-	/** 
+	/**
 	 * Json格式的业务参数，其中
 third_party_shop_id ：第三方ShopId（必须）
 third_party_shop_name ：第三方店铺名称（必须）
@@ -25,7 +25,7 @@ h5_rul ：广告页URL（可选）
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

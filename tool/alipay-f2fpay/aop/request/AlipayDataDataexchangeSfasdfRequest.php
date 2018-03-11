@@ -7,7 +7,7 @@
  */
 class AlipayDataDataexchangeSfasdfRequest
 {
-	/** 
+	/**
 	 * 1232456374
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayDataDataexchangeSfasdfRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

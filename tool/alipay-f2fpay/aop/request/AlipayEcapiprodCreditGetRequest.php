@@ -7,27 +7,27 @@
  */
 class AlipayEcapiprodCreditGetRequest
 {
-	/** 
+	/**
 	 * 授信编号
 	 **/
 	private $creditNo;
-	
-	/** 
+
+	/**
 	 * 身份证号码
 	 **/
 	private $entityCode;
-	
-	/** 
+
+	/**
 	 * 客户的姓名
 	 **/
 	private $entityName;
-	
-	/** 
+
+	/**
 	 * 每一个对接融资平台的系统提供商都有一个机构号
 	 **/
 	private $isvCode;
-	
-	/** 
+
+	/**
 	 * 融资平台分配给小贷公司的机构编码
 	 **/
 	private $orgCode;
@@ -41,7 +41,7 @@ class AlipayEcapiprodCreditGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setCreditNo($creditNo)
 	{
 		$this->creditNo = $creditNo;

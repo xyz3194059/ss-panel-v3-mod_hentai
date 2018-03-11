@@ -7,7 +7,7 @@
  */
 class AlipaySiteprobeUserInfoGetRequest
 {
-	/** 
+	/**
 	 * JSON格式的业务参数，目前接收的值包括支付宝钱包生成的OTP token和店铺Id,其中店铺Id可选
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipaySiteprobeUserInfoGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

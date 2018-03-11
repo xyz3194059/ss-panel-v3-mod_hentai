@@ -7,7 +7,7 @@
  */
 class AlipaySiteprobeDeviceInfoSearchRequest
 {
-	/** 
+	/**
 	 * Json格式的业务参数，其中:
 shopId ：店铺Id
 offset ：起始位置
@@ -24,7 +24,7 @@ limit ：返回数量（最多200条）
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;

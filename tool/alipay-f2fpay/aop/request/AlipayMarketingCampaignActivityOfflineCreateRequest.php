@@ -7,7 +7,7 @@
  */
 class AlipayMarketingCampaignActivityOfflineCreateRequest
 {
-	/** 
+	/**
 	 * 能够创商户建领券活动,后续支持
 	 **/
 	private $bizContent;
@@ -21,7 +21,7 @@ class AlipayMarketingCampaignActivityOfflineCreateRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
-	
+
 	public function setBizContent($bizContent)
 	{
 		$this->bizContent = $bizContent;
