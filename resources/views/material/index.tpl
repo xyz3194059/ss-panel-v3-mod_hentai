@@ -1,6 +1,5 @@
 {include file='header_n.tpl'}
 <div id="wrapper">
-	<!--首页开始-->
 	<header id="header">
 		<div class="logo"> <span class="fas fa-rocket"></span> </div> {if $user->isLogin}
 		<div class="content">
@@ -11,11 +10,11 @@
 		</div>
 		<nav>
 			<ul>
-				<li><a href="#1">簡介</a></li>
+				<li><a href="#info">簡介</a></li>
 				<li><a href="/user">用戶中心</a></li>
-				<li><a href="#5">下載</a></li>
+				<li><a href="#download">下載</a></li>
 			</ul>
-		</nav> else}
+		</nav> {else}
 		<div class="content">
 			<div class="inner">
 				<h1>{$config["appName"]}</h1>
@@ -24,47 +23,39 @@
 		</div>
 		<nav>
 			<ul>
-				<li><a href="#1">簡介</a></li>
+				<li><a href="#info">簡介</a></li>
 				<li><a href="/auth/login">登錄</a></li>
 				<li><a href="/auth/register">註冊</a></li>
-				<li><a href="#4">聯系</a></li>
-				<li><a href="#5">下載</a></li>
+				<li><a href="#contact">聯系</a></li>
+				<li><a href="#download">下載</a></li>
 			</ul>
 		</nav> {/if} </header>
-	<!--首页结束-->
 	<div id="main">
-		<!--标签1开始-->
-		<article id="1">
+		<article id="info">
 			<h2 class="major">簡介</h2>
 			<p>穿越時空</p>
 			<p>跨越阻礙</p>
 		</article>
-		<!--   简介修改示例: <p> 123</p>  一个  <p> 123</p>  为一行，请不要删除 </article>-->\
-		<!--标签4开始-->
-		<article id="4">
+		<article id="contact">
 			<h2 class="major">聯繫我們</h2>
 			<ul class="icons">
 				<p>請在下方選擇一個聯繫方式，聯繫我們</p>
 				<li> <a target="_blank" href="https://t.me/joinchat/GUrO5g_Klk717hXJR-EzKA" class="fab fa-telegram-plane">
 										<span class="label">Telegrame</span>
-									</a>
-					<a href="mailto:monkeyblacktech97@gmail.com" class="far fa-envelope">
-						<!-- 请在fontawesome.com寻找替换图标 href替换链接 --><span class="label">Email</span> </a>
-				</li>
+									</a> <a href="mailto:monkeyblacktech97@gmail.com" class="far fa-envelope">
+						<span class="label">Email</span></a> </li>
 			</ul>
 		</article>
-		<!--标签5开始-->
-		<article id="5">
+		<article id="download">
 			<h2 class="major">软件下載</h2>
 			<ul>
-				<li><a href="/ssr-download/ssr-win.7z" class="fab fa-windows fa-lg">&nbsp;Windows</a></li>
-				<li><a href="/ssr-download/ssr-mac.dmg" class="fas fa-laptop fa-lg">&nbsp;MacOS</a></li>
-				<li><a href="/ssr-download/ssr-android.apk" class="icon fa-android">&nbsp;Android</a></li>
-				<li><a href="#ios" class="fab fa-app-store-ios fa-lg">&nbsp;iOS</a></li>
-				<li><a href="/ssr-download/SSTap.7z" class="fas fa-gamepad fa-lg">&nbsp;Win游戏专用</a></li>
+				<li><a href="/ssr-download/ssr-win.7z" class="fab fa-windows">&nbsp;Windows</a></li>
+				<li><a href="/ssr-download/ssr-mac.dmg" class="fas fa-laptop">&nbsp;MacOS</a></li>
+				<li><a href="/ssr-download/ssr-android.apk" class="fab fa-android">&nbsp;Android</a></li>
+				<li><a href="#ios" class="fab fa-apple">&nbsp;iOS</a></li>
+				<li><a href="/ssr-download/SSTap.7z" class="fas fa-gamepad">&nbsp;Win游戏专用</a></li>
 			</ul>
 		</article>
-		<!--标签5开始-->
 		<article id="login">
 			<h2 class="major">登錄</h2>
 			<form method="post" action="javascript:void(0);">
@@ -80,5 +71,4 @@
 				<p color class="h5 margin-top-sm text-black-hint" id="msg"></p>
 			</div>
 		</article>
-		<!--全部标签结束-->
 	</div> {include file='footer_n.tpl'}

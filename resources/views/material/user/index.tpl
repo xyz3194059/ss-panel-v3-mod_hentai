@@ -1,17 +1,5 @@
- {include file='user/main.tpl'} {$ssr_prefer = URL::SSRCanConnect($user, 0)}
-<style>
-  .kaobei {
-    -webkit-transition-duration: 0.4s;
-    /* Safari */
-    transition-duration: 0.4s;
-  }
-
-  .kaobei:hover {
-    background-color: #ff7ffe;
-    /* prink */
-    color: white;
-  }
-</style>
+ {include file='user/main.tpl'}
+ {$ssr_prefer = URL::SSRCanConnect($user, 0)}
 <main class="content">
   <div class="content-header ui-content-header">
     <div class="container">
