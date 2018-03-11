@@ -1,7 +1,7 @@
 {include file='header_n.tpl'}
 <div id="wrapper">
 	<header id="header">
-		<div class="logo"> <span class="fas fa-rocket fa-3x"></span>
+		<div class="logo"> <li class="fas fa-rocket fa-3x"></li>
 		</div>
 		{if $user->isLogin}
 		<div class="content">
@@ -84,7 +84,7 @@
 				<div class="field half"> <label for="passwd">密碼</label> <input type="password" name="Password" id="passwd" /> </div>
 				<ul class="actions">
 					<li><input id="login" type="submit" value="登錄" class="special" /></li>
-					<li><input type="reset" value="清空" /></li>
+					<li><input type="reset" value="清空"/></li>
 				</ul>
 			</form>
 			<div class="field half"> <input value="week" id="remember_me" name="remember_me" type="checkbox" checked> <label for="remember_me">記住我</label> </div> <br>

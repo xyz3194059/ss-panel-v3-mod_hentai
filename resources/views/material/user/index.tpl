@@ -1,4 +1,5 @@
-{include file='user/main.tpl'} {$ssr_prefer = URL::SSRCanConnect($user, 0)}
+{include file='user/main.tpl'}
+{$ssr_prefer = URL::SSRCanConnect($user, 0)}
 <main class="content">
   <div class="content-header ui-content-header">
     <div class="container">
@@ -129,8 +130,10 @@
                         <p><a class="btn btn-brand btn-flat waves-attach" href="/user/url_reset"><span class="icon">autorenew</span>&nbsp;重置我的订阅链接</a></p>
                       </div>
                     </div>
-              </div> <i class="fas fa-bolt fa-lg"></i> 訂閱地址：<input type="text" class="input form-control form-control-monospace" name="input1" readonly value="{$baseUrl}/link/{$ssr_sub_token}?mu=1" readonly="true"><button class="copy-text btn btn-subscription"
-                type="button" data-clipboard-text="{$baseUrl}/link/{$ssr_sub_token}?mu=1">点击拷贝订阅地址</button><br> </div>
+              </div> <i class="fas fa-bolt fa-lg"></i> 訂閱地址：
+							<input type="text" class="input form-control form-control-monospace" name="input1" readonly value="{$baseUrl}/link/{$ssr_sub_token}?mu=1" readonly="true">
+							<button class="copy-text btn btn-subscription" type="button" data-clipboard-text="{$baseUrl}/link/{$ssr_sub_token}?mu=1">点击拷贝订阅地址</button><br>
+						</div>
           </div>
         </div>
         <div class="col-lg-6 col-md-6">
@@ -244,12 +247,7 @@
 										<p class="card-heading">討論區</p>
 											<div class="ds-thread" data-thread-key="0" data-title="index" data-url="{$baseUrl}/user/"></div>
 											<script type="text/javascript">
-											var duoshuoQuery = {
-
-											short_name:"{$duoshuo_shortname}"
-
-
-											};
+											var duoshuoQuery = {short_name:"{$duoshuo_shortname}"};
 												(function() {
 													var ds = document.createElement('script');
 													ds.type = 'text/javascript';ds.async = true;
