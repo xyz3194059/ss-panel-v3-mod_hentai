@@ -1,11 +1,29 @@
 {include file='header_n.tpl'}
 <div id="wrapper">
 	<header id="header">
-		<div class="logo"> <span class="fas fa-rocket"></span> </div> {if $user->isLogin}
+		<div class="logo"> <span class="fas fa-rocket fa-5x"></span>
+		</div>
+		{if $user->isLogin}
 		<div class="content">
 			<div class="inner">
-				<p>用戶：<code>{$user->user_name}</code> 等級： {if $user->class!=0} <code>VIP{$user->class}</code> {else} <code>免費</code> {/if} 過期時間： {if $user->class_expire!="1989-06-04 00:05:00"} <code>{$user->class_expire}</code> {else} <code>不過期</code> {/if} </p>
-				<p>總流量：<code>{$user->enableTraffic()}</code> 已用流量：<code>{$user->usedTraffic()}</code> 剩餘流量：<code>{$user->unusedTraffic()}</code></p>
+				<p>用戶：<code>{$user->user_name}
+				</code> 等級：
+				{if $user->class!=0}
+					<code>VIP{$user->class}</code>
+				{else}
+					<code>免費</code>
+				{/if}
+				過期時間：
+				{if $user->class_expire!="1989-06-04 00:05:00"}
+					<code>{$user->class_expire}</code>
+				{else}
+					<code>不過期</code>
+				{/if}
+			</p>
+				<p>總流量：<code>{$user->enableTraffic()}</code>
+					已用流量：<code>{$user->usedTraffic()}</code>
+					剩餘流量：<code>{$user->unusedTraffic()}</code>
+				</p>
 			</div>
 		</div>
 		<nav>
@@ -14,7 +32,8 @@
 				<li><a href="/user">用戶中心</a></li>
 				<li><a href="#download">下載</a></li>
 			</ul>
-		</nav> {else}
+		</nav>
+		{else}
 		<div class="content">
 			<div class="inner">
 				<h1>{$config["appName"]}</h1>
@@ -29,7 +48,9 @@
 				<li><a href="#contact">聯系</a></li>
 				<li><a href="#download">下載</a></li>
 			</ul>
-		</nav> {/if} </header>
+		</nav>
+		{/if}
+	</header>
 	<div id="main">
 		<article id="info">
 			<h2 class="major">簡介</h2>

@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
+<!DOCTYPE HTML>
+<html lang="zh-cmn-Hans">
 
 <head>
 	<meta charset="UTF-8">
-	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<meta content="ie=edge,chrome=1" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" name="viewport">
 	<meta name="theme-color" content="#3f51b5">
 	<title>{$config["appName"]}</title>
 	<!-- css -->
@@ -15,10 +15,10 @@
 	<!-- ... -->
 </head>
 <style>
-	.divcss5 {
-		position: fixed;
-		bottom: 0;
-	}
+.divcss5 {
+	position: fixed;
+	bottom: 0;
+}
 </style>
 
 <body class="page-brand">
