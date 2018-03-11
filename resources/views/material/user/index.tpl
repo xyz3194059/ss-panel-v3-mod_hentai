@@ -19,7 +19,7 @@
 
 		<div class="content-header ui-content-header">
 			<div class="container">
-				<h1 class="content-heading">用户中心</h1>
+				<h1 class="content-heading">用戶中心</h1>
 			</div>
 		</div>
 		<div class="container">
@@ -31,142 +31,126 @@
 							<div class="card">
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
-                                     <p class="card-heading"> <i class="icon icon-md">notifications_active</i>公告栏</p>
-										<!--<p>其他公告请到<a href="/user/announcement"/>公告面板</a>查看。</p>-->
+                                     <p class="card-heading"><i class="fas fa-bell fa-2x"></i>最新公告</p>
 										{if $ann != null}
 										<p>{$ann->content}</p>
 										{/if}
+                    <p>歷史公告前往<button href="/user/announcement"/>公告欄</p>
 									</div>
-
 								</div>
 							</div>
-
 							<div class="card">
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
-										<p class="card-heading"><i class="icon icon-md">phonelink</i> 快速添加节点</p>
-										<nav class="tab-nav margin-top-no">
-											<ul class="nav nav-list">
+										<p class="card-heading"><i class="fas fa-cog fa-2x"></i>&nbsp;快速添加節點</p>
+										<!--<nav class="tab-nav margin-top-no">
+												<ul class="nav nav-list">
 												<li {if $ssr_prefer}class="active"{/if}>
-													<a class="waves-attach" data-toggle="tab" href="#all_ssr"><i class="icon icon-lg">airplanemode_active</i>&nbsp;ShadowsocksR</a>
+														<a class="waves-attach" data-toggle="tab" href="#all_ssr"><i class="icon icon-lg">airplanemode_active</i>&nbsp;ShadowsocksR</a>
 												</li>
-									<!--			<li {if !$ssr_prefer}class="active"{/if}>
-													<a class="waves-attach" data-toggle="tab" href="#all_ss"><i class="icon icon-lg">flight_takeoff</i>&nbsp;不可用</a>
-												</li>  -->
+											<li {if !$ssr_prefer}class="active"{/if}>
+													<a class="waves-attach" data-toggle="tab" href="#all_ss"><i class="icon icon-lg">flight_takeoff</i>&nbsp;Shadowsocks</a>
+												</li>
 											</ul>
-										</nav>
+										</nav> -->
 										<div class="card-inner">
 											<div class="tab-content">
 												<div class="tab-pane fade {if $ssr_prefer}active in{/if}" id="all_ssr">
 													{$pre_user = URL::cloneUser($user)}
-
 													<nav class="tab-nav margin-top-no">
 														<ul class="nav nav-list">
 															<li class="active">
-																<a class="waves-attach" data-toggle="tab" href="#all_ssr_windows"><i class="icon icon-lg">desktop_windows</i>&nbsp;Windows</a>
+																<a class="waves-attach" data-toggle="tab" href="#all_ssr_windows"><i class="fab fa-windows fa-lg"></i>&nbsp;Windows</a>
 															</li>
 															<li>
-																<a class="waves-attach" data-toggle="tab" href="#all_ssr_mac"><i class="icon icon-lg">laptop_mac</i>&nbsp;MacOS</a>
+																<a class="waves-attach" data-toggle="tab" href="#all_ssr_mac"><i class="fas fa-laptop fa-lg"></i>&nbsp;MacOS</a>
 															</li>
                                                           <li>
-																<a class="waves-attach" data-toggle="tab" href="#all_ssr_linux"><i class="icon icon-lg">dvr</i>&nbsp;Linux</a>
+																<a class="waves-attach" data-toggle="tab" href="#all_ssr_linux"><i class="fab fa-linux fa-lg"></i>&nbsp;Linux</a>
 															</li>
 															<li>
-																<a class="waves-attach" data-toggle="tab" href="#all_ssr_ios"><i class="icon icon-lg">phone_iphone</i>&nbsp;iOS</a>
+																<a class="waves-attach" data-toggle="tab" href="#all_ssr_ios"><i class="fab fa-app-store-ios fa-lg"></i>&nbsp;iOS</a>
 															</li>
 															<li>
-																<a class="waves-attach" data-toggle="tab" href="#all_ssr_android"><i class="icon icon-lg">android</i>&nbsp;Android</a>
+																<a class="waves-attach" data-toggle="tab" href="#all_ssr_android"><i class="fab fa-android fa-lg"></i>&nbsp;Android</a>
 															</li>
 															<li>
 																<a class="waves-attach" data-toggle="tab" href="#all_ssr_router"><i class="icon icon-lg">router</i>&nbsp;路由器</a>
 															</li>
                                                           <li>
-																<a class="waves-attach" data-toggle="tab" href="#all_ssr_game"><i class="icon icon-lg">videogame_asset</i>&nbsp;游戏端</a>
+																<a class="waves-attach" data-toggle="tab" href="#all_ssr_game"><i class="fas fa-gamepad fa-lg">&nbsp;遊戲端</a>
 															</li>
              												<li>
-																<a class="waves-attach" data-toggle="tab" href="#all_ssr_info"><i class="icon icon-lg">info_outline</i>&nbsp;连接信息</a>
+																<a class="waves-attach" data-toggle="tab" href="#all_ssr_info"><i class="fas fa-link fa-lg">info_outline</i>&nbsp;連接信息</a>
 															</li>
 														</ul>
 													</nav>
-													
+
 													<div class="tab-pane fade active in" id="all_ssr_windows">
-                                                        {$user = URL::getSSRConnectInfo($pre_user)}
+                            {$user = URL::getSSRConnectInfo($pre_user)}
 														{$ssr_url_all = URL::getAllUrl($pre_user, 0, 0)}
 														{$ssr_url_all_mu = URL::getAllUrl($pre_user, 1, 0)}
-														<p><span class="icon icon-lg text-white">looks_one</span><a href="/ssr-download/ssr-win.7z"> 点击我下载</a></p>
-                                                          <p><span class="icon icon-lg text-white">looks_two</span> 解压至任意磁盘</p>
-                                                          <p><span class="icon icon-lg text-white">looks_3</span> 运行程序</p>
+														  <span class="icon icon-lg text-white">looks_1</span><button href="/ssr-download/ssr-win.7z"> 下载</button>
+                              <p><span class="icon icon-lg text-white">looks_2</span> 解壓至任意硬盤；</p>
+                              <p><span class="icon icon-lg text-white">looks_3</span> 運行程序；</p>
 															<!--<code>(1)</code>下载<a href="/user/getpcconf?is_mu=0&is_ss=0">普通端口</a>或者<a href="/user/getpcconf?is_mu=1&is_ss=0">这个（单端口多用户）</a>，右键小飞机 服务器 -- 从配置文件导入服务器，选择这个文件<br>
 															<code>(2)(推荐)</code>点击<a class="copy-text" data-clipboard-text="{$ssr_url_all}"> 这里（普通端口）</a>或者<a class="copy-text" data-clipboard-text="{$ssr_url_all}"> 这个(单端口多用户）</a>，然后右键小飞机 -- 从剪贴板复制地址<br> -->
-															<p> <span class="icon icon-lg text-white">looks_4</span> 任务栏右下角右键纸飞机图标--服务器订阅--SSR服务器订阅设置，将订阅链接设置为下面的地址，确定之后再更新 SSR 服务器订阅。</p> 
-															<p> <span class="icon icon-lg text-white">looks_5</span> 然后选择一个合适的服务器，代理规则选“绕过局域网和大陆”，然后即可上网。</p> 
-														<p><span class="icon icon-lg text-white">flash_auto</span> 订阅地址：<input type="text" class="input form-control form-control-monospace" name="input1" readonly value="{$baseUrl}/link/{$ssr_sub_token}?mu=0" readonly="true"><button class="copy-text btn btn-subscription" type="button" data-clipboard-text="{$baseUrl}/link/{$ssr_sub_token}?mu=0">点击拷贝订阅地址</button><br>
-														<!--	单端口多用户端口订阅地址：<code>{$baseUrl}/link/{$ssr_sub_token}?mu=1</code>  -->
-														</p>
-                                                       <p><a href="/user/announcement">点击这里查看Windows傻瓜式教程</a></p> 
+															<p> <span class="icon icon-lg text-white">looks_4</span> 右鍵右下角任務欄中<i class="fas fa-paper-plane fa-flip-horizontal"></i>圖標--選擇服務器訂閱--SSR服務器訂閱設置，將訂閱鏈接設置在下面的地址，最後確定再更新 SSR 服務器訂閱；</p>
+															<p> <span class="icon icon-lg text-white">looks_5</span> 然後在服務器選項中--選擇想用的線路--系統代理模式選擇為“PAC模式--”代理規則為“繞過局域網和大陸”，即可上網。</p>
+                              <p>要是還不了解可以查閱<button href="/user/help">Windows圖片教程</button>
 													</div>
 													<div class="tab-pane fade" id="all_ssr_mac">
-															<p><span class="icon icon-lg text-white">looks_one</span><a href="/ssr-download/ssr-mac.dmg"> 点击我下载</a></p>
-                                                      		<p><span class="icon icon-lg text-white">looks_two</span> 打开下载的Dmg文件</p>
-                                                     	    <p><span class="icon icon-lg text-white">looks_3</span> 把ShadowsocksX拖入到Finder的应用程序列表(Applications)</p>
-                                                      		<p><span class="icon icon-lg text-white">looks_4</span> 打开Launchapad里的ShadowsocksX</p>
-                                                      		<p><span class="icon icon-lg text-white">looks_5</span> 菜单栏的纸飞机图标-服务器-服务器订阅填入以下订阅地址，更新后出现您的节点</p>
-                                                      <p><span class="icon icon-lg text-white">looks_6</span> 菜单栏的纸飞机图标-打开shadowsocks</p><!-- ，然后下载<a href="/user/getpcconf?is_mu=0&is_ss=0">普通端口</a>或者<a  href="/user/getpcconf?is_mu=1&is_ss=0">这个（单端口多用户）</a>，运行程序，小飞机上右键 服务器列表 子菜单 的 “导入服务器配置文件...” 导入这个文件，然后选择一个合适的服务器，更新一下PAC，然后开启系统代理即可上网。</p>	-->													
-                                        				<p><span class="icon icon-lg text-white">flash_auto</span> 订阅地址：<input type="text" class="input form-control form-control-monospace" name="input1" readonly value="{$baseUrl}/link/{$ssr_sub_token}?mu=0" readonly="true"><button class="copy-text btn btn-subscription" type="button" data-clipboard-text="{$baseUrl}/link/{$ssr_sub_token}?mu=0">点击拷贝订阅地址</button><br>
-														<!--	单端口多用户端口订阅地址：<code>{$baseUrl}/link/{$ssr_sub_token}?mu=1</code>   -->
-                                                      </p>
-                                                      <p><a href="/user/announcement">点击这里查看Mac傻瓜式教程</a></p> 
+															<p><span class="icon icon-lg text-white">looks_one</span><a href="/ssr-download/ssr-mac.dmg"> 下載</a></p>
+                                                      		<p><span class="icon icon-lg text-white">looks_two</span> 將文件拖入到Finder的應用程序列表(Applications)；</p>
+                                                     	    <p><span class="icon icon-lg text-white">looks_3</span> 打開Launchapad裡的ShadowsocksX；</p>
+                                                      		<p><span class="icon icon-lg text-white">looks_4</span> 菜單欄的<i class="fas fa-paper-plane fa-flip-horizontal"></i>圖標--服務器--服務器訂閱填入以下訂閱地址--最後更新一下；</p>
+                                                      		<p><span class="icon icon-lg text-white">looks_5</span> 菜單欄中的圖標--打開shadowsocks。</p>
+                                                    <!-- ，然后下载<a href="/user/getpcconf?is_mu=0&is_ss=0">普通端口</a>或者<a  href="/user/getpcconf?is_mu=1&is_ss=0">这个（单端口多用户）</a>，运行程序，小飞机上右键 服务器列表 子菜单 的 “导入服务器配置文件...” 导入这个文件，然后选择一个合适的服务器，更新一下PAC，然后开启系统代理即可上网。</p>	-->
+                                                          <p>要是還不了解可以查閱<button href="/user/help">MacOS圖片教程</button>
 													</div>
                                                   <div class="tab-pane fade" id="all_ssr_linux">
-                                                      <p><a href="/user/announcement">点击这里查看Linux傻瓜式教程</a></p> 
+                                                    <p>要是還不了解可以查閱<button href="/user/help">Linux圖片教程</button>
 													</div>
 													<div class="tab-pane fade" id="all_ssr_ios">
-                                                        <p><span class="icon icon-lg text-white">looks_one</span> 切换<code>App Store</code>账号-ID:<code>shz7348@icloud.com</code> 密码<code>Qq#123456</code>注意特殊符号与大小写,如果显示需要解锁账号，请提交工单或邮件。（千万不要试图登陆iCloud，会上传您的照片与通讯录到这个账户上）</p>
-                                                         <p><span class="icon icon-lg text-white">looks_two</span> 商店搜索<code>Shadowrocket</code>下载安装</p>
-                                                      	<p><span class="icon icon-lg text-white">looks_3</span> 安装完成后切换回您自己的账号。（请务必切换回您自己的账户）</p>
-                                                      <!--  <p>两种方式导入所有节点</p> 
+                                                        <p><span class="icon icon-lg text-white">looks_one</span> 在<code>App Store</code>里切換賬號-ID:<code>shz7348@icloud.com</code> 密碼<code>Qq#123456</code>注意區分特殊符號與大小寫,如果提示需要賬號被鎖，請聯繫管理員（請勿在iCloud中登錄本賬號）；</p>
+                                                         <p><span class="icon icon-lg text-white">looks_two</span> 已內購列表中搜索<code>Shadowrocket</code>并安裝；</p>
+                                                      	<p><span class="icon icon-lg text-white">looks_3</span> 安裝完畢后請在App Store註銷賬號。</p>
+                                                      <!--  <p>两种方式导入所有节点</p>
                                                         <p>1、在 Safari 中点击 <a href="{$ssr_url_all}">这个（普通端口）</a>或者<a href="{$ssr_url_all_mu}">这个（单端口多用户）</a>，然后点击确定，就可以批量添加节点。</p> -->
-														<p><span class="icon icon-lg text-white">looks_3</span> 打开Shadowrocket软件后，点击右上角<span class="icon icon-lg text-white">add</span>，添加类型为<code>Subscribe</code>，URL填写以下地址即可自动更新节点</p>
-                                                      <p><span class="icon icon-lg text-white">looks_4</span> 选择任意节点点击连接，然后点击allow后解锁指纹</p>
-                                                      <p><span class="icon icon-lg text-white">looks_5</span> 注意：第一次连接可能不能用，导入后程序退出并重新打开程序后连接即可！</p>
-														<p><span class="icon icon-lg text-white">flash_auto</span> 订阅地址：<input type="text" class="input form-control form-control-monospace" name="input1" readonly value="{$baseUrl}/link/{$ssr_sub_token}?mu=0" readonly="true"><button class="copy-text btn btn-subscription" type="button" data-clipboard-text="{$baseUrl}/link/{$ssr_sub_token}?mu=0">点击拷贝订阅地址</button><br>
+														<p><span class="icon icon-lg text-white">looks_3</span> 打開軟件，點擊右上角<i class="fas fa-plus"></i>，選擇添加類型為<code>Subscribe</code>，URL填寫以下地址即可自動獲取線路信息</p>
+                                                      <p><span class="icon icon-lg text-white">looks_4</span> 在主界面選擇任意線路，并點擊連接按鈕即可使用。</p>
+                                                      <p><span class="icon icon-lg text-white">looks_5</span> 注意：第一次連接可能不能用，後台關閉軟件后，重新開啟軟件即可！</p>
 														<!--	单端口多用户端口订阅地址：<code>{$baseUrl}/link/{$ssr_sub_token}?mu=1</code>   -->
-                                                      <p><a href="/user/announcement">点击这里查看iOS傻瓜式教程</a></p> 
+                                                      <p>要是還不了解可以查閱<button href="/user/help">iOS圖片教程</button>
 													</div>
 													<div class="tab-pane fade" id="all_ssr_android">
-														<p><span class="icon icon-lg text-white">filter_1</span><a href="/ssr-download/ssr-android.apk"> 点击我下载</a>并安装</p>
-                                                      <p><span class="icon icon-lg text-white">filter_2</span> 打开App，点击右下角的<span class="icon icon-lg text-white">add</span>号图标</p>
-                                                        <p><span class="icon icon-lg text-white">filter_3</span> 添加/升级 SSR订阅</p>
-                                                          <p><span class="icon icon-lg text-white">filter_4</span> 添加订阅地址，输入以下订阅地址后确定</p>
-                                                      <p><span class="icon icon-lg text-white">filter_5</span> 订阅出现系统自带的订阅，请把系统自带的无效订阅<code>左滑删除</code>（自带影响订阅更新速度</p>
-                                                       <p><span class="icon icon-lg text-white">filter_6</span> 点击确定并升级</p>
-                                                      <p><span class="icon icon-lg text-white">filter_7</span> 选择任意节点</p>
-                                                      <p><span class="icon icon-lg text-white">filter_8</span> 路由选择：绕过局域网以及中国大陆</p>
-                                                        <p><span class="icon icon-lg text-white">filter_9</span> 点击右上角的纸飞机图标即可连接</p>
+														<p><span class="icon icon-lg text-white">filter_1</span><a href="/ssr-download/ssr-android.apk"> 下載</a></p>
+                                                      <p><span class="icon icon-lg text-white">filter_2</span> 打開軟件，點擊右下角<i class="fas fa-plus"></i>；</p>
+                                                        <p><span class="icon icon-lg text-white">filter_3</span> 添加/升級 SSR訂閱；</p>
+                                                          <p><span class="icon icon-lg text-white">filter_4</span> 添加訂閱地址，輸入以下訂閱地址并確定；</p>
+                                                      <p><span class="icon icon-lg text-white">filter_5</span> 訂閱會出現系統自帶的訂閱，請把系統自帶的無效訂閱<code>左滑刪除</code>（自帶影響訂閱刷新速度）；</p>
+                                                       <p><span class="icon icon-lg text-white">filter_6</span> 點擊確定并更新；</p>
+                                                      <p><span class="icon icon-lg text-white">filter_7</span> 選擇任意線路；</p>
+                                                      <p><span class="icon icon-lg text-white">filter_8</span> 路由選擇：繞過局域網以及中國大陸；</p>
+                                                        <p><span class="icon icon-lg text-white">filter_9</span> 點擊右上角的点击右上角<i class="fas fa-paper-plane fa-flip-horizontal"></i>，即可連接。</p>
                                                  <!--       <p>两种方式导入所有节点</p>
-                                                         <p>1、在手机上默认浏览器中点击<a href="{$ssr_url_all}">这个链接（普通端口）</a>或者<a href="{$ssr_url_all_mu}">这个链接（单端口多用户）</a>，然后点击确定，批量添加完节点，然后路由选择<code>绕过局域网和大陆</code>，右上角开启就可以上网了。同时提供一个 ACL (看您的需要)地址，<a href="/link/{$acl_token}">长按复制地址</a>到客户端里应用即可。</p> 
-                                                         <p>手机上默认浏览器中点击<a href="{$ssr_url_all}">这个链接（普通端口）</a>，同时提供一个 ACL (看您的需要)地址，<a href="/link/{$acl_token}">长按复制地址</a>到客户端里路由设置后更新即可。</p>-->													
-															<p><span class="icon icon-lg text-white">flash_auto</span> 订阅地址：<input type="text" class="input form-control form-control-monospace" name="input1" readonly value="{$baseUrl}/link/{$ssr_sub_token}?mu=0" readonly="true"><button class="copy-text btn btn-subscription" type="button" data-clipboard-text="{$baseUrl}/link/{$ssr_sub_token}?mu=0">点击拷贝订阅地址</button><br>
+                                                         <p>1、在手机上默认浏览器中点击<a href="{$ssr_url_all}">这个链接（普通端口）</a>或者<a href="{$ssr_url_all_mu}">这个链接（单端口多用户）</a>，然后点击确定，批量添加完节点，然后路由选择<code>绕过局域网和大陆</code>，右上角开启就可以上网了。同时提供一个 ACL (看您的需要)地址，<a href="/link/{$acl_token}">长按复制地址</a>到客户端里应用即可。</p>
+                                                         <p>手机上默认浏览器中点击<a href="{$ssr_url_all}">这个链接（普通端口）</a>，同时提供一个 ACL (看您的需要)地址，<a href="/link/{$acl_token}">长按复制地址</a>到客户端里路由设置后更新即可。</p>-->
 														<!--	单端口多用户端口订阅地址：<code>{$baseUrl}/link/{$ssr_sub_token}?mu=1</code>  -->
-                                                      <p><a href="/user/announcement">点击这里查看Android傻瓜式教程</a></p>
+                                                      <p>要是還不了解可以查閱<button href="/user/help">Android圖片教程</button>
 													</div>
 													<div class="tab-pane fade" id="all_ssr_router">
-													<p>路由器 刷入<a href="http://www.right.com.cn/forum/thread-161324-1-1.html">这个固件</a>，然后 SSH 登陆路由器，执行以下命令（导入普通端口）<br>
-														<code>wget -O- {$baseUrl}/link/{$router_token}?is_ss=0 | bash && echo -e "\n0 */3 * * * wget -O- {$baseUrl}/link/{$router_token}?is_ss=0 | bash\n">> /etc/storage/cron/crontabs/admin && killall crond && crond </code><br>
-														这个单端口多用户的<br>
+													<p>路由器刷入<a href="http://www.right.com.cn/forum/thread-161324-1-1.html">此固件</a>，然後SSH登入路由器然，執行以下命令<br>
 														<code>wget -O- {$baseUrl}/link/{$router_token_without_mu}?is_ss=0 | bash && echo -e "\n0 */3 * * * wget -O- {$baseUrl}/link/{$router_token_without_mu}?is_ss=0 | bash\n">> /etc/storage/cron/crontabs/admin && killall crond && crond </code><br>
-														执行完毕以后就可以到路由器的设置面板里随意选择 Shadowsocks 服务器进行连接了。</p>
+														執行完畢以後，就可以到路由器的設置面板里選擇 Shadowsocks 服務進行連接了。</p>
 													</div>
                                                     <div class="tab-pane fade" id="all_ssr_game">
-														 <p><span class="icon icon-lg text-white">looks_one</span><a href="/ssr-download/SSTap.7z">点击我下载</a></p>
-                                                       <p><span class="icon icon-lg text-white">looks_two</span> 安装，期间会安装虚拟网卡，请点击允许或确认</p>
-                                                       <p><span class="icon icon-lg text-white">looks_3</span> 打开桌面程序SSTap</p>
-                                                       <p><span class="icon icon-lg text-white">looks_4</span> 齿轮图标-SSR订阅-SSR订阅管理添加以下订阅链接即可</p>
-                                                       <p><span class="icon icon-lg text-white">looks_5</span> 更新后选择其中一个节点闪电图标测试节点-测试UDP转发...通过!（UDP通过即可连接并开始游戏），如测试不通过，点击齿轮图标设置DNS，推荐谷歌DNS</p>
-														<p><span class="icon icon-lg text-white">flash_auto</span>	订阅地址：<input type="text" class="input form-control form-control-monospace" name="input1" readonly value="{$baseUrl}/link/{$ssr_sub_token}?mu=0" readonly="true"><button class="copy-text btn btn-subscription" type="button" data-clipboard-text="{$baseUrl}/link/{$ssr_sub_token}?mu=0">点击拷贝订阅地址</button><br>
-														<!--	单端口多用户端口订阅地址：<code>{$baseUrl}/link/{$ssr_sub_token}?mu=1</code>  -->
-                                                      </p>
-                                                      <p><a href="/user/announcement">点击这里查看游戏客户端傻瓜式教程</a></p>
+														 <p><span class="icon icon-lg text-white">looks_one</span><a href="/ssr-download/SSTap.7z">下载</a></p>
+                                                       <p><span class="icon icon-lg text-white">looks_two</span> 安裝期間，會提示安裝虛擬網卡，請點擊允許或確認</p>
+                                                       <p><span class="icon icon-lg text-white">looks_3</span> 在桌面打開SSTap</p>
+                                                       <p><span class="icon icon-lg text-white">looks_4</span> 界面上點擊<i class="fas fa-cog"></i>--SSR訂閱-SSR訂閱管理--添加以下訂閱鏈接即可</p>
+                                                       <p><span class="icon icon-lg text-white">looks_5</span> 更新后選擇線路，點擊<i class="fas fa-bolt"></i>測試 - 測試UDP轉發...通過!（UDP通過即可連接并開始遊戲；如測試不通過，點擊如测试不通过<i class="fas fa-cog"></i>--設置--修改DNS，推薦谷歌DNS</p>
+                                                        <p>要是還不了解可以查閱<button href="/user/help">遊戲客戶端圖片教程</button>
 													</div>
                                                   <div class="tab-pane fade" id="all_ssr_info">
 														{$user = URL::getSSRConnectInfo($pre_user)}
@@ -174,107 +158,31 @@
 														{$ssr_url_all_mu = URL::getAllUrl($pre_user, 1, 0)}
 														{if URL::SSRCanConnect($user)}
 														<dl class="dl-horizontal">
-                                                          <p><dt><code>优点导入普通端口，如果普通端口无法使用再导入单端口</code></dt></p>
 															<p><dt>端口</dt>
-															<dd>{$user->port}</dd></p>
+															<dd>{$user->port}</dd>
 
-															<p><dt>密码</dt>
-															<dd>{$user->passwd}</dd></p>
+															<p><dt>密碼</dt>
+															<dd>{$user->passwd}</dd>
 
-															<p><dt>自定义加密</dt>
-															<dd>{$user->method}</dd></p>
+															<p><dt>加密</dt>
+															<dd>{$user->method}</dd>
 
-															<p><dt>自定义协议</dt>
-															<dd>{$user->protocol}</dd></p>
+															<p><dt>協議</dt>
+															<dd>{$user->protocol}</dd>
 
-															<p><dt>自定义混淆</dt>
-															<dd>{$user->obfs}</dd></p>
+															<p><dt>混淆</dt>
+															<dd>{$user->obfs}</dd>
 														</dl>
 														{else}
-															<p>您好，您目前的 加密方式，混淆，或者协议设置在 ShadowsocksR 客户端下无法连接。请您选用 Shadowsocks 客户端来连接，或者到 资料编辑 页面修改后再来查看此处。</p>
+															<p>你好，你目前的加密方式，混淆，或者協議設置在 ShadowsocksR 客戶端下無法使用。請選擇 Shadowsocks 客戶單來連接，或者在 資料編輯頁面修改此處。</p>
 
-															<p>同时, ShadowsocksR 单端口多用户的连接不受您设置的影响,您可以在此使用相应的客户端进行连接~</p>
+															<p>同時, ShadowsocksR 單端口多用戶的連接不受您的影響，您可以在此使用相應的客戶端進行連接~</p>
 
-															<p>请注意，在当前状态下您的 SSR 订阅链接已经失效，您无法通过此种方式导入节点。</p>
+															<p>請注意，在當前狀態下您的 SSR 訂閱鏈接已經失效，您需要手動設置線路。</p>
 														{/if}
 													</div>
-                                                  
-
-												</div>
-                                            
-												<div class="tab-pane fade {if !$ssr_prefer}active in{/if}" id="all_ss">
-													<nav class="tab-nav margin-top-no">
-														<ul class="nav nav-list">
-															<li class="active">
-																<a class="waves-attach" data-toggle="tab" href="#all_ss_info"><i class="icon icon-lg">info_outline</i>&nbsp;连接信息</a>
-															</li>
-															<li>
-																<a class="waves-attach" data-toggle="tab" href="#all_ss_windows"><i class="icon icon-lg">desktop_windows</i>&nbsp;Windows</a>
-															</li>
-															<li>
-																<a class="waves-attach" data-toggle="tab" href="#all_ss_mac"><i class="icon icon-lg">laptop_mac</i>&nbsp;MacOS</a>
-															</li>
-															<li>
-																<a class="waves-attach" data-toggle="tab" href="#all_ss_ios"><i class="icon icon-lg">laptop_mac</i>&nbsp;iOS</a>
-															</li>
-															<li>
-																<a class="waves-attach" data-toggle="tab" href="#all_ss_android"><i class="icon icon-lg">android</i>&nbsp;Android</a>
-															</li>
-															<li>
-																<a class="waves-attach" data-toggle="tab" href="#all_ss_router"><i class="icon icon-lg">router</i>&nbsp;路由器</a>
-															</li>
-														</ul>
-													</nav>
-													<div class="tab-pane fade active in" id="all_ss_info">
-														{$user = URL::getSSConnectInfo($pre_user)}
-														{$ss_url_all = URL::getAllUrl($pre_user, 0, 1)}
-														{$ss_url_all_mu = URL::getAllUrl($pre_user, 1, 1)}
-														{$ss_url_all_win = URL::getAllUrl($pre_user, 0, 2)}
-
-														{if URL::SSCanConnect($user)}
-														<dl class="dl-horizontal">
-															<p>各个节点的地址请到节点列表查看！</p>
 
 
-															<p><dt>端口</dt>
-															<dd>{$user->port}</dd></p>
-
-															<p><dt>密码</dt>
-															<dd>{$user->passwd}</dd></p>
-
-															<p><dt>自定义加密</dt>
-															<dd>{$user->method}</dd></p>
-
-															<p><dt>自定义混淆</dt>
-															<dd>{$user->obfs}</dd></p>
-														</dl>
-														{else}
-															<p>您好，您目前的 加密方式，混淆，或者协议设置在 SS 客户端下无法连接。请您选用 SSR 客户端来连接，或者到 资料编辑 页面修改后再来查看此处。</p>
-															<p>同时, Shadowsocks 单端口多用户的连接不受您设置的影响,您可以在此使用相应的客户端进行连接~</p>
-														{/if}
-													</div>
-													<div class="tab-pane fade" id="all_ss_windows">
-														<p><a href="/ssr-download/ss-win.zip">下载</a>，解压，运行程序，然后您有两种方式导入所有节点<br>
-															(1)下载<a href="/user/getpcconf?is_mu=0&is_ss=1">这个（普通端口）</a>，放到小飞机的目录下，然后打开小飞机。<br>
-															(2)点击<a class="copy-text" data-clipboard-text="{$ss_url_all_win}">这里（普通端口）</a>, 然后右键小飞机 -- 从剪贴板导入 URL<br>
-													</div>
-													<div class="tab-pane fade" id="all_ss_mac">
-														<p><a href="/ssr-download/ss-mac.zip">下载</a>，安装，然后下载<a href="/user/getpcconf?is_mu=0&is_ss=1">这个（普通端口）</a>或者<a href="/user/getpcconf?is_mu=1&is_ss=1">这个（单端口多用户）</a>，运行程序，小飞机上右键 服务器列表 子菜单 的 “导入服务器配置文件...” 导入这个文件，然后选择一个合适的服务器，更新一下PAC，然后开启系统代理即可上网。</p>
-													</div>
-													<div class="tab-pane fade" id="all_ss_ios">
-														<p>推荐下载<a href="https://itunes.apple.com/cn/app/shadowrocket/id932747118?mt=8">Shadowrocket</a>，已购买此软件的美国商店Apple ID:<code>shz7348@icloud.com</code> 密码<code>Qq654321.</code>注意特殊符号与大小写,自行切换商店账号下载安装，然后在 Safari 中点击<a href="{$ss_url_all}">这个（普通端口）</a>或者<a href="{$ss_url_all_mu}">这个（单端口多用户）</a>，然后点击确定，就可以批量添加节点。</p>
-														<p>iOS 下载<a href="/link/{$ios_token}?is_ss=1">这个（普通端口）</a>或者<a href="/link/{$ios_token}?is_ss=1&is_mu=1">这个（单端口多用户）</a>，导入到 Surge 中，然后就可以随意切换服务器上网了。</p>
-													</div>
-													<div class="tab-pane fade" id="all_ss_android">
-														<p><a href="/ssr-download/ss-android.apk">下载</a>，再<a href="/ssr-download/ss-android-obfs.apk">下载</a>，然后安装，然后在手机上点击 <a class="copy-text" data-clipboard-text="{$ss_url_all}"> 这个链接（普通端口）</a>或者<a class="copy-text" data-clipboard-text="{$ss_url_all_mu}">这个链接（单端口多用户端口）</a>复制到剪贴板，打开 Shadowsocks 客户端，选择从剪贴板导入，然后选择一个节点，设置一下路由为绕过大陆，点击飞机就可以上网了。</p>
-													</div>
-													<div class="tab-pane fade" id="all_ss_router">
-														<p>路由器 刷入<a href="http://www.right.com.cn/forum/thread-161324-1-1.html">这个固件</a>，然后 SSH 登陆路由器，执行以下命令（导入普通端口）<br>
-														<code>wget -O- {$baseUrl}/link/{$router_token}?is_ss=1 | bash && echo -e "\n0 */3 * * * wget -O- {$baseUrl}/link/{$router_token}?is_ss=1 | bash\n">> /etc/storage/cron/crontabs/admin && killall crond && crond </code><br>
-														或者这个单端口多用户的<br>
-														<code>wget -O- {$baseUrl}/link/{$router_token_without_mu}?is_ss=1 | bash && echo -e "\n0 */3 * * * wget -O- {$baseUrl}/link/{$router_token_without_mu}?is_ss=1 | bash\n">> /etc/storage/cron/crontabs/admin && killall crond && crond </code><br>
-														执行完毕以后就可以到路由器的设置面板里随意选择 Shadowsocks 服务器进行连接了。</p>
-													</div>
 												</div>
 											</div>
 										</div>
@@ -284,6 +192,7 @@
 											</div>
 										</div>
 									</div>
+                  <i class="fas fa-bolt fa-lg"></i> 訂閱地址：<input type="text" class="input form-control form-control-monospace" name="input1" readonly value="{$baseUrl}/link/{$ssr_sub_token}?mu=1" readonly="true"><button class="copy-text btn btn-subscription" type="button" data-clipboard-text="{$baseUrl}/link/{$ssr_sub_token}?mu=1">点击拷贝订阅地址</button><br>
 
 								</div>
 							</div>
@@ -295,52 +204,44 @@
 							<div class="card">
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
-										<p class="card-heading"><i class="icon icon-md">account_circle</i>账号使用情况</p>
+										<p class="card-heading"><i class="fas fa-user-circle fa-2x"></i>&nbsp;賬號信息</p>
 										<dl class="dl-horizontal">
-											<p><dt>帐号等级</dt>
+											<p><strong>帐号等级：</strong>
                                               {if $user->class!=0}
 											<dd><!--{$user->class}--><i class="icon icon-md t4-text">stars</i>&nbsp;VIP</dd>
                                           {else}
-                                              <dd><!--{$user->class}--><i class="icon icon-md t4-text">stars</i>&nbsp;免费</dd>
+                                              <dd><!--{$user->class}--><i class="icon icon-md t4-text">stars</i>&nbsp;免費</dd>
                                               {/if}
-                                          </p>
-                                          {if $user->class!=0}
-                                          	 <p><dt>Telegram(VIP可见)</dt>
-											<dd><!--{$user->class}--><i class="icon icon-md t4-text">stars</i>&nbsp;<a href="请到index.tpl第299行修改" target="view_window">点击加入TG群</a></dd>
-                                          {else}
-                                             
-                                              {/if}
-                                          </p>
 
-											<p><dt>等级过期时间</dt>
+											<p><strong>服務到期：</strong>
                                               {if $user->class_expire!="1989-06-04 00:05:00"}
 											<dd><!--{$user->class}--><i class="icon icon-md">event</i>&nbsp;{$user->class_expire}</dd>
                                           {else}
                                               <dd><i class="icon icon-md">event</i>&nbsp;不过期</dd>
                                               {/if}
-											</p>
+											
 
-											<p><dt>帐号过期时间</dt>
+											<p><strong>帐号到期：</strong>
 											<dd><i class="icon icon-md">event</i>&nbsp;{$user->expire_in}</dd>
 
-											<p><dt>速度限制</dt>
+											<p><dt>速度上限</dt>
 											{if $user->node_speedlimit!=0}
-											<dd><i class="icon icon-md">settings_input_component</i>&nbsp;{$user->node_speedlimit}Mbps</dd>
+											<dd><i class="icon icon-md">settings_input_component</i>&nbsp;{$user->node_speedlimit}兆</dd>
 											{else}
 											<dd><i class="icon icon-md">settings_input_component</i>&nbsp;不限速</dd>
-											{/if}</p>
-                                           <p><dt>在线设备数</dt>
-											<dd><i class="icon icon-md">phonelink</i>&nbsp;{$user->online_ip_count()} / {$user->node_connector}</dd></p>
-											<p><dt>余额</dt>
-											<dd><i class="icon icon-md">monetization_on</i>&nbsp;{$user->money} CNY</dd></p>
-											<p><dt>上次使用</dt>
+											{/if}
+                                           <p><dt>設備上限</dt>
+											<dd><i class="icon icon-md">phonelink</i>&nbsp;{$user->online_ip_count()} / {$user->node_connector}</dd>
+											<p><dt>賬號餘額</dt>
+											<dd><i class="icon icon-md">monetization_on</i>&nbsp;{$user->money} 元</dd>
+											<p><dt>最近使用</dt>
                                               {if $user->lastSsTime()!="从未使用喵"}
 											<dd><i class="icon icon-md">event</i>&nbsp;{$user->lastSsTime()}</dd>
                                           {else}
-                                          <dd><i class="icon icon-md">event</i>&nbsp;从未使用</dd>
-                                          {/if}</p>
-                                          <p><dt>上次签到时间：</dt>
-                                            <dd><i class="icon icon-md">event</i>&nbsp;{$user->lastCheckInTime()}</dd></p>
+                                          <dd><i class="icon icon-md">event</i>&nbsp;無記錄</dd>
+                                          {/if}
+                                      {* <p><dt>上次签到时间：</dt>
+                                            <dd><i class="icon icon-md">event</i>&nbsp;{$user->lastCheckInTime()}</dd>
 
 
 											<p id="checkin-msg"></p>
@@ -348,7 +249,7 @@
 											{if $geetest_html != null}
 												<div id="popup-captcha"></div>
 											{/if}
-									
+
 
 									<div class="card-action">
 										<div class="card-action-btn pull-left">
@@ -360,7 +261,7 @@
 												<p><a class="btn btn-brand disabled btn-flat waves-attach" href="#"><span class="icon">check</span>&nbsp;今日已签到</a></p>
 											{/if}
 										</div>
-									</div>
+									</div> *}
 										</dl>
 									</div>
 
@@ -372,56 +273,43 @@
 									<div class="card-inner margin-bottom-no">
 
 										<div id="traffic_chart" style="height: 300px; width: 100%;"></div>
-                                     
-                                      <script src="/assets/js/canvasjs.min.js"> </script>
+
+                                      <script src="assets/dimension/js/canvasjs.min.js"> </script>
 										<!--	<script src="//canvasjs.com/assets/script/canvasjs.min.js"> </script> -->
 										<script type="text/javascript">
-											var chart = new CanvasJS.Chart("traffic_chart",
-
-                                                                           
-
-											{
-                                         theme: "light1",
-
-                                              
-												title:{
-													text: "流量使用情况",
-													fontFamily: "Impact",
-													fontWeight: "normal"
-													},
-												legend:{
-													verticalAlign: "bottom",
-													horizontalAlign: "center"
-												},
-												data: [
-												{
-													startAngle: -15,
-													indexLabelFontSize: 20,
-													indexLabelFontFamily: "Garamond",
-													indexLabelFontColor: "darkgrey",
-													indexLabelLineColor: "darkgrey",
-													indexLabelPlacement: "outside",
-                                                    yValueFormatString: "##0.00\"%\"",
-													type: "pie",
-													showInLegend: true,
-													dataPoints: [
-														{if $user->transfer_enable != 0}
-														{
-															y: {$user->last_day_t/$user->transfer_enable*100},label: "总已用", legendText:"总已用 {number_format($user->last_day_t/$user->transfer_enable*100,2)}% {$user->LastusedTraffic()}", indexLabel: "总已用 {number_format($user->last_day_t/$user->transfer_enable*100,2)}% {$user->LastusedTraffic()}"
-														},
-														{
-															y: {($user->u+$user->d-$user->last_day_t)/$user->transfer_enable*100},label: "今日", legendText:"今日 {number_format(($user->u+$user->d-$user->last_day_t)/$user->transfer_enable*100,2)}% {$user->TodayusedTraffic()}", indexLabel: "今日 {number_format(($user->u+$user->d-$user->last_day_t)/$user->transfer_enable*100,2)}% {$user->TodayusedTraffic()}"
-														},
-														{
-															y: {($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100},label: "剩余可用", legendText:"剩余可用 {number_format(($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100,2)}% {$user->unusedTraffic()}", indexLabel: "剩余可用 {number_format(($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100,2)}% {$user->unusedTraffic()}"
-														}
-														{/if}
-													]
-												}
-												]
-											});
-
-											chart.render();
+                    var salesDoughnutChartUS = new CanvasJS.Chart("traffic_chart", {
+                        animationEnabled: true,
+                        backgroundColor: "transparent",
+                        title: {
+                          fontColor: "#848484",
+                          fontSize: 70,
+                          horizontalAlign: "center",
+                          text: "{($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100}%",
+                          verticalAlign: "center"
+                        },
+                        toolTip: {
+                          backgroundColor: "#ffffff",
+                          borderThickness: 0,
+                          cornerRadius: 0,
+                          fontColor: "#424242"
+                        },
+                        data: [
+                          {
+                            explodeOnClick: false,
+                            innerRadius: "96%",
+                            radius: "90%",
+                            startAngle: 270,
+                            type: "doughnut",
+                            dataPoints: [
+                              {if $user->transfer_enable != 0}
+								{y: {$user->last_day_t/$user->transfer_enable*100}，color: "#c70000"}，
+								{y: {($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100},color: "#424242"}
+                              {/if}
+                            ]
+                          }
+                        ]
+                      })；
+						chart.render();
 										</script>
 
 									</div>
@@ -472,7 +360,7 @@
 							<div class="card">
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
-										<p class="card-heading">讨论区</p>
+										<p class="card-heading">討論區</p>
 											<div class="ds-thread" data-thread-key="0" data-title="index" data-url="{$baseUrl}/user/"></div>
 											<script type="text/javascript">
 											var duoshuoQuery = {
@@ -502,9 +390,9 @@
 					</div>
 
 
-				</div>
+				
 			</section>
-		</div>
+		
 	</main>
 
 
@@ -526,7 +414,7 @@ $(function(){
 
 $(".copy-text").click(function () {
 	$("#result").modal();
-	$("#msg").html("已复制到您的剪贴板，请您继续接下来的操作。");
+	$("#msg").html("複製成功！");
 });
 
 {if $geetest_html == null}
@@ -558,7 +446,7 @@ window.onload = function() {
                 },
                 error: function (jqXHR) {
 					$("#result").modal();
-                    $("#msg").html("发生错误：" + jqXHR.status);
+                    $("#msg").html("錯誤：" + jqXHR.status);
                 }
             });
     }
@@ -579,7 +467,7 @@ $(document).ready(function () {
 			},
 			error: function (jqXHR) {
 				$("#result").modal();
-				$("#msg").html("发生错误：" + jqXHR.status);
+				$("#msg").html("錯誤：" + jqXHR.status);
 			}
 		})
 	})
@@ -631,7 +519,7 @@ var handlerPopup = function (captchaObj) {
 			},
 			error: function (jqXHR) {
 				$("#result").modal();
-				$("#msg").html("发生错误：" + jqXHR.status);
+				$("#msg").html("錯誤：" + jqXHR.status);
 			}
 		});
 	});
@@ -655,5 +543,3 @@ initGeetest({
 
 
 </script>
-
-

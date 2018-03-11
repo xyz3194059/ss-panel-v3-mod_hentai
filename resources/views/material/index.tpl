@@ -14,6 +14,7 @@
         <link rel="bookmark" href="/favicon.ico"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 		<link rel="stylesheet" href="assets/css/main.css"/>
+		<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
         <noscript><link rel="stylesheet" href="./assets/css/noscript.css" /></noscript>   
   </head>
   
@@ -27,42 +28,42 @@
                        {if $user->isLogin}
 						<div class="content">
 							<div class="inner">
-                                  <p>用户：<code>{$user->user_name}</code>
-                                    等级：{if $user->class!=0}
+                                  <p>用戶：<code>{$user->user_name}</code>
+                                    等級：{if $user->class!=0}
 											<code>VIP</code>
                                           {else}
-                                             <code>免费</code>
+                                             <code>免費</code>
                                               {/if}
-                                    过期时间：{if $user->class_expire!="1989-06-04 00:05:00"}
+                                    過期時間：{if $user->class_expire!="1989-06-04 00:05:00"}
 											    <code>{$user->class_expire}</code>
                                           {else}
-                                              <code>不过期</code>
+                                              <code>不過期</code>
                                               {/if}</p>
-                                  <p>总流量：<code>{$user->enableTraffic()}</code>
+                                  <p>總流量：<code>{$user->enableTraffic()}</code>
                                   已用流量：<code>{$user->usedTraffic()}</code>
-                                  剩余流量：<code>{$user->unusedTraffic()}</code></p>
+                                  剩餘流量：<code>{$user->unusedTraffic()}</code></p>
                           </div>
                       </div>	
 					  	<nav>
 							<ul>
-                                <li><a href="#1">简介</a></li>
-					            <li><a href="/user">用户中心</a></li>
-								<li><a href="#5">下载</a></li>
+                                <li><a href="#1">簡介</a></li>
+					            <li><a href="/user">用戶中心</a></li>
+								<li><a href="#5">下載</a></li>
                         </ul>
 						</nav>
                               {else}
                               <div class="content">
 							<div class="inner">
 								<h1>{$config["appName"]}</h1>
-								<p>请问您今天要来点兔子吗？</p>
+								<p>帶你瀏覽無疆的海洋</p>
                           </div>
                       </div>	
                               <nav>
 							<ul>
-                               <li><a href="#1">简介</a></li>
-								<li><a href="/auth/login">登录</a></li>
-								<li><a href="/auth/register">注册</a></li>
-                              	<li><a href="#4">联系</a></li>
+                               <li><a href="#1">簡介</a></li>
+								<li><a href="/auth/login">登錄</a></li>
+								<li><a href="/auth/register">註冊</a></li>
+                              	<li><a href="#4">聯系</a></li>
 								<li><a href="#5">下載</a></li>
                               
                            </ul>
@@ -74,18 +75,22 @@
 					<div id="main">
                       <!--标签1开始-->
                       <article id="1">
-                      <h2 class="major">简介</h2>
+                      <h2 class="major">簡介</h2>
                       <p>这里是示范文字</p><p> 请到站点文件夹</p><p>resources/views/material/index.tpl</p><p>第79行进行修改</p></article>
 					  <!--   简介修改示例: <p> 123</p>  一个  <p> 123</p>  为一行，请不要删除 </article>-->
                      <!--标签4开始-->
                       <article id="4">
-								<h2 class="major">联系我们</h2>
+								<h2 class="major">聯繫我們</h2>
 								<ul class="icons">
-                                   <p>此处填写联系方式</p>
+                                   <p>請在下方選擇一個聯繫方式，聯繫我們</p>
                                     <li>
-                                      <a target="_blank" href="#" class="icon fa-facebook">
+                                      <a target="_blank" href="https://t.me/joinchat/GUrO5g_Klk717hXJR-EzKA" class="fab fa-telegram-plane">
 									 <!-- 请在fontawesome.com寻找替换图标 href替换链接 -->
-                                      <span class="label">Facebook</span>
+                                      <span class="label">Telegrame</span>
+                                      </a>
+                                      <a href="mailto:monkeyblacktech97@gmail.com" class="far fa-envelope">
+									 <!-- 请在fontawesome.com寻找替换图标 href替换链接 -->
+                                      <span class="label">Email</span>
                                       </a>
                                     </li>
                                   </ul>

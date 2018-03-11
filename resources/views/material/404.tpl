@@ -14,7 +14,7 @@
       <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css" />
       </noscript>
-  </head>	
+  </head>
 <body>
 			<div id="wrapper">
 					<header id="header">
@@ -23,7 +23,7 @@
 						<div class="content">
 							<div class="inner">
 								<h1>404错误</h1>
-								<p>您的页面查找不到咯</p></div></div>	
+								<p>您的页面查找不到咯</p></div></div>
 						<nav>
 							<ul>
 								<li><a href="./#">返回首页</a></li>
@@ -37,4 +37,5 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-</body></html>
+</body>
+</html>

@@ -7,17 +7,18 @@
 	<meta name="theme-color" content="#ff9800">
 	<title>{$config["appName"]}</title>
 
-	
+
 	<!-- css -->
 	<link href="/theme/material/css/base.min.css" rel="stylesheet">
 	<link href="/theme/material/css/project.min.css" rel="stylesheet">
-	<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 
  <style>
     body {
         background: #eee;
     }
-    
+
     @keyframes mysnow {
         0% {
             bottom: 100%;
@@ -33,7 +34,7 @@
             bottom: 0;
         }
     }
-    
+
     @-webkit-keyframes mysnow {
         0% {
             bottom: 100%;
@@ -49,7 +50,7 @@
             bottom: 0;
         }
     }
-    
+
     @-moz-keyframes mysnow {
         0% {
             bottom: 100%;
@@ -65,7 +66,7 @@
             bottom: 0;
         }
     }
-    
+
     @-ms-keyframes mysnow {
         0% {
             bottom: 100%;
@@ -81,7 +82,7 @@
             bottom: 0;
         }
     }
-    
+
     @-o-keyframes mysnow {
         0% {
             bottom: 100%;
@@ -97,7 +98,7 @@
             bottom: 0;
         }
     }
-    
+
     .roll {
         position: absolute;
         opacity: 0;
@@ -108,14 +109,14 @@
         -o-animation: mysnow 5s;
         height: 80px;
     }
-    
+
     .div {
         position: fixed;
     }
     </style>
 
 
-	
+
 	<!-- favicon -->
 	<!-- ... -->
 	<style>
@@ -222,10 +223,10 @@
 			background-color:#fff
 		}
 
-		
-		
-		
-		
+
+
+
+
 		.pagination>li>a,
 		.pagination>li>span {
 		  border: 1px solid white;
@@ -234,13 +235,13 @@
 		  background: #f50057;
 		  color: #fff;
 		}
-		
+
 		.pagination>li>a {
 		  background: white;
 		  color: #000;
 		}
-		
-		
+
+
 		.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
 			color: #fff;
 			background-color: #000;
@@ -252,44 +253,44 @@
 		  color: #fff;
 		  border-color: #fff;
 		}
-		
-		
-		
+
+
+
 		.pagination > .disabled > span {
 		  border-color: #fff;
 		}
-		
-		
+
+
 		pre {
 			white-space: pre-wrap;
 			word-wrap: break-word;
 		}
-		
+
 		.progress-green .progress-bar {
 			background-color: #f0231b;
 		}
-		
+
 		.progress-green {
 			background-color: #000;
 		}
-		
+
 		.progress-green .progress-bar {
 			background-color: #ff0a00;
 		}
-		
+
 		.page-orange .ui-content-header {
 			background-image: url(/theme/material/css/images/bg/amber.jpg);
 		}
-		
+
 		.content-heading {
 			font-weight: 300;
 			color: #fff;
 		}
 	</style>
-  
-	
-	
-	
+
+
+
+
 </head>
 <body class="page-orange">
 	<header class="header header-orange header-transparent header-waterfall ui-header">
@@ -300,7 +301,7 @@
 				</a>
 			</div>
 		</ul>
-		
+
 		<ul class="nav nav-list pull-right">
 			<div class="dropdown margin-right">
 				<a class="dropdown-toggle padding-left-no padding-right-no" data-toggle="dropdown">
@@ -313,7 +314,7 @@
 						<li>
 							<a class="padding-right-lg waves-attach" href="/user/"><span class="icon icon-lg margin-right">account_box</span>用户中心</a>
 						</li>
-                      
+
 						<li>
 							<a class="padding-right-cd waves-attach" href="/user/logout"><span class="icon icon-lg margin-right">exit_to_app</span>登出</a>
 						</li>
@@ -322,7 +323,7 @@
 					<span class="access-hide">未登录</span>
              		 <span class="icon icon-lg margin-right">account_circle</span>
 					<!-- <span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="/theme/material/images/users/avatar-001.jpg"></span>  -->
-					
+
 					<ul class="dropdown-menu dropdown-menu-right">
 						<li>
 							<a class="padding-right-lg waves-attach" href="/auth/login"><span class="icon icon-lg margin-right">account_box</span>登录</a>
@@ -332,7 +333,7 @@
 						</li>
 					</ul>
 				{/if}
-					
+
 			</div>
 		</ul>
 	</header>
@@ -356,22 +357,22 @@
 									<i class="icon icon-lg">account_balance_wallet</i>&nbsp;用户中心
 								</a>
 							</li>
-                                
-							
+
+
 							<li>
 								<a href="/user/profile">
 									<i class="icon icon-lg">account_box</i>&nbsp;账户信息
 								</a>
 							</li>
-							
+
 							<li>
 								<a href="/user/edit">
 									<i class="icon icon-lg">sync_problem</i>&nbsp;资料编辑
 								</a>
 							</li>
-							
 
-                          <li> 
+
+                          <li>
 								<a href="/user/ticket">
 									<i class="icon icon-lg">question_answer</i>&nbsp;工单系统
 								</a>
@@ -380,15 +381,15 @@
 								<a href="/user/invite">
 									<i class="icon icon-lg">loyalty</i>&nbsp;邀请码
 								</a>
-							</li> 
-							
-							
-				
-							
-							
+							</li>
+
+
+
+
+
 						</ul>
-						
-						
+
+
 						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_use">使用</a>
 						<ul class="menu-collapse collapse in" id="ui_menu_use">
 							<li>
@@ -396,29 +397,29 @@
 									<i class="icon icon-lg">airplanemode_active</i>&nbsp;节点列表
 								</a>
 							</li>
-							
+
 							<li>
 								<a href="/user/relay">
 									<i class="icon icon-lg">compare_arrows</i>&nbsp;中转规则
 								</a>
 							</li>
-							
+
 							<li>
 								<a href="/user/trafficlog">
 									<i class="icon icon-lg">hourglass_empty</i>&nbsp;流量记录
 								</a>
 							</li>
-							
+
 							<li>
 								<a href="/user/lookingglass">
 									<i class="icon icon-lg">visibility</i>&nbsp;延迟检测
 								</a>
-								<a href="/user/announcement">
+								<a href="/user/help">
 									<i class="icon icon-lg">start</i>&nbsp;使用教程
 								</a>
 							</li>
 						</ul>
-						
+
 						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_help">商店</a>
 						<ul class="menu-collapse collapse in" id="ui_menu_help">
                           	<li>
@@ -426,43 +427,43 @@
 									<i class="icon icon-lg">code</i>&nbsp;充值
 								</a>
 							</li>
-						
+
 							<li>
 								<a href="/user/shop">
 									<i class="icon icon-lg">shop</i>&nbsp;套餐购买
 								</a>
 							</li>
-							
+
 							<li><a href="/user/bought"><i class="icon icon-lg">shopping_cart</i>&nbsp;购买记录</a></li>
 
-                           
 
-                         
+
+
                           {if $config['enable_donate']=='true'}
 							<li>
 								<a href="/user/donate">
 									<i class="icon icon-lg">attach_money</i>&nbsp;捐赠公示
 								</a>
 							</li>
-							{/if} 
-                          
+							{/if}
+
 						</ul>
 						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_detect">审计</a>
 						<ul class="menu-collapse collapse in" id="ui_menu_detect">
 							<li><a href="/user/detect"><i class="icon icon-lg">account_balance</i>&nbsp;审计规则</a></li>
 							<li><a href="/user/detect/log"><i class="icon icon-lg">assignment_late</i>&nbsp;审计记录</a></li>
-						</ul> 
+						</ul>
 						{if $config['enable_wecenter']=='true'}
 						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_trade">帮助</a>
 						<ul class="menu-collapse collapse in" id="ui_menu_trade">
-							
+
 							<li>
 								<a href="{$config["wecenter_url"]}" target="_blank">
 									<i class="icon icon-lg">help</i>&nbsp;问答系统
 								</a>
 							</li>
 							{/if}
-		
+
 					</li>
 				</ul>
 			</div>
@@ -471,4 +472,3 @@
 	<!--这里替换crisp.chat的代码，如您不需要请把script标签删除-->
 	<script type="text/javascript"> window.$crisp=[];window.CRISP_WEBSITE_ID="您的ID";(function(){ d=document;s=d.createElement("script"); s.src="https://client.crisp.chat/l.js"; s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})(); </script>
 	<!--这里放crisp.chat的代码，如您不需要请把script标签删除-->
-
