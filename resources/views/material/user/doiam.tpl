@@ -17,7 +17,7 @@
 	var type = "wepay";
 	var pid = 0;
 	window.onload = function() {
-		$('body').append("<script src=\" \/assets\/public\/js\/jquery.qrcode.min.js \"><\/script>");
+		$('body').append("<script src=\" \/assets\/AdminLTE\/js\/jquery.qrcode.min.js \"><\/script>");
 		$(".type").click(function() {
 			type = $(this).data("pay");
 		});

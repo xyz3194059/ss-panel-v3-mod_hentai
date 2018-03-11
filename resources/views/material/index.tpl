@@ -1,7 +1,7 @@
 {include file='header_n.tpl'}
 <div id="wrapper">
 	<header id="header">
-		<div class="logo"> <span class="fas fa-rocket fa-5x"></span>
+		<div class="logo"> <span class="fas fa-rocket fa-3x"></span>
 		</div>
 		{if $user->isLogin}
 		<div class="content">

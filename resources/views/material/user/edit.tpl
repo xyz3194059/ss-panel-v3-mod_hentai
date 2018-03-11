@@ -338,13 +338,13 @@
         },
         error: function(jqXHR) {
           $("#result").modal();
-          $("#msg").html(data.msg + "     出现了一些错误。");
+          $("#msg").html(data.msg + " 出现了一些错误。");
         }
       })
     })
   })
 </script>
-<script src=" /assets/public/js/jquery.qrcode.min.js "></script>
+<script src="/assets/AdminLTE/js/jquery.qrcode.min.js"></script>
 <script>
   var ga_qrcode = '{$user->getGAurl()}';
   jQuery('#ga-qr').qrcode({

@@ -190,7 +190,7 @@
 		</section>
 	</div>
 </main> {include file='user/footer.tpl'}
-<script src="/assets/public/js/jquery.qrcode.min.js"></script>
+<script src="/assets/AdminLTE/js/jquery.qrcode.min.js"></script>
 <script>
 	{
 		if URL::SSCanConnect($user, $mu)
