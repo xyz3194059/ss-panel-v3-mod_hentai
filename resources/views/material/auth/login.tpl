@@ -161,8 +161,8 @@
 				$("#result").modal();
 				$("#msg").html("請滑動驗證碼來完成驗證");
 				return;
-			} {
-			/if}
+			}
+			{/if}
 						document.getElementById("login").disabled = true;
 						$.ajax({
 							type: "POST",
@@ -226,13 +226,12 @@
 	$('div.modal').on('hidden.bs.modal', function () {
 		$("div.gt_slider_knob").show();
 	});
-})
-</script>
+}) < /script>
 {if $config['enable_telegram'] == 'true'}
-<script src="/assets/AdminLTE/js/jquery.qrcode.min.js"></script>
-<script>
-	var telegram_qrcode = 'mod://login/{$login_token}';
-	jQuery('#telegram-qr').qrcode({"text": telegram_qrcode});
+<script src="/assets / AdminLTE / js / jquery.qrcode.min.js ">
+</script>
+< script >
+	var telegram_qrcode = 'mod://login/{$login_token}'; jQuery('#telegram-qr').qrcode({"text": telegram_qrcode});
 </script>
 <script>
 	$(document).ready(function () {
@@ -304,7 +303,7 @@
 			if$geetest_html - >success
 		}
 		0 {
-			else 
+			else
 			}
 		1 {
 			/if} // 表示用户后台检测极验服务器是否宕机，与SDK配合，用户一般不需要关注

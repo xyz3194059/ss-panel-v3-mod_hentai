@@ -3,14 +3,11 @@
 	<!--首页开始-->
 	<div class="content">
 		<div class="inner">
-			<h1>staff</h1> </div>
+			<h1>staff</h1>
+		</div>
 	</div>
-	<!--
-I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
-It will not impact the appearance and can give developers a lot of support :)
-
-很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。它不会影响美观并可以给开发者很大的支持和动力。 :)
--->
+	<!-- I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much. It will not impact the appearance and can give developers a lot of support :) 很高兴您使用并喜欢该主题，开发不易
+	十分谢谢与希望您可以保留一下版权声明。它不会影响美观并可以给开发者很大的支持和动力。 :) -->
 	<p>MIT许可证（MIT）</p>
 	<p class="copyright">&copy;2015 orvice</p>
 	<p>特此免费授予任何获得副本的人这个软件和相关的文档文件（“软件”）来处理在软件中没有限制， 包括但不限于权利使用，复制，修改，合并，发布，分发，再许可和/或销售该软件的副本， 并允许软件所属的人员提供这样做，但须符合以下条件：</p>
@@ -23,19 +20,28 @@ It will not impact the appearance and can give developers a lot of support :)
 			<tbody>
 				<tr>
 					<td>原作</td>
-					<td><a href="https://github.com/orvice/">orvice</a></td>
+					<td>
+						<a href="https://github.com/orvice/">orvice</a>
+					</td>
 				</tr>
 				<tr>
 					<td>现阶段维护</td>
-					<td><a href="https://github.com/galaxychuck">galaxyq</a></td>
+					<td>
+						<a href="https://github.com/galaxychuck">galaxyq</a>
+					</td>
 				</tr>
 				<tr>
 					<td>监督</td>
-					<td><a href="https://www.zhaoj.in">（曾经的）glzjin</a></td>
+					<td>
+						<a href="https://www.zhaoj.in">（曾经的）glzjin</a>
+					</td>
 				</tr>
 				<tr>
 					<td>作画</td>
-					<td><a href="https://github.com/Daemonite/">Daemonite</a>,<a href="https://www.zhaoj.in">（曾经的）glzjin</a> ,<a href="https://github.com/galaxychuck">galaxyq</a></td>
+					<td>
+						<a href="https://github.com/Daemonite/">Daemonite</a>,<a href="https://www.zhaoj.in">（曾经的）glzjin</a>
+						,<a href="https://github.com/galaxychuck">galaxyq</a>
+					</td>
 				</tr>
 				<tr>
 					<td>staff监督</td>
@@ -43,7 +49,9 @@ It will not impact the appearance and can give developers a lot of support :)
 				</tr>
 				<tr>
 					<td>出演</td>
-					<td><a href="https://www.zhaoj.in">（曾经的）glzjin</a>，<a href="http://mengyang.wang/">mengyang</a>，<a href="http://tony.ecy.ren/">tony</a></td>
+					<td>
+						<a href="https://www.zhaoj.in">（曾经的）glzjin</a>，<a href="http://mengyang.wang/">mengyang</a>，<a href="http://tony.ecy.ren/">tony</a>
+					</td>
 				</tr>
 				<tr>
 					<td>鸣谢</td>
@@ -51,15 +59,20 @@ It will not impact the appearance and can give developers a lot of support :)
 				</tr>
 				<tr>
 					<td>本程序的参与人员列表</td>
-					<td>此列表为参与到 <a href="https://github.com/NimaQu/ss-panel-v3-mod_UIChanges">ss-panel-v3 glzjin mod UIChanges</a> 中的人员，在此表示感谢。</td>
+					<td>此列表为参与到
+						<a href="https://github.com/NimaQu/ss-panel-v3-mod_UIChanges">ss-panel-v3 glzjin mod UIChanges</a>
+						中的人员，在此表示感谢。</td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
 	<nav>
-		<ul> <a href="javascript:history.back();" class="button">返回上一页</a> </ul>
+		<ul>
+			<a href="javascript:history.back();" class="button">返回上一页</a>
+		</ul>
 	</nav>
 	<!--首页结束-->
 	<div id="main">
 		<!--全部标签结束-->
-	</div> {include file='footer_n.tpl'}
+	</div>
+	{include file='footer_n.tpl'}
