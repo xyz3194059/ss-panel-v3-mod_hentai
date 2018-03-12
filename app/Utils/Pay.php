@@ -7,6 +7,10 @@ use App\Models\Payback;
 use App\Services\Config;
 class Pay
 {
+    /**
+     * @param $user
+     * @return null|string
+     */
     public static function getHTML($user)
     {
         $driver = Config::get("payment_system");
@@ -26,7 +30,6 @@ class Pay
             default:
                 return "";
         }
-        return null;
     }
     /**
      * DoiamPay
@@ -62,7 +65,7 @@ class Pay
 
                         <p><img src="/images/qianbai-4.png" height="250" width="200" /></p>
                         <div class="form-group form-group-label">
-                         <label class="floating-label" for="number">请选择充值金额</label>
+                         <label class="floating-label" id="number">请选择充值金额</label>
                         <select id="type" class="form-control" name="amount">
                             <option></option>
                             <option value="'.Config::get('amount')[0].'">'.Config::get('amount')[0].'元</option>
@@ -121,6 +124,11 @@ class Pay
         );
         return $widget->getHtmlCode(array("height"=>Config::get('pmw_height'),"width"=>"100%"));
     }
+
+    /**
+     * @param $user
+     * @param $amount
+     */
     private static function spay_gen($user, $amount)
     {
         /**************************请求参数**************************/
@@ -673,6 +681,5 @@ class Pay
             default:
                 return "";
         }
-        return null;
     }
 }

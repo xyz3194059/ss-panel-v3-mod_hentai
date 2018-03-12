@@ -12,7 +12,7 @@
 .cm-s-3024-night div.CodeMirror-selected {background: #3a3432 !important;}
 .cm-s-3024-night.CodeMirror ::selection { background: rgba(58, 52, 50, .99); }
 .cm-s-3024-night.CodeMirror ::-moz-selection { background: rgba(58, 52, 50, .99); }
-.cm-s-3024-night .CodeMirror-gutters {background: #090300; border-right: 0px;}
+.cm-s-3024-night .CodeMirror-gutters {background: #090300; border-right: 0;}
 .cm-s-3024-night .CodeMirror-guttermarker { color: #db2d20; }
 .cm-s-3024-night .CodeMirror-guttermarker-subtle { color: #5c5855; }
 .cm-s-3024-night .CodeMirror-linenumber {color: #5c5855;}

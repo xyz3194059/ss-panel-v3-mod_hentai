@@ -41,4 +41,3 @@ class AlipayF2FQueryResult
     }
 }
 
-?>

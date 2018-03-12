@@ -52,4 +52,3 @@ class AlipayTradeCancelContentBuilder extends ContentBuilder
 
 }
 
-?>

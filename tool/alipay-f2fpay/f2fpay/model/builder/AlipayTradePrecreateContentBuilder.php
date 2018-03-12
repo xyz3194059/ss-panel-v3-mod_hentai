@@ -251,4 +251,3 @@ class AlipayTradePrecreateContentBuilder extends ContentBuilder
     }
 }
 
-?>

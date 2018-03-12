@@ -1,5 +1,5 @@
 <footer id="footer">
-  <p class="copyright">&copy;2017-2018 {$config["appName"]} </p>
+    <p class="copyright">&copy;2017-2018 {$config["appName"]} </p>
 </footer>
 </div>
 <div id="bg"></div>

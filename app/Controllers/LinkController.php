@@ -178,6 +178,12 @@ class LinkController extends BaseController
         return $NLink->token;
     }
 
+    /**
+     * @param $request
+     * @param $response
+     * @param $args
+     * @return null
+     */
     public static function GetContent($request, $response, $args)
     {
         $token = $args['token'];

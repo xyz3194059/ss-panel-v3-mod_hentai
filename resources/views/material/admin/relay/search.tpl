@@ -64,9 +64,7 @@
 				targets: ['_all'],
 				className: 'mdl-data-table__cell--non-numeric'
 			}],
-			{
-				include file = 'table/lang_chinese.tpl'
-			}
+			{include file = 'table/lang_chinese.tpl'}
 		});
 
 		function search() {

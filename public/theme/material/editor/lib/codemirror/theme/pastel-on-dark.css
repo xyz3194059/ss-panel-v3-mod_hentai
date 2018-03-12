@@ -19,7 +19,7 @@
 
 .cm-s-pastel-on-dark .CodeMirror-gutters {
 	background: #34302f;
-	border-right: 0px;
+	border-right: 0;
 	padding: 0 3px;
 }
 .cm-s-pastel-on-dark .CodeMirror-guttermarker { color: white; }

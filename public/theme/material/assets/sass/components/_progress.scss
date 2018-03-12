@@ -65,8 +65,8 @@
 	@keyframes pbar-indeterminate-one {
 		0% {
 			// position
-				left: 0%;
-			width: 0%;
+				left: 0;
+			width: 0;
 		}
 		50% {
 			// position
@@ -76,7 +76,7 @@
 		75% {
 			// position
 				left: 100%;
-			width: 0%;
+			width: 0;
 		}
 	}
 
@@ -84,18 +84,18 @@
 		0%,
 		50% {
 			// position
-				left: 0%;
-			width: 0%;
+				left: 0;
+			width: 0;
 		}
 		75% {
 			// position
-				left: 0%;
+				left: 0;
 			width: 25%;
 		}
 		100% {
 			// position
 				left: 100%;
-			width: 0%;
+			width: 0;
 		}
 	}
 

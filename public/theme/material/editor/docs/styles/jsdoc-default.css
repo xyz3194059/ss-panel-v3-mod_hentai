@@ -51,7 +51,7 @@ a:hover {
 header
 {
     display: block;
-    padding: 0px 4px;
+    padding: 0 4px;
 }
 
 tt, code, kbd, samp {
@@ -312,7 +312,7 @@ h6
 .params td, .params th, .props td, .props th
 {
     border: 1px solid #ddd;
-    margin: 0px;
+    margin: 0;
     text-align: left;
     vertical-align: top;
     padding: 4px 6px;

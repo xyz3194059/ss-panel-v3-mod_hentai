@@ -1618,17 +1618,14 @@
                             case 120:
                                     $.proxy(toolbarHandlers["watch"], _this)();
                                     return false;
-                                break;
                                 
                             case 121:
                                     $.proxy(toolbarHandlers["preview"], _this)();
                                     return false;
-                                break;
                                 
                             case 122:
                                     $.proxy(toolbarHandlers["fullscreen"], _this)();                        
                                     return false;
-                                break;
                                 
                             default:
                                 break;

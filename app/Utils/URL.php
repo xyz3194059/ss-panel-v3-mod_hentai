@@ -80,7 +80,7 @@ class URL
         if($mu_port != 0) {
             $mu_user = User::where('port', '=', $mu_port)->where("is_multi_user", "<>", 0)->first();
             if ($mu_user == null) {
-                return;
+                return ;
             }
             return URL::SSRCanConnect($mu_user);
         }

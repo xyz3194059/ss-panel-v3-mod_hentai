@@ -52,4 +52,3 @@ class AlipayTradeQueryContentBuilder extends ContentBuilder
 
 }
 
-?>

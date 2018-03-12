@@ -3506,8 +3506,7 @@
 
                     if (faMatchs)
                     {                        
-                        for (var fa = 0, len1 = faMatchs.length; fa < len1; fa++)
-                        {
+                        for(var fa = 0, len1 = faMatchs.length; fa < len1; fa++){
                             var faName = faMatchs[fa].replace(/:/g, "");
                             
                             return "<i class=\"fa " + faName + " fa-emoji\" title=\"" + faName.replace("fa-", "") + "\"></i>";
@@ -3520,8 +3519,7 @@
 
                         if (emdlogoMathcs)                                        
                         {                            
-                            for (var x = 0, len2 = emdlogoMathcs.length; x < len2; x++)
-                            {
+                            for (var x = 0, len2 = emdlogoMathcs.length; x < len2; x++){
                                 var logoName = emdlogoMathcs[x].replace(/:/g, "");
                                 return "<i class=\"" + logoName + "\" title=\"Editor.md logo (" + logoName + ")\"></i>";
                             }

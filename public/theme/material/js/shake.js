@@ -18,6 +18,9 @@
 
     'use strict';
 
+    /**
+     * @return {boolean}
+     */
     function Shake(options) {
         //feature detect
         this.hasDeviceMotion = 'ondevicemotion' in window;

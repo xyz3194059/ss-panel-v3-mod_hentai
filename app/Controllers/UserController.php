@@ -429,6 +429,7 @@ class UserController extends BaseController
             $user->class=$codeq->type;
             $user->save();
         }
+        return 0;
     }
 
 
@@ -773,6 +774,7 @@ class UserController extends BaseController
                 echo "微笑";
 
         }
+        return 0;
     }
 
     public function GetPcConf($request, $response, $args)
