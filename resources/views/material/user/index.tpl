@@ -28,8 +28,8 @@
                     <!--<li {if !$ssr_prefer}class="active"{/if}>
 													<a class="waves-attach" data-toggle="tab" href="#all_ss"><i class="icon icon-lg">flight_takeoff</i>&nbsp;Shadowsocks</a>
 												</li>
-											</ul>
-										</nav> -->
+											</ul>-->
+										</nav>
                     <div class="card-inner">
                       <div class="tab-content">
                         <div class="tab-pane fade {if $ssr_prefer}active in{/if}" id="all_ssr"> {$pre_user = URL::cloneUser($user)}

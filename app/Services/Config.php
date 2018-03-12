@@ -31,9 +31,7 @@ class Config
             "enable_analytics_code" => self::get("enable_analytics_code"),
             "enable_donate" => self::get("enable_donate"),
             "enable_telegram" => self::get("enable_telegram"),
-	    "inviteNumback" => self::get("inviteNumback"),
-	    "payment_system" => self::get("payment_system")
-
+            "payment_system" => self::get("payment_system")
          ];
     }
 

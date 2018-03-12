@@ -1,4 +1,5 @@
 {include file='admin/main.tpl'}
+
 <main class="content">
 	<div class="content-header ui-content-header">
 		<div class="container">
@@ -19,12 +20,12 @@
 			</div>
 			<div class="ui-card-wrap">
 				<div class="row">
+					<script src="assets/materialize/js/canvasjs.js"></script>
 					<div class="col-lg-6 col-sm-6">
 						<div class="card">
 							<div class="card-main">
 								<div class="card-inner margin-bottom-no">
 									<div id="check_chart" style="height: 300px; width: 100%;"></div>
-									<script src="//cdn.staticfile.org/canvasjs/1.7.0/canvasjs.js"></script>
 									<script type="text/javascript">
 										var chart = new CanvasJS.Chart("check_chart", {
 											title: {
@@ -75,7 +76,6 @@
 							<div class="card-main">
 								<div class="card-inner margin-bottom-no">
 									<div id="alive_chart" style="height: 300px; width: 100%;"></div>
-									<script src="//cdn.staticfile.org/canvasjs/1.7.0/canvasjs.js"></script>
 									<script type="text/javascript">
 										var chart = new CanvasJS.Chart("alive_chart", {
 											title: {
@@ -140,7 +140,6 @@
 							<div class="card-main">
 								<div class="card-inner margin-bottom-no">
 									<div id="node_chart" style="height: 300px; width: 100%;"></div>
-									<script src="//cdn.staticfile.org/canvasjs/1.7.0/canvasjs.js"></script>
 									<script type="text/javascript">
 										var chart = new CanvasJS.Chart("node_chart", {
 													title: {
@@ -187,7 +186,6 @@
 							<div class="card-main">
 								<div class="card-inner margin-bottom-no">
 									<div id="traffic_chart" style="height: 300px; width: 100%;"></div>
-									<script src="//cdn.staticfile.org/canvasjs/1.7.0/canvasjs.js"></script>
 									<script type="text/javascript">
 										var chart = new CanvasJS.Chart("traffic_chart", {
 													title: {

@@ -8,8 +8,8 @@
 	<meta name="theme-color" content="#f44336">
 	<title>{$config["appName"]}</title>
 	<!-- css -->
-	<link href="/theme/material/css/base.min.css" rel="stylesheet">
-	<link href="/theme/material/css/project.min.css" rel="stylesheet">
+	<link href="/theme/material/css/base.css" rel="stylesheet">
+	<link href="/theme/material/css/project.css" rel="stylesheet">
 	<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="//cdn.staticfile.org/material-design-lite/1.1.0/material.min.css" rel="stylesheet">
 	<link href="//cdn.staticfile.org/datatables/1.10.13/css/dataTables.material.min.css" rel="stylesheet">
@@ -33,7 +33,10 @@
 				<ul class="dropdown-menu dropdown-menu-right">
 					<li> <a class="padding-right-lg waves-attach" href="/user/"><span class="icon icon-lg margin-right">account_box</span>用户中心</a> </li>
 					<li> <a class="padding-right-lg waves-attach" href="/user/logout"><span class="icon icon-lg margin-right">exit_to_app</span>登出</a> </li>
-				</ul> {else} <span class="access-hide">未登录</span> <span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="/theme/material/images/users/avatar-001.jpg"></span> </a>
+				</ul>
+				{else}
+				<span class="access-hide">未登录</span>
+				<span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="/theme/material/images/users/avatar-001.jpg"></span> </a>
 				<ul class="dropdown-menu dropdown-menu-right">
 					<li> <a class="padding-right-lg waves-attach" href="/auth/login"><span class="icon icon-lg margin-right">account_box</span>登录</a> </li>
 					<li> <a class="padding-right-lg waves-attach" href="/auth/register"><span class="icon icon-lg margin-right">pregnant_woman</span>注册</a> </li>
@@ -72,8 +75,11 @@
 							<li><a href="/admin/code"><i class="icon icon-lg">code</i>&nbsp;充值码{if $config['enable_donate']=='true'}与捐赠{/if}</a></li>
 							<li><a href="/admin/shop"><i class="icon icon-lg">shop</i>&nbsp;商品</a></li>
 							<li><a href="/admin/coupon"><i class="icon icon-lg">card_giftcard</i>&nbsp;优惠码</a></li>
-							<li><a href="/admin/bought"><i class="icon icon-lg">shopping_cart</i>&nbsp;购买记录</a></li> {if $config['payment_system']=='yftpay'}
-							<li><a href="/admin/yftOrder"><i class="icon icon-lg">shopping_cart</i>&nbsp;充值记录</a></li> {/if} </ul>
+							<li><a href="/admin/bought"><i class="icon icon-lg">shopping_cart</i>&nbsp;购买记录</a></li>
+							{if $config['payment_system']=='yftpay'}
+							<li><a href="/admin/yftOrder"><i class="icon icon-lg">shopping_cart</i>&nbsp;充值记录</a></li>
+							{/if}
+						</ul>
 						<li><a href="/user"><i class="icon icon-lg">person</i>&nbsp;用户中心</a></li>
 					</li>
 				</ul>

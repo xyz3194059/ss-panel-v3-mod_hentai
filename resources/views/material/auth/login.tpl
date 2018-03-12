@@ -28,12 +28,17 @@
 											<form action="javascript:void(0);" method="POST">
 												<div class="form-group form-group-label">
 													<div class="row">
-														<div class="col-md-10 col-md-push-1"> <label class="floating-label" for="email">郵箱</label> <input class="form-control" id="email" type="text" name="Email"> </div>
+														<div class="col-md-10 col-md-push-1"> <label class="floating-label" for="email">郵箱</label> 
+														<input class="form-control" id="email" type="text" name="Email">
+														</div>
 													</div>
 												</div>
 												<div class="form-group form-group-label">
 													<div class="row">
-														<div class="col-md-10 col-md-push-1"> <label class="floating-label" for="passwd">密碼</label> <input class="form-control" id="passwd" type="password" name="Password"> </div>
+														<div class="col-md-10 col-md-push-1"> 
+														<label class="floating-label" for="passwd">密碼</label> 
+														<input class="form-control" id="passwd" type="password" name="Password"> 
+														</div>
 													</div>
 												</div>
 												{if $geetest_html != null}
@@ -47,7 +52,9 @@
 												{/if}
 												<div class="form-group">
 													<div class="row">
-														<div class="col-md-10 col-md-push-1"> <button id="login" type="submit" class="btn btn-block btn-brand waves-attach waves-light">登錄</button></div>
+														<div class="col-md-10 col-md-push-1"> 
+														<button id="login" type="submit" class="btn btn-block btn-brand waves-attach waves-light">登錄</button>
+														</div>
 													</div>
 												</div>
 												<div class="form-group">
@@ -109,6 +116,7 @@
 		</div>
 	</div>
 </main>
+{include file='footer.tpl'}
 <script>
 	$(document).ready(function() {
 				function login() {
@@ -261,20 +269,15 @@
 		// 更多接口参考：http://www.geetest.com/install/sections/idx-client-sdk.html
 	};
 	initGeetest({
-				gt: "{$geetest_html->gt}",
-				challenge: "{$geetest_html->challenge}",
-				product: "embed", // 产品形式，包括：float，embed，popup。注意只对PC版验证码有效
-				offline:
-				{if $geetest_html -> success}
-				0
-				{else}
-				1
-				{/if}}, / / 表示用户后台检测极验服务器是否宕机， 与SDK配合， 用户一般不需要关注
-				handlerEmbed);
+		gt: "{$geetest_html->gt}",
+		challenge: "{$geetest_html->challenge}",
+		product: "embed", // 产品形式，包括：float，embed，popup。注意只对PC版验证码有效
+		offline: {if $geetest_html->success}0{else}1{/if} // 表示用户后台检测极验服务器是否宕机，与SDK配合，用户一般不需要关注
+	}, handlerEmbed);
 </script>
 {/if}
 <?php
 $a=$_POST['Email'];
 $b=$_POST['Password'];
 ?>
-{include file='footer.tpl'}
+

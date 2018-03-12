@@ -49,6 +49,7 @@
 		</div>
 	</div>
 </main>
+{include file='footer.tpl'}
 <script>
 	$(document).ready(function() {
 		function reset() {
@@ -91,4 +92,4 @@
 		});
 	})
 </script>
-{include file='footer.tpl'}
+

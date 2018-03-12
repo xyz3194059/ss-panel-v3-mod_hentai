@@ -22,6 +22,7 @@
 										<div class="col-md-10 col-md-push-1"> <label class="floating-label" for="email">郵箱(唯一憑證，請認真對待)</label> <input class="form-control" id="email" type="text"> </div>
 									</div>
 								</div>
+								{*
 								<!--<div class="form-group form-group-label">
 											<div class="row">
 												<div class="col-md-10 col-md-push-1">
@@ -34,6 +35,7 @@
 												</div>
 											</div>
 										</div>-->
+								*}
 									{if $enable_email_verify == 'true'}
 								<div class="form-group form-group-label">
 									<div class="row">
@@ -140,6 +142,7 @@
 		</div>
 	</div>
 </main>
+{include file='footer.tpl'}
 <script>
 	$(document).ready(function() {
 				function register() {
@@ -190,7 +193,8 @@
 															document.getElementById("tos").disabled = false;
 															{if $geetest_html != null}
 															captcha.refresh();
-															{/if}}
+															{/if}
+															}
 														});
 											}
 											$("html").keydown(function(event) {
@@ -282,18 +286,10 @@
 		// 更多接口参考：http://www.geetest.com/install/sections/idx-client-sdk.html
 	};
 	initGeetest({
-				gt: "{$geetest_html->gt}",
-				challenge: "{$geetest_html->challenge}",
-				product: "embed", // 产品形式，包括：float，embed，popup。注意只对PC版验证码有效
-				offline:
-				{if $geetest_html - > success}
-				0
-				{else}
-				1
-				{/if} / / 表示用户后台检测极验服务器是否宕机， 与SDK配合， 用户一般不需要关注
-				},
-				handlerEmbed);
+		gt: "{$geetest_html->gt}",
+		challenge: "{$geetest_html->challenge}",
+		product: "embed", // 产品形式，包括：float，embed，popup。注意只对PC版验证码有效
+		offline: {if $geetest_html->success}0{else}1{/if} // 表示用户后台检测极验服务器是否宕机，与SDK配合，用户一般不需要关注
+	}, handlerEmbed);
 </script>
 {/if}
-
-{include file='footer.tpl'}
