@@ -1,150 +1,154 @@
- {include file='header.tpl'}
-
+{include file='header.tpl'}
 <main class="content">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-4 col-lg-push-4 col-sm-6 col-sm-push-3">
-				<section class="content-inner">
-					<div class="card">
-						<div class="card-main">
-							<div class="card-header">
-								<div class="card-inner">
-									<h1 class="card-heading"><img src="/images/register.jpg" height=100% width=100% /></h1> </div>
-							</div>
-							<div class="card-inner">
-								<div class="form-group form-group-label">
-									<div class="row">
-										<div class="col-md-10 col-md-push-1"> <label class="floating-label" for="name">暱稱</label> <input class="form-control" id="name" type="text"> </div>
-									</div>
-								</div>
-								<div class="form-group form-group-label">
-									<div class="row">
-										<div class="col-md-10 col-md-push-1"> <label class="floating-label" for="email">郵箱(唯一憑證，請認真對待)</label> <input class="form-control" id="email" type="text"> </div>
-									</div>
-								</div>
-								{*
-								<!--<div class="form-group form-group-label">
-											<div class="row">
-												<div class="col-md-10 col-md-push-1">
-											<label class="floating-label" for="theme">主題</label>
-											<select id="theme" class="form-control">
-
-													<option value="{$theme}">{$theme}</option>
-
-													</select>
-												</div>
-											</div>
-										</div>-->
-								*}
-									{if $enable_email_verify == 'true'}
-								<div class="form-group form-group-label">
-									<div class="row">
-										<div class="col-md-10 col-md-push-1"> <label class="floating-label" for="email_code">郵箱驗證碼</label>
-											<input class="form-control" id="email_code" type="text" onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;">
-											<button id="email_verify" class="btn btn-block btn-brand-accent waves-attach waves-light">點擊獲取驗證碼</button>
-										</div>
-									</div>
-								</div>
-								{/if}
-								<div class="form-group form-group-label">
-									<div class="row">
-										<div class="col-md-10 col-md-push-1">
-											<label class="floating-label" for="passwd">密碼</label>
-											<input class="form-control" id="passwd" type="password">
-										</div>
-									</div>
-								</div>
-								<div class="form-group form-group-label">
-									<div class="row">
-										<div class="col-md-10 col-md-push-1">
-											<label class="floating-label" for="repasswd">重複密碼</label>
-											<input class="form-control" id="repasswd" type="password">
-										</div>
-									</div>
-								</div>
-								<div class="form-group form-group-label">
-									<div class="row">
-										<div class="col-md-10 col-md-push-1">
-											<label class="floating-label" for="imtype">選擇您的聯繫方式</label>
-											<select class="form-control" id="imtype">
-														<option></option>
-														<option value="1">微信</option>
-														<option value="2">QQ</option>
-														<option value="3">Facebook</option>
-														<option value="4">Telegram</option>
-											</select>
-										</div>
-									</div>
-								</div>
-								<div class="form-group form-group-label">
-									<div class="row">
-										<div class="col-md-10 col-md-push-1"> <label class="floating-label" for="wechat">在這裡輸入聯繫方式賬號</label>
-											<input class="form-control" id="wechat" type="text">
-										</div>
-									</div>
-								</div>
-								<!--	{if $enable_invite_code == 'true'}-->
-								<div class="form-group form-group-label">
-									<div class="row">
-										<div class="col-md-10 col-md-push-1">
-											<label class="floating-label" for="code">邀請碼</label>
-											<input class="form-control" id="code" type="text" value="{$code}">
-											<button class="btn btn-block btn-brand-accent waves-attach waves-light" onclick="javascript:window.open('/code');">查看公告邀請碼</button>
-										</div>
-									</div>
-								</div>
-								<!--	{/if}-->
-								{if $geetest_html != null}
-								<div class="form-group form-group-label">
-									<div class="row">
-										<div class="col-md-10 col-md-push-1">
-											<div id="embed-captcha"></div>
-										</div>
-									</div>
-								</div> {/if}
-								<div class="form-group">
-									<div class="row">
-										<div class="col-md-10 col-md-push-1">
-											<button id="tos" type="submit" class="btn btn-block btn-brand waves-attach waves-light">註冊</button>
-										</div>
-									</div>
-								</div>
-								<div class="form-group">
-									<div class="row">
-										<div class="col-md-10 col-md-push-1">
-											<p>註冊即代表同意<a href="/tos">本站服務條款</a>，以及保證錄入信息的真實性；如有不實信息，將會導致賬號被刪除！</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="clearfix">
-						<p class="margin-no-top pull-left"><a class="btn btn-flat btn-brand waves-attach" href="/auth/login">已經註冊？請登錄</a></p>
-					</div> {include file='dialog.tpl'}
-					<div aria-hidden="true" class="modal modal-va-middle fade" id="tos_modal" role="dialog" tabindex="-1">
-						<div class="modal-dialog">
-							<div class="modal-content">
-								<div class="modal-heading">
-									<h2 class="modal-title">注册 TOS</h2> </div>
-								<div class="modal-inner"> {include file='reg_tos.tpl'} </div>
-								<div class="modal-footer">
-									<p class="text-right">
-										<button class="btn btn-flat btn-brand-accent waves-attach waves-effect" data-dismiss="modal" type="button" id="cancel">我不同意</button>
-										<button class="btn btn-flat btn-brand-accent waves-attach waves-effect" data-dismiss="modal" id="reg" type="button">我同意</button>
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-			</div>
-		</div>
-	</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-lg-push-4 col-sm-6 col-sm-push-3">
+        <section class="content-inner">
+          <div class="card">
+            <div class="card-main">
+              <div class="card-header">
+                <div class="card-inner">
+                  <h1 class="card-heading"><img src="/images/register.jpg" height="100%" width="100%"/></h1>
+                </div>
+              </div>
+              <div class="card-inner">
+                <div class="form-group form-group-label">
+                  <div class="row">
+                    <div class="col-md-10 col-md-push-1">
+                      <label class="floating-label" for="name">暱稱</label>
+                      <input class="form-control" id="name" type="text">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group form-group-label">
+                  <div class="row">
+                    <div class="col-md-10 col-md-push-1">
+                      <label class="floating-label" for="email">郵箱(唯一憑證，請認真對待)</label>
+                      <input class="form-control" id="email" type="text">
+                    </div>
+                  </div>
+                </div>
+                {*
+                <!--<div class="form-group form-group-label"> <div class="row"> <div class="col-md-10 col-md-push-1"> <label class="floating-label" for="theme">主題</label> <select id="theme" class="form-control"> <option value="{$theme}">{$theme}</option> </select>
+                </div> </div> </div>-->
+                *} {if $enable_email_verify == 'true'}
+                <div class="form-group form-group-label">
+                  <div class="row">
+                    <div class="col-md-10 col-md-push-1">
+                      <label class="floating-label" for="email_code">郵箱驗證碼</label>
+                      <input class="form-control" id="email_code" type="text" onkeypress="javascript:if(event.keyCode == 32)event.returnValue = false;">
+                      <button id="email_verify" class="btn btn-block btn-brand-accent waves-attach waves-light">點擊獲取驗證碼</button>
+                    </div>
+                  </div>
+                </div>
+                {/if}
+                <div class="form-group form-group-label">
+                  <div class="row">
+                    <div class="col-md-10 col-md-push-1">
+                      <label class="floating-label" for="passwd">密碼</label>
+                      <input class="form-control" id="passwd" type="password">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group form-group-label">
+                  <div class="row">
+                    <div class="col-md-10 col-md-push-1">
+                      <label class="floating-label" for="repasswd">重複密碼</label>
+                      <input class="form-control" id="repasswd" type="password">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group form-group-label">
+                  <div class="row">
+                    <div class="col-md-10 col-md-push-1">
+                      <label class="floating-label" for="imtype">選擇您的聯繫方式</label>
+                      <select class="form-control" id="imtype">
+                        <option></option>
+                        <option value="1">微信</option>
+                        <option value="2">QQ</option>
+                        <option value="3">Facebook</option>
+                        <option value="4">Telegram</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group form-group-label">
+                  <div class="row">
+                    <div class="col-md-10 col-md-push-1">
+                      <label class="floating-label" for="wechat">在這裡輸入聯繫方式賬號</label>
+                      <input class="form-control" id="wechat" type="text">
+                    </div>
+                  </div>
+                </div>
+                <!-- {if $enable_invite_code == 'true'}-->
+                <div class="form-group form-group-label">
+                  <div class="row">
+                    <div class="col-md-10 col-md-push-1">
+                      <label class="floating-label" for="code">邀請碼</label>
+                      <input class="form-control" id="code" type="text" value="{$code}">
+                      <button class="btn btn-block btn-brand-accent waves-attach waves-light" onclick="javascript:window.open('/code');">查看公告邀請碼</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- {/if}-->
+                {if $geetest_html != null}
+                <div class="form-group form-group-label">
+                  <div class="row">
+                    <div class="col-md-10 col-md-push-1">
+                      <div id="embed-captcha"></div>
+                    </div>
+                  </div>
+                </div>
+                {/if}
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-md-10 col-md-push-1">
+                      <button id="tos" type="submit" class="btn btn-block btn-brand waves-attach waves-light">註冊</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-md-10 col-md-push-1">
+                      <p>註冊即代表同意<a href="/tos">本站服務條款</a>，以及保證錄入信息的真實性；如有不實信息，將會導致賬號被刪除！</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix">
+            <p class="margin-no-top pull-left">
+              <a class="btn btn-flat btn-brand waves-attach" href="/auth/login">已經註冊？請登錄</a>
+            </p>
+          </div>
+          {include file='dialog.tpl'}
+          <div aria-hidden="true" class="modal modal-va-middle fade" id="tos_modal" role="dialog" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-heading">
+                  <h2 class="modal-title">注册 TOS</h2>
+                </div>
+                <div class="modal-inner">
+                  {include file='reg_tos.tpl'}
+                </div>
+                <div class="modal-footer">
+                  <p class="text-right">
+                    <button class="btn btn-flat btn-brand-accent waves-attach waves-effect" data-dismiss="modal" type="button" id="cancel">我不同意</button>
+                    <button class="btn btn-flat btn-brand-accent waves-attach waves-effect" data-dismiss="modal" id="reg" type="button">我同意</button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
 </main>
 {include file='footer.tpl'}
 <script>
-	$(document).ready(function() {
+  $(document).ready(function() {
 				function register() {
 					document.getElementById("tos").disabled = true;
 					$.ajax({
