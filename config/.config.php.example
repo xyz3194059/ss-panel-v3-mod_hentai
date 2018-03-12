@@ -213,13 +213,13 @@ $System_Config['enable_class_expire_reset']='true';
 $System_Config['enable_class_expire_reset_traffic']='0';
 
 #账户到期时是否重置流量
-$System_Config['enable_account_expire_reset']='false';
+$System_Config['enable_account_expire_reset']='true';
 
 #账户到期时重置为的流量值，GB
 $System_Config['enable_account_expire_reset_traffic']='0';
 
 #购买时是否重置流量
-$System_Config['enable_bought_reset']='false';
+$System_Config['enable_bought_reset']='true';
 
 #账户到期之后是否会删除账户
 $System_Config['enable_account_expire_delete']='false';

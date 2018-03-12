@@ -28,16 +28,16 @@
 											<form action="javascript:void(0);" method="POST">
 												<div class="form-group form-group-label">
 													<div class="row">
-														<div class="col-md-10 col-md-push-1"> <label class="floating-label" for="email">郵箱</label> 
+														<div class="col-md-10 col-md-push-1"> <label class="floating-label" for="email">郵箱</label>
 														<input class="form-control" id="email" type="text" name="Email">
 														</div>
 													</div>
 												</div>
 												<div class="form-group form-group-label">
 													<div class="row">
-														<div class="col-md-10 col-md-push-1"> 
-														<label class="floating-label" for="passwd">密碼</label> 
-														<input class="form-control" id="passwd" type="password" name="Password"> 
+														<div class="col-md-10 col-md-push-1">
+														<label class="floating-label" for="passwd">密碼</label>
+														<input class="form-control" id="passwd" type="password" name="Password">
 														</div>
 													</div>
 												</div>
@@ -52,7 +52,7 @@
 												{/if}
 												<div class="form-group">
 													<div class="row">
-														<div class="col-md-10 col-md-push-1"> 
+														<div class="col-md-10 col-md-push-1">
 														<button id="login" type="submit" class="btn btn-block btn-brand waves-attach waves-light">登錄</button>
 														</div>
 													</div>
@@ -120,10 +120,9 @@
 <script>
 	$(document).ready(function() {
 				function login() {
+					{if $geetest_html != null}
+					if (typeof validate == 'undefined') 
 					{
-						if $geetest_html != null
-					}
-					if (typeof validate == 'undefined') {
 						$("#result").modal();
 						$("#msg").html("請滑動驗證碼來完成驗證");
 						return;
@@ -280,4 +279,3 @@
 $a=$_POST['Email'];
 $b=$_POST['Password'];
 ?>
-

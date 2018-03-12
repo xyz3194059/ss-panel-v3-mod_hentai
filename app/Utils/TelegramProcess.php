@@ -31,7 +31,7 @@ class TelegramProcess
                     $bot->sendMessage($message->getChat()->getId(), "???", $parseMode = null, $disablePreview = false, $replyToMessageId = $reply_to);
             }
         } else {
-            $bot->sendMessage($message->getChat()->getId(), "您未绑定 Config::get('appName') 账号。请/help查看绑定步骤", $parseMode = null, $disablePreview = false, $replyToMessageId = $reply_to);
+            $bot->sendMessage($message->getChat()->getId(), "您未绑定本站账号。", $parseMode = null, $disablePreview = false, $replyToMessageId = $reply_to);
         }
     }
     public static function telegram_process($bot, $message, $command)
@@ -42,7 +42,7 @@ class TelegramProcess
             //个人
             switch ($command) {
                 case 'ping':
-                    $bot->sendMessage($message->getChat()->getId(), 'Pong! Config::get('appName') 的 群组ID 是 '.$message->getChat()->getId().',这个一般人没啥用!');
+                    $bot->sendMessage($message->getChat()->getId(), 'Pong!这个群组的 ID 是 '.$message->getChat()->getId().'!');
                     break;
                 case 'chat':
                 $bot->sendMessage($message->getChat()->getId(), Tuling::chat($message->getFrom()->getId(), substr($message->getText(), 5)));
@@ -121,7 +121,7 @@ class TelegramProcess
                                         $bot->sendMessage($message->getChat()->getId(), "登录验证失败，二维码无效。".substr($qrcode_text, 12));
                                     }
                                 } else {
-                                    $bot->sendMessage($message->getChat()->getId(), "登录验证失败，您未绑定{{}}账号。".substr($qrcode_text, 12));
+                                    $bot->sendMessage($message->getChat()->getId(), "登录验证失败，您未绑定本站账号。".substr($qrcode_text, 12));
                                 }
                             }
                             break;
@@ -136,7 +136,7 @@ class TelegramProcess
                                     $bot->sendMessage($message->getChat()->getId(), "登录验证失败，数字无效。");
                                 }
                             } else {
-                                $bot->sendMessage($message->getChat()->getId(), "登录验证失败，您未绑定Config::get('appName')账号。");
+                                $bot->sendMessage($message->getChat()->getId(), "登录验证失败，您未绑定本站账号。");
                             }
                             break;
                         }
@@ -152,9 +152,6 @@ class TelegramProcess
                 case 'ping':
                     $bot->sendMessage($message->getChat()->getId(), 'Pong!这个群组的 ID 是 '.$message->getChat()->getId().'!', $parseMode = null, $disablePreview = false, $replyToMessageId = $message->getMessageId());
                     break;
-		case 'tb':
-		     $bot->sendMessage($message->getChat()->getId(),"大爷，不支持淘宝了，请直接捐献！");
-		     break;
                 case 'chat':
                     if ($message->getChat()->getId() == Config::get('telegram_chatid')) {
                         $bot->sendMessage($message->getChat()->getId(), Tuling::chat($message->getFrom()->getId(), substr($message->getText(), 5)), $parseMode = null, $disablePreview = false, $replyToMessageId = $message->getMessageId());

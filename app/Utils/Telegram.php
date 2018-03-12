@@ -8,7 +8,7 @@ class Telegram
 {
 
     /**
-     * ������Ϣ
+     * ·¢ËÍÏûÏ¢
      */
     public static function Send($messageText)
     {
