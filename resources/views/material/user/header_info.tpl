@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-cmn-Hans">
+<html lang="zh-cn">
 <head>
 	<meta charset="UTF-8">
-	<meta content="ie=edge,chrome=1" http-equiv="X-UA-Compatible">
-	<meta content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" name="viewport">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
 	<meta name="theme-color" content="#4caf50">
 	<meta http-equiv="X-Frame-Options" content="sameorigin">
 	<title>{$config["appName"]}</title>
@@ -13,7 +13,7 @@
 	<!-- css -->
 	<link href="/theme/material/css/base.min.css" rel="stylesheet">
 	<link href="/theme/material/css/project.min.css" rel="stylesheet">
-	<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
 
 
 	<!-- favicon -->
@@ -175,3 +175,4 @@
 	</style>
 </head>
 <body class="page-green">
+	

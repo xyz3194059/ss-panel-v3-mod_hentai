@@ -20,7 +20,6 @@
         bottom: 0;
     }
 </style>
-
 <body class="page-brand">
 <header class="header header-transparent header-waterfall ui-header">
     <ul class="nav nav-list pull-left">
@@ -43,7 +42,7 @@
                                 class="icon icon-lg margin-right">exit_to_app</span>登出</a></li>
             </ul>
             {else}
-            <span class="access-hide">未登录</span> <span
+            <span class="access-hide">未登錄</span> <span
                     class="icon icon-cd margin-right">account_circle</span>
             <!--	<span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="/theme/material/images/users/avatar-001.jpg"></span> --></a>
             <ul class="dropdown-menu dropdown-menu-right">
