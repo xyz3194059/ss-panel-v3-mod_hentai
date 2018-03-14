@@ -147,11 +147,10 @@
                                                 <p><span class="icon icon-lg text-white">looks_5</span>
                                                     注意：第一次連接可能不能用，導入後程序退出並重新打開程序後連接即可！</p>
                                                 <p><span class="icon icon-lg text-white">flash_auto</span>
-                                                  訂閱地址：<input type="text" class="input form-control form-control-monospace" name="input1" readonly="true" value="{$baseUrl}/link/{$ssr_sub_token}?mu=0"></p>
-                                                    <button class="copy-text btn btn-subscription" type="button"
-                                                            data-clipboard-text="{$baseUrl}/link/{$ssr_sub_token}?mu=0">
-                                                        點擊拷貝訂閱地址
-                                                    </button>
+                                                    訂閱地址：<input type="text" class="input form-control form-control-monospace" name="input1" readonly="true" value="{$baseUrl}/link/{$ssr_sub_token}?mu=0"></p>
+                                                <button class="copy-text btn btn-subscription" type="button" data-clipboard-text="{$baseUrl}/link/{$ssr_sub_token}?mu=0">
+                                                    點擊拷貝訂閱地址
+                                                </button>
                                                 <p><a href="/user/announcement">點擊這裏查看iOS傻瓜式教程</a></p>
                                             </div>
                                             <div class="tab-pane fade" id="all_ssr_android">
@@ -180,7 +179,7 @@
                                                             data-clipboard-text="{$baseUrl}/link/{$ssr_sub_token}?mu=0">
                                                         點擊拷貝訂閱地址
                                                     </button>
-                                                  </p>
+                                                </p>
                                                 <p><a href="/user/announcement">點擊這裏查看Android傻瓜式教程</a></p>
                                             </div>
                                             <div class="tab-pane fade" id="all_ssr_router">
@@ -228,38 +227,21 @@
                                                 {$ssr_url_all = URL::getAllUrl($pre_user, 0, 0)}
                                                 {$ssr_url_all_mu = URL::getAllUrl($pre_user, 1, 0)}
                                                 {if URL::SSRCanConnect($user)}
-                                                    <dl class="dl-horizontal">
-                                                        <p>
-                                                            <dt><code>優點導入普通端口，如果普通端口無法使用再導入單端口</code></dt>
-                                                        </p>
-                                                        <p>
-                                                            <dt>端口</dt>
+                                                    <dl class="dl-horizontal">\
+                                                        <dt><code>優點導入普通端口，如果普通端口無法使用再導入單端口</code></dt>
+                                                        <dt>端口</dt>
                                                         <dd>{$user->port}</dd>
-                                                        </p>
-
-                                                        <p>
-                                                            <dt>密碼</dt>
+                                                        <dt>密碼</dt>
                                                         <dd>{$user->passwd}</dd>
-                                                        </p>
-
-                                                        <p>
-                                                            <dt>自定義加密</dt>
+                                                        <dt>自定義加密</dt>
                                                         <dd>{$user->method}</dd>
-                                                        </p>
-
-                                                        <p>
-                                                            <dt>自定義協議</dt>
+                                                        <dt>自定義協議</dt>
                                                         <dd>{$user->protocol}</dd>
-                                                        </p>
-
-                                                        <p>
-                                                            <dt>自定義混淆</dt>
+                                                        <dt>自定義混淆</dt>
                                                         <dd>{$user->obfs}</dd>
-                                                        </p>
                                                     </dl>
                                                 {else}
-                                                    <p>您好，您目前的 加密方式，混淆，或者協議設置在 ShadowsocksR 客戶端下無法連接。請您選用 Shadowsocks
-                                                        客戶端來連接，或者到 資料編輯 頁面修改後再來查看此處。</p>
+                                                    <p>您好，您目前的 加密方式，混淆，或者協議設置在 ShadowsocksR 客戶端下無法連接。請您選用 Shadowsocks 客戶端來連接，或者到 資料編輯 頁面修改後再來查看此處。</p>
                                                     <p>同時, ShadowsocksR 單端口多用戶的連接不受您設置的影響,您可以在此使用相應的客戶端進行連接~</p>
                                                     <p>請注意，在當前狀態下您的 SSR 訂閱鏈接已經失效，您無法通過此種方式導入節點。</p>
                                                 {/if}
@@ -269,28 +251,22 @@
                                             <nav class="tab-nav margin-top-no">
                                                 <ul class="nav nav-list">
                                                     <li class="active">
-                                                        <a class="waves-attach" data-toggle="tab" href="#all_ss_info"><i
-                                                                    class="icon icon-lg">info_outline</i>&nbsp;連接信息</a>
+                                                        <a class="waves-attach" data-toggle="tab" href="#all_ss_info"><i class="icon icon-lg">info_outline</i>&nbsp;連接信息</a>
                                                     </li>
                                                     <li>
-                                                        <a class="waves-attach" data-toggle="tab"
-                                                           href="#all_ss_windows"><i class="icon icon-lg">desktop_windows</i>&nbsp;Windows</a>
+                                                        <a class="waves-attach" data-toggle="tab" href="#all_ss_windows"><i class="icon icon-lg">desktop_windows</i>&nbsp;Windows</a>
                                                     </li>
                                                     <li>
-                                                        <a class="waves-attach" data-toggle="tab" href="#all_ss_mac"><i
-                                                                    class="icon icon-lg">laptop_mac</i>&nbsp;MacOS</a>
+                                                        <a class="waves-attach" data-toggle="tab" href="#all_ss_mac"><i class="icon icon-lg">laptop_mac</i>&nbsp;MacOS</a>
                                                     </li>
                                                     <li>
-                                                        <a class="waves-attach" data-toggle="tab" href="#all_ss_ios"><i
-                                                                    class="icon icon-lg">laptop_mac</i>&nbsp;iOS</a>
+                                                        <a class="waves-attach" data-toggle="tab" href="#all_ss_ios"><i class="icon icon-lg">laptop_mac</i>&nbsp;iOS</a>
                                                     </li>
                                                     <li>
-                                                        <a class="waves-attach" data-toggle="tab"
-                                                           href="#all_ss_android"><i class="icon icon-lg">android</i>&nbsp;Android</a>
+                                                        <a class="waves-attach" data-toggle="tab" href="#all_ss_android"><i class="icon icon-lg">android</i>&nbsp;Android</a>
                                                     </li>
                                                     <li>
-                                                        <a class="waves-attach" data-toggle="tab" href="#all_ss_router"><i
-                                                                    class="icon icon-lg">router</i>&nbsp;路由器</a>
+                                                        <a class="waves-attach" data-toggle="tab" href="#all_ss_router"><i class="icon icon-lg">router</i>&nbsp;路由器</a>
                                                     </li>
                                                 </ul>
                                             </nav>
@@ -303,25 +279,14 @@
                                                 {if URL::SSCanConnect($user)}
                                                     <dl class="dl-horizontal">
                                                         <p>各個節點的地址請到節點列表查看！</p>
-                                                        <p>
-                                                            <dt>端口</dt>
+                                                        <dt>端口</dt>
                                                         <dd>{$user->port}</dd>
-                                                        </p>
-
-                                                        <p>
-                                                            <dt>密碼</dt>
+                                                        <dt>密碼</dt>
                                                         <dd>{$user->passwd}</dd>
-                                                        </p>
-
-                                                        <p>
-                                                            <dt>自定義加密</dt>
+                                                        <dt>自定義加密</dt>
                                                         <dd>{$user->method}</dd>
-                                                        </p>
-
-                                                        <p>
-                                                            <dt>自定義混淆</dt>
+                                                        <dt>自定義混淆</dt>
                                                         <dd>{$user->obfs}</dd>
-                                                        </p>
                                                     </dl>
                                                 {else}
                                                     <p>您好，您目前的 加密方式，混淆，或者協議設置在 SS 客戶端下無法連接。請您選用 SSR 客戶端來連接，或者到 資料編輯
@@ -344,20 +309,14 @@
                                             </div>
                                             <div class="tab-pane fade" id="all_ss_ios">
                                                 <p>
-                                                    推薦下載<a href="https://itunes.apple.com/cn/app/shadowrocket/id932747118?mt=8">Shadowrocket</a>，已購買此軟件的美國商店Apple
-                                                    ID:<code>shz7348@icloud.com</code> 密碼<code>Qq654321.</code>注意特殊符號與大小寫,自行切換商店賬號下載安裝，然後在
-                                                    Safari 中點擊<a href="{$ss_url_all}">這個（普通端口）</a>或者<a
-                                                            href="{$ss_url_all_mu}">這個（單端口多用戶）</a>，然後點擊確定，就可以批量添加節點。</p>
-                                                <p>iOS 下載<a href="/link/{$ios_token}?is_ss=1">這個（普通端口）</a>或者<a
-                                                            href="/link/{$ios_token}?is_ss=1&is_mu=1">這個（單端口多用戶）</a>，導入到
+                                                    推薦下載<a href="https://itunes.apple.com/cn/app/shadowrocket/id932747118?mt=8">Shadowrocket</a>，已購買此軟件的美國商店Apple ID:<code>shz7348@icloud.com</code> 密碼<code>Qq654321.</code>注意特殊符號與大小寫,自行切換商店賬號下載安裝，然後在
+                                                    Safari 中點擊<a href="{$ss_url_all}">這個（普通端口）</a>或者<a href="{$ss_url_all_mu}">這個（單端口多用戶）</a>，然後點擊確定，就可以批量添加節點。</p>
+                                                <p>iOS 下載<a href="/link/{$ios_token}?is_ss=1">這個（普通端口）</a>或者<a href="/link/{$ios_token}?is_ss=1&is_mu=1">這個（單端口多用戶）</a>，導入到
                                                     Surge 中，然後就可以隨意切換服務器上網了。</p>
                                             </div>
                                             <div class="tab-pane fade" id="all_ss_android">
-                                                <p><a href="/ssr-download/ss-android.apk">下載</a>，再<a
-                                                            href="/ssr-download/ss-android-obfs.apk">下載</a>，然後安裝，然後在手機上點擊
-                                                    <a class="copy-text" data-clipboard-text="{$ss_url_all}">
-                                                        這個鏈接（普通端口）</a>或者<a class="copy-text"
-                                                                           data-clipboard-text="{$ss_url_all_mu}">這個鏈接（單端口多用戶端口）</a>複制到剪貼板，打開
+                                                <p><a href="/ssr-download/ss-android.apk">下載</a>，再<a href="/ssr-download/ss-android-obfs.apk">下載</a>，然後安裝，然後在手機上點擊
+                                                    <a class="copy-text" data-clipboard-text="{$ss_url_all}"> 這個鏈接（普通端口）</a>或者<a class="copy-text" data-clipboard-text="{$ss_url_all_mu}">這個鏈接（單端口多用戶端口）</a>複制到剪貼板，打開
                                                     Shadowsocks 客戶端，選擇從剪貼板導入，然後選擇一個節點，設置一下路由爲繞過大陸，點擊飛機就可以上網了。</p>
                                             </div>
                                             <div class="tab-pane fade" id="all_ss_router">
@@ -380,8 +339,7 @@
                                 </div>
                                 <div class="card-action">
                                     <div class="card-action-btn pull-left">
-                                        <p><a class="btn btn-brand btn-flat waves-attach" href="/user/url_reset"><span
-                                                        class="icon">autorenew</span>&nbsp;重置我的訂閱鏈接</a></p>
+                                        <p><a class="btn btn-brand btn-flat waves-attach" href="/user/url_reset"><span class="icon">autorenew</span>&nbsp;重置我的訂閱鏈接</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -395,16 +353,13 @@
                             <div class="card-inner margin-bottom-no">
                                 <p class="card-heading"><i class="icon icon-md">account_circle</i>賬號使用情況</p>
                                 <dl class="dl-horizontal">
-                                    <p>
                                         <dt>帳號等級</dt>
                                         {if $user->class!=0}
                                     <dd><i class="icon icon-md t4-text">stars</i>&nbsp;<code>VIP{$user->class}</dd>
                                     {else}
                                     <dd><i class="icon icon-md t4-text">stars</i>&nbsp;免費</dd>
                                     {/if}
-                                    </p>
                                     {if $user->class!=0}
-                                        <p>
                                             <dt>Telegram(VIP可見)</dt>
                                         <dd><i class="icon icon-md t4-text">stars</i>&nbsp;<a href="請到index.tpl第299行修改"
                                                                                               target="view_window">點擊加入TG群</a>
@@ -412,22 +367,14 @@
                                     {else}
 
                                     {/if}
-                                    </p>
-
-                                    <p>
                                         <dt>等級過期時間</dt>
                                         {if $user->class_expire!="1989-06-04 00:05:00"}
                                     <dd><i class="icon icon-md">event</i>&nbsp;{$user->class_expire}</dd>
                                     {else}
                                     <dd><i class="icon icon-md">event</i>&nbsp;不過期</dd>
                                     {/if}
-                                    </p>
-
-                                    <p>
                                         <dt>帳號過期時間</dt>
                                     <dd><i class="icon icon-md">event</i>&nbsp;{$user->expire_in}</dd>
-
-                                    <p>
                                         <dt>速度限制</dt>
                                         {if $user->node_speedlimit!=0}
                                     <dd>
@@ -436,27 +383,21 @@
                                     </dd>
                                     {else}
                                     <dd><i class="icon icon-md">settings_input_component</i>&nbsp;不限速</dd>
-                                    {/if}</p>
-                                    <p>
+                                    {/if}
                                         <dt>在線設備數</dt>
                                     <dd><i class="icon icon-md">phonelink</i>&nbsp;{$user->online_ip_count()}
                                         / {$user->node_connector}</dd>
-                                    </p>
-                                    <p>
                                         <dt>余額</dt>
                                     <dd><i class="icon icon-md">monetization_on</i>&nbsp;{$user->money} CNY</dd>
-                                    </p>
-                                    <p>
                                         <dt>上次使用</dt>
                                         {if $user->lastSsTime()!="從未使用喵"}
                                     <dd><i class="icon icon-md">event</i>&nbsp;{$user->lastSsTime()}</dd>
                                     {else}
                                     <dd><i class="icon icon-md">event</i>&nbsp;從未使用</dd>
-                                    {/if}</p>
-                                    <p>
+                                    {/if}
+
                                         <dt>上次簽到時間：</dt>
                                     <dd><i class="icon icon-md">event</i>&nbsp;{$user->lastCheckInTime()}</dd>
-                                    </p>
                                     <p id="checkin-msg"></p>
 
                                     {if $geetest_html != null}
@@ -492,11 +433,11 @@
                                         animationEnabled: true,
                                         backgroundColor: "transparent",
                                         title: {
-                                          text: "{($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100}%",
-                                          fontColor: "#848484",
-                                          fontSize: 70,
-                                          horizontalAlign: "center",
-                                          verticalAlign: "center"
+                                            text: "{($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100}%",
+                                            fontColor: "#848484",
+                                            fontSize: 70,
+                                            horizontalAlign: "center",
+                                            verticalAlign: "center"
                                         },
                                         toolTip: {
                                             backgroundColor: "#ffffff",
@@ -512,12 +453,12 @@
                                                 startAngle: 270,
                                                 type: "doughnut",
                                                 dataPoints: [
-                                    {if $user->transfer_enable != 0}
-                                    {color: "#c70000", y: {$user->last_day_t/$user->transfer_enable*100}}，
-                                    {color: "#424242", y: {($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100}}
-                                    {/if}]
-                                    }]
-                                    })；
+                                                    {if $user->transfer_enable != 0}
+                                                    {color: "#c70000", y: {$user->last_day_t/$user->transfer_enable*100}},
+                                                    {color: "#424242", y: {($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100}}
+                                                    {/if}]
+                                            }]
+                                    });
                                     chart.render();
                                 </script>
                             </div>
@@ -541,7 +482,7 @@
                                     ds.async = true;
                                     ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
                                     ds.charset = 'UTF-8';
-                                    (document.getElementsByTagName('head')[0]|| document.getElementsByTagName('body')[0]).appendChild(ds);
+                                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
                                 })();
                             </script>
                         </div>
@@ -550,9 +491,7 @@
             {/if}
             {include file='dialog.tpl'}
     </div>
-    </div>
     </section>
-    </div>
 </main>
 
 {include file='user/footer.tpl'}
