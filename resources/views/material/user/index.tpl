@@ -3,7 +3,6 @@
 
 
 <main class="content">
-
     <div class="content-header ui-content-header">
         <div class="container">
             <h1 class="content-heading">用戶中心</h1>
@@ -23,10 +22,8 @@
                                     <p>{$ann->content}</p>
                                 {/if}
                             </div>
-
                         </div>
                     </div>
-
                     <div class="card">
                         <div class="card-main">
                             <div class="card-inner margin-bottom-no">
@@ -34,8 +31,7 @@
                                 <nav class="tab-nav margin-top-no">
                                     <ul class="nav nav-list">
                                         <li {if $ssr_prefer}class="active"{/if}>
-                                            <a class="waves-attach" data-toggle="tab" href="#all_ssr"><i
-                                                        class="icon icon-lg">airplanemode_active</i>&nbsp;ShadowsocksR</a>
+                                            <a class="waves-attach" data-toggle="tab" href="#all_ssr"><i class="icon icon-lg">airplanem ode_active</i>&nbsp;ShadowsocksR</a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -43,32 +39,25 @@
                                     <div class="tab-content">
                                         <div class="tab-pane fade {if $ssr_prefer}active in{/if}" id="all_ssr">
                                             {$pre_user = URL::cloneUser($user)}
-
                                             <nav class="tab-nav margin-top-no">
                                                 <ul class="nav nav-list">
                                                     <li class="active">
-                                                        <a class="waves-attach" data-toggle="tab"
-                                                           href="#all_ssr_windows"><i class="icon icon-lg">desktop_windows</i>&nbsp;Windows</a>
+                                                        <a class="waves-attach" data-toggle="tab" href="#all_ssr_windows"><i class="icon icon-lg">desktop_windows</i>&nbsp;Windows</a>
                                                     </li>
                                                     <li>
-                                                        <a class="waves-attach" data-toggle="tab" href="#all_ssr_mac"><i
-                                                                    class="icon icon-lg">laptop_mac</i>&nbsp;MacOS</a>
+                                                        <a class="waves-attach" data-toggle="tab" href="#all_ssr_mac"><i class="icon icon-lg">laptop_mac</i>&nbsp;MacOS</a>
                                                     </li>
                                                     <li>
-                                                        <a class="waves-attach" data-toggle="tab" href="#all_ssr_linux"><i
-                                                                    class="icon icon-lg">dvr</i>&nbsp;Linux</a>
+                                                        <a class="waves-attach" data-toggle="tab" href="#all_ssr_linux"><i class="icon icon-lg">dvr</i>&nbsp;Linux</a>
                                                     </li>
                                                     <li>
-                                                        <a class="waves-attach" data-toggle="tab" href="#all_ssr_ios"><i
-                                                                    class="icon icon-lg">phone_iphone</i>&nbsp;iOS</a>
+                                                        <a class="waves-attach" data-toggle="tab" href="#all_ssr_ios"><i class="icon icon-lg">phone_iphone</i>&nbsp;iOS</a>
                                                     </li>
                                                     <li>
-                                                        <a class="waves-attach" data-toggle="tab"
-                                                           href="#all_ssr_android"><i class="icon icon-lg">android</i>&nbsp;Android</a>
+                                                        <a class="waves-attach" data-toggle="tab" href="#all_ssr_android"><i class="icon icon-lg">android</i>&nbsp;Android</a>
                                                     </li>
                                                     <li>
-                                                        <a class="waves-attach" data-toggle="tab"
-                                                           href="#all_ssr_router"><i class="icon icon-lg">router</i>&nbsp;路由器</a>
+                                                        <a class="waves-attach" data-toggle="tab" href="#all_ssr_router"><i class="icon icon-lg">router</i>&nbsp;路由器</a>
                                                     </li>
                                                     <li>
                                                         <a class="waves-attach" data-toggle="tab"
@@ -157,17 +146,12 @@
                                                     選擇任意節點點擊連接，然後點擊allow後解鎖指紋</p>
                                                 <p><span class="icon icon-lg text-white">looks_5</span>
                                                     注意：第一次連接可能不能用，導入後程序退出並重新打開程序後連接即可！</p>
-                                                <p><span class="icon icon-lg text-white">flash_auto</span> 訂閱地址：<input
-                                                            type="text"
-                                                            class="input form-control form-control-monospace"
-                                                            name="input1" readonly
-                                                            value="{$baseUrl}/link/{$ssr_sub_token}?mu=0"
-                                                            readonly="true">
+                                                <p><span class="icon icon-lg text-white">flash_auto</span>
+                                                  訂閱地址：<input type="text" class="input form-control form-control-monospace" name="input1" readonly="true" value="{$baseUrl}/link/{$ssr_sub_token}?mu=0"></p>
                                                     <button class="copy-text btn btn-subscription" type="button"
                                                             data-clipboard-text="{$baseUrl}/link/{$ssr_sub_token}?mu=0">
                                                         點擊拷貝訂閱地址
                                                     </button>
-                                                    <br>
                                                 <p><a href="/user/announcement">點擊這裏查看iOS傻瓜式教程</a></p>
                                             </div>
                                             <div class="tab-pane fade" id="all_ssr_android">
@@ -196,7 +180,7 @@
                                                             data-clipboard-text="{$baseUrl}/link/{$ssr_sub_token}?mu=0">
                                                         點擊拷貝訂閱地址
                                                     </button>
-                                                    <br>
+                                                  </p>
                                                 <p><a href="/user/announcement">點擊這裏查看Android傻瓜式教程</a></p>
                                             </div>
                                             <div class="tab-pane fade" id="all_ssr_router">
@@ -280,10 +264,7 @@
                                                     <p>請注意，在當前狀態下您的 SSR 訂閱鏈接已經失效，您無法通過此種方式導入節點。</p>
                                                 {/if}
                                             </div>
-
-
                                         </div>
-
                                         <div class="tab-pane fade {if !$ssr_prefer}active in{/if}" id="all_ss">
                                             <nav class="tab-nav margin-top-no">
                                                 <ul class="nav nav-list">
@@ -322,8 +303,6 @@
                                                 {if URL::SSCanConnect($user)}
                                                     <dl class="dl-horizontal">
                                                         <p>各個節點的地址請到節點列表查看！</p>
-
-
                                                         <p>
                                                             <dt>端口</dt>
                                                         <dd>{$user->port}</dd>
@@ -409,11 +388,8 @@
 
                         </div>
                     </div>
-
                 </div>
-
                 <div class="col-lg-6 col-md-6">
-
                     <div class="card">
                         <div class="card-main">
                             <div class="card-inner margin-bottom-no">
@@ -481,15 +457,11 @@
                                         <dt>上次簽到時間：</dt>
                                     <dd><i class="icon icon-md">event</i>&nbsp;{$user->lastCheckInTime()}</dd>
                                     </p>
-
-
                                     <p id="checkin-msg"></p>
 
                                     {if $geetest_html != null}
                                         <div id="popup-captcha"></div>
                                     {/if}
-
-
                                     <div class="card-action">
                                         <div class="card-action-btn pull-left">
                                             {if $user->isAbleToCheckin() }
@@ -507,16 +479,12 @@
                                     </div>
                                 </dl>
                             </div>
-
                         </div>
                     </div>
-
                     <div class="card">
                         <div class="card-main">
                             <div class="card-inner margin-bottom-no">
-
                                 <div id="traffic_chart" style="height: 300px; width: 100%;"></div>
-
                                 <script src="/assets/materialize/js/canvasjs.min.js"></script>
                                 <!--	<script src="//canvasjs.com/assets/script/canvasjs.min.js"> </script> -->
                                 <script type="text/javascript">
@@ -524,11 +492,11 @@
                                         animationEnabled: true,
                                         backgroundColor: "transparent",
                                         title: {
-                                            fontColor: "#848484",
-                                            fontSize: 70,
-                                            horizontalAlign: "center",
-                                            text: "{($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100}%",
-                                            verticalAlign: "center"
+                                          text: "{($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100}%",
+                                          fontColor: "#848484",
+                                          fontSize: 70,
+                                          horizontalAlign: "center",
+                                          verticalAlign: "center"
                                         },
                                         toolTip: {
                                             backgroundColor: "#ffffff",
@@ -545,21 +513,18 @@
                                                 type: "doughnut",
                                                 dataPoints: [
                                     {if $user->transfer_enable != 0}
-                                    {y: {$user->last_day_t/$user->transfer_enable*100}，color: "#c70000"}，
-                                    {y: {($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100},color: "#424242"}
+                                    {color: "#c70000", y: {$user->last_day_t/$user->transfer_enable*100}}，
+                                    {color: "#424242", y: {($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100}}
                                     {/if}]
                                     }]
                                     })；
-											chart.render();
+                                    chart.render();
                                 </script>
                             </div>
-
                         </div>
                     </div>
-
                 </div>
             </div>
-
 
             {if $enable_duoshuo=='true'}
                 <div class="card">
@@ -569,33 +534,22 @@
                             <div class="ds-thread" data-thread-key="0" data-title="index"
                                  data-url="{$baseUrl}/user/"></div>
                             <script type="text/javascript">
-                                var duoshuoQuery = {
-
-                                    short_name: "{$duoshuo_shortname}"
-
-
-                                };
+                                var duoshuoQuery = {short_name: "{$duoshuo_shortname}"};
                                 (function () {
                                     var ds = document.createElement('script');
                                     ds.type = 'text/javascript';
                                     ds.async = true;
                                     ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
                                     ds.charset = 'UTF-8';
-                                    (document.getElementsByTagName('head')[0]
-                                        || document.getElementsByTagName('body')[0]).appendChild(ds);
+                                    (document.getElementsByTagName('head')[0]|| document.getElementsByTagName('body')[0]).appendChild(ds);
                                 })();
                             </script>
                         </div>
-
                     </div>
                 </div>
             {/if}
-
             {include file='dialog.tpl'}
-
     </div>
-
-
     </div>
     </section>
     </div>
