@@ -4,9 +4,8 @@ body {
 }
 
 .ui-content-header {
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
+    background: no-repeat 50% 50%;
+    background-size: cover;
   margin-bottom: -58px;
   padding-top: 68px;
   padding-bottom: 58px;

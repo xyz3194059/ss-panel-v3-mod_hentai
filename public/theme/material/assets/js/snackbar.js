@@ -90,7 +90,7 @@
                 $this.data('bs.snackbar', (data = new Snackbar(options)));
                 data.show();
             } else if ($('.snackbar-inner').length && !$('.snackbar-inner.old').length) {
-                $('.snackbar-inner.in').addClass('old')
+                $('.snackbar-inner.in').addClass('old');
                 data.hide();
                 if ($.support.transition) {
                     $(document).one('bsTransitionEnd', '.snackbar-inner.old', function () {

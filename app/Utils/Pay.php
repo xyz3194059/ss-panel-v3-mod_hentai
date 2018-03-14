@@ -61,14 +61,14 @@ class Pay
     {
 
             return '
-            			<p><i class="icon icon-lg">monetization_on</i>&nbsp;余额&nbsp;<font color="red" size="5">'.$user->money.'</font>&nbsp;元</p>
+            			<p><i class="icon icon-lg">monetization_on</i>&nbsp;余额&nbsp;<span  style="color: red; font-size: large; ">'.$user->money.'</span>&nbsp;元</p>
 
                         <p><img src="/images/qianbai-4.png" height="250" width="200" /></p>
                         <div class="form-group form-group-label">
                          <label class="floating-label" id="number">请选择充值金额</label>
                         <select id="type" class="form-control" name="amount">
                             <option></option>
-                            <option value="'.Config::get('amount')[0].'">'.Config::get('amount')[0].'元</option>
+                            <option value="' .Config::get('amount')[0].'">'.Config::get('amount')[0].'元</option>
                             <option value="'.Config::get('amount')[1].'">'.Config::get('amount')[1].'元</option>
                             <option value="'.Config::get('amount')[2].'">'.Config::get('amount')[2].'元</option>
                             <option value="'.Config::get('amount')[3].'">'.Config::get('amount')[3].'元</option>

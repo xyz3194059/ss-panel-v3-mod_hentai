@@ -189,16 +189,16 @@
 										</nav>
 										<div class="tab-pane fade {if $ssr_prefer}active in{/if}" id="ssr_url">
 											{if URL::SSRCanConnect($user, $mu)}
-												<p><a href="{URL::getItemUrl($ssr_item, 0)}"/>Android 手機上用默認浏覽器打開點我就可以直接添加了(給 ShadowsocksR APP)</a></p>
-												<p><a href="{URL::getItemUrl($ssr_item, 0)}"/>iOS 上用 Safari 打開點我就可以直接添加了(給 Shadowrocket)</a></p>
+												<p><a href="{URL::getItemUrl($ssr_item, 0)}"></a>Android 手機上用默認浏覽器打開點我就可以直接添加了(給 ShadowsocksR APP)</a></p>
+												<p><a href="{URL::getItemUrl($ssr_item, 0)}"></a>iOS 上用 Safari 打開點我就可以直接添加了(給 Shadowrocket)</a></p>
 											{else}
 												<p>您好，您目前的 加密方式，混淆，或者協議設置在 ShadowsocksR 客戶端下無法連接。請您選用 Shadowsocks 客戶端來連接，或者到 資料編輯 頁面修改後再來查看此處。</p>
 											{/if}
 										</div>
 										<div class="tab-pane fade {if !$ssr_prefer}active in{/if}" id="ss_url">
 											{if URL::SSCanConnect($user, $mu)}
-												<p><a href="{URL::getItemUrl($ss_item, 1)}"/>Android 手機上用默認浏覽器打開點我就可以直接添加了(給 Shadowsocks)</a></p>
-												<p><a href="{URL::getItemUrl($ss_item, 1)}"/>iOS 上用 Safari 打開點我就可以直接添加了(給 Shadowrocket)</a></p>
+												<p><a href="{URL::getItemUrl($ss_item, 1)}"></a>Android 手機上用默認浏覽器打開點我就可以直接添加了(給 Shadowsocks)</a></p>
+												<p><a href="{URL::getItemUrl($ss_item, 1)}"></a>iOS 上用 Safari 打開點我就可以直接添加了(給 Shadowrocket)</a></p>
 											{else}
 												<p>您好，您目前的 加密方式，混淆，或者協議設置在 Shadowsocks 客戶端下無法連接。請您選用 ShadowsocksR 客戶端來連接，或者到 資料編輯 頁面修改後再來查看此處。</p>
 											{/if}

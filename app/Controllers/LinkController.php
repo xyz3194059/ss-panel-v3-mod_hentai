@@ -1376,7 +1376,6 @@ FINAL,Proxy';
 			<key>PayloadOrganization</key>
 			<string>Tony</string>
 			<key>PayloadRemovalDisallowed</key>
-			<false/>
 			<key>PayloadType</key>
 			<string>Configuration</string>
 			<key>PayloadUUID</key>

@@ -198,10 +198,8 @@ if (!empty($_POST['out_trade_no'])&& trim($_POST['out_trade_no'])!="") {
             font-family:'宋体';
         }
         #logo{
-            background-color: transparent;
-            background-image: url("../img/new-btn-fixed.png");
             border: medium none;
-            background-position:0 0;
+            background: transparent url("../img/new-btn-fixed.png") 0 0;
             width:166px;
             height:35px;
             float:left;
@@ -335,7 +333,7 @@ if (!empty($_POST['out_trade_no'])&& trim($_POST['out_trade_no'])!="") {
     </form>
     <div id="foot">
         <ul class="foot-ul">
-            <li><font class="note-help">如果您点击“确认”按钮，即表示您同意该次的执行操作。 </font></li>
+            <li><span class="note-help">如果您点击“确认”按钮，即表示您同意该次的执行操作。 </span></li>
             <li>
                 支付宝版权所有 2011-2015 ALIPAY.COM
             </li>

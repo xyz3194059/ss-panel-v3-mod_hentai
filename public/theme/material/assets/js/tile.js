@@ -59,7 +59,7 @@
 
 			this.$element.closest('.tile-collapse').removeClass('active');
 
-			this.transitioning = 1
+			this.transitioning = 1;
 
 			var complete = function () {
 				this.transitioning = 0;

@@ -16,7 +16,7 @@ class Spay_notify
     }
     /**
      * 针对notify_url验证消息是否是支付宝发出的合法消息
-     * @return 验证结果
+     * @return 验证结果|bool
      */
     public function verifyNotify()
     {
