@@ -430,6 +430,7 @@
                                 <!--	<script src="//canvasjs.com/assets/script/canvasjs.min.js"> </script> -->
                                 <script type="text/javascript">
                                     var salesDoughnutChartUS = new CanvasJS.Chart("traffic_chart", {
+                                        theme: "light1",
                                         animationEnabled: true,
                                         backgroundColor: "transparent",
                                         title: {
@@ -454,8 +455,8 @@
                                                 type: "doughnut",
                                                 dataPoints: [
                                                     {if $user->transfer_enable != 0}
-                                                    {color: "#c70000", y: {$user->last_day_t/$user->transfer_enable*100}},
-                                                    {color: "#424242", y: {($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100}}
+                                                    {y: {$user->last_day_t/$user->transfer_enable*100},color: "#c70000"},
+                                                    {y: {($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100},color: "#424242"}
                                                     {/if}]
                                             }]
                                     });
@@ -472,8 +473,7 @@
                     <div class="card-main">
                         <div class="card-inner margin-bottom-no">
                             <p class="card-heading">討論區</p>
-                            <div class="ds-thread" data-thread-key="0" data-title="index"
-                                 data-url="{$baseUrl}/user/"></div>
+                            <div class="ds-thread" data-thread-key="0" data-title="index" data-url="{$baseUrl}/user/"></div>
                             <script type="text/javascript">
                                 var duoshuoQuery = {short_name: "{$duoshuo_shortname}"};
                                 (function () {
@@ -514,9 +514,7 @@
 
 
     window.onload = function () {
-        var myShakeEvent = new Shake({
-            threshold: 15
-        });
+        var myShakeEvent = new Shake(threshold: 15});
 
         myShakeEvent.start();
 
