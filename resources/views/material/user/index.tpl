@@ -427,41 +427,43 @@
                             <div class="card-inner margin-bottom-no">
                                 <div id="traffic_chart" style="height: 300px; width: 100%;"></div>
                                 <script src="/assets/materialize/js/canvasjs.min.js"></script>
-                                <!--	<script src="//canvasjs.com/assets/script/canvasjs.min.js"> </script> -->
-                                <script type="text/javascript">
-                                    var salesDoughnutChartUS = new CanvasJS.Chart("traffic_chart", {
-                                        theme: "light1",
-                                        animationEnabled: true,
-                                        backgroundColor: "transparent",
-                                        title: {
-                                            text: "{($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100}%",
-                                            fontColor: "#848484",
-                                            fontSize: 70,
-                                            horizontalAlign: "center",
-                                            verticalAlign: "center"
-                                        },
-                                        toolTip: {
-                                            backgroundColor: "#ffffff",
-                                            borderThickness: 0,
-                                            cornerRadius: 0,
-                                            fontColor: "#424242"
-                                        },
-                                        data: [
-                                            {
-                                                explodeOnClick: false,
-                                                innerRadius: "96%",
-                                                radius: "90%",
-                                                startAngle: 270,
-                                                type: "doughnut",
-                                                dataPoints: [
-                                                    {if $user->transfer_enable != 0}
-                                                    {y: {$user->last_day_t/$user->transfer_enable*100},color: "#c70000"},
-                                                    {y: {($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100},color: "#424242"}
-                                                    {/if}]
-                                            }]
-                                    });
-                                    chart.render();
-                                </script>
+            										<script type="text/javascript">
+            											var chart = new CanvasJS.Chart("traffic_chart",{
+            												title:{
+            													text: "{($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100}%",
+            													fontColor: "#848484",
+                                                              	fontSize: 70,
+                                                          		verticalAlign: "center",
+                                                              	horizontalAlign: "center"
+            													},
+                                                            toolTip: {
+                                                                backgroundColor: "#ffffff",
+                                                                borderThickness: 0,
+                                                                cornerRadius: 0,
+                                                                fontColor: "#424242"
+                                                    			},
+            												data: [
+            												{
+            													  explodeOnClick: false,
+                                                            innerRadius: "96%",
+                                                            radius: "90%",
+                                                            startAngle: 270,
+            													type: "doughnut",
+            													dataPoints: [
+            														{if $user->transfer_enable != 0}
+            														{
+            															y: {$user->last_day_t/$user->transfer_enable*100},color: "#c70000"
+            														},
+            														{
+            															y: {($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100},color: "#424242"
+            														}
+            														{/if}
+            													]
+            												}
+            												]
+            											});
+            											chart.render();
+            										</script>
                             </div>
                         </div>
                     </div>
