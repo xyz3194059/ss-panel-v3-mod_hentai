@@ -100,25 +100,11 @@
                                                 <p><span class="icon icon-lg text-white">looks_one</span><a
                                                             href="/ssr-download/ssr-mac.dmg"> 點擊我下載</a></p>
                                                 <p><span class="icon icon-lg text-white">looks_two</span> 打開下載的Dmg文件</p>
-                                                <p><span class="icon icon-lg text-white">looks_3</span>
-                                                    把ShadowsocksX拖入到Finder的應用程序列表(Applications)</p>
-                                                <p><span class="icon icon-lg text-white">looks_4</span>
-                                                    打開Launchapad裏的ShadowsocksX</p>
-                                                <p><span class="icon icon-lg text-white">looks_5</span>
-                                                    菜單欄的紙飛機圖標-服務器-服務器訂閱填入以下訂閱地址，更新後出現您的節點</p>
-                                                <p><span class="icon icon-lg text-white">looks_6</span>
-                                                    菜單欄的紙飛機圖標-打開shadowsocks</p>
-                                                <p><span class="icon icon-lg text-white">flash_auto</span> 訂閱地址：<input
-                                                            type="text"
-                                                            class="input form-control form-control-monospace"
-                                                            name="input1" readonly
-                                                            value="{$baseUrl}/link/{$ssr_sub_token}?mu=0"
-                                                            readonly="true">
-                                                    <button class="copy-text btn btn-subscription" type="button"
-                                                            data-clipboard-text="{$baseUrl}/link/{$ssr_sub_token}?mu=0">
-                                                        點擊拷貝訂閱地址
-                                                    </button>
-                                                    <br>
+                                                <p><span class="icon icon-lg text-white">looks_3</span>把ShadowsocksX拖入到Finder的應用程序列表(Applications)</p>
+                                                <p><span class="icon icon-lg text-white">looks_4</span>打開Launchapad裏的ShadowsocksX</p>
+                                                <p><span class="icon icon-lg text-white">looks_5</span>菜單欄的紙飛機圖標-服務器-服務器訂閱填入以下訂閱地址，更新後出現您的節點</p>
+                                                <p><span class="icon icon-lg text-white">looks_6</span>菜單欄的紙飛機圖標-打開shadowsocks</p>
+                                                <p><span class="icon icon-lg text-white">flash_auto</span> 訂閱地址：<input type="text" class="input form-control form-control-monospace" name="input1" readonly value="{$baseUrl}/link/{$ssr_sub_token}?mu=0" readonly="true"><button class="copy-text btn btn-subscription" type="button" data-clipboard-text="{$baseUrl}/link/{$ssr_sub_token}?mu=0">點擊拷貝訂閱地址</button><br>
 
                                                 </p>
                                                 <p><a href="/user/announcement">點擊這裏查看Mac傻瓜式教程</a></p>
@@ -223,7 +209,7 @@
                                                 {$ssr_url_all = URL::getAllUrl($pre_user, 0, 0)}
                                                 {$ssr_url_all_mu = URL::getAllUrl($pre_user, 1, 0)}
                                                 {if URL::SSRCanConnect($user)}
-                                                    <dl class="dl-horizontal">\
+                                                    <dl class="dl-horizontal">
                                                         <dt><code>優先入普通端口，如果普通端口無法使用再導入單端口</code></dt>
                                                         <dt>端口</dt>
                                                         <dd>{$user->port}</dd>
@@ -349,50 +335,50 @@
                             <div class="card-inner margin-bottom-no">
                                 <p class="card-heading"><i class="icon icon-md">account_circle</i>賬號使用情況</p>
                                 <dl class="dl-horizontal">
-                                        <dt>帳號等級</dt>
-                                        {if $user->class!=0}
-                                    <dd><i class="icon icon-md t4-text">stars</i>&nbsp;<code>VIP{$user->class}</dd>
+                                    <dt>帳號等級</dt>
+                                    {if $user->class!=0}
+                                        <dd><i class="icon icon-md t4-text">stars</i>&nbsp;<code>VIP{$user->class}</code></dd>
                                     {else}
-                                    <dd><i class="icon icon-md t4-text">stars</i>&nbsp;免費</dd>
+                                        <dd><i class="icon icon-md t4-text">stars</i>&nbsp;免費</dd>
                                     {/if}
                                     {if $user->class!=0}
-                                            <dt>Telegram(VIP可見)</dt>
+                                        <dt>Telegram(VIP可見)</dt>
                                         <dd><i class="icon icon-md t4-text">stars</i>&nbsp;<a href="請到index.tpl第299行修改"
                                                                                               target="view_window">點擊加入TG群</a>
                                         </dd>
                                     {else}
 
                                     {/if}
-                                        <dt>等級過期時間</dt>
-                                        {if $user->class_expire!="1989-06-04 00:05:00"}
-                                    <dd><i class="icon icon-md">event</i>&nbsp;{$user->class_expire}</dd>
+                                    <dt>等級過期時間</dt>
+                                    {if $user->class_expire!="1989-06-04 00:05:00"}
+                                        <dd><i class="icon icon-md">event</i>&nbsp;{$user->class_expire}</dd>
                                     {else}
-                                    <dd><i class="icon icon-md">event</i>&nbsp;不過期</dd>
+                                        <dd><i class="icon icon-md">event</i>&nbsp;不過期</dd>
                                     {/if}
-                                        <dt>帳號過期時間</dt>
+                                    <dt>帳號過期時間</dt>
                                     <dd><i class="icon icon-md">event</i>&nbsp;{$user->expire_in}</dd>
-                                        <dt>速度限制</dt>
-                                        {if $user->node_speedlimit!=0}
-                                    <dd>
-                                        <i class="icon icon-md">settings_input_component</i>&nbsp;{$user->node_speedlimit}
-                                        Mbps
-                                    </dd>
+                                    <dt>速度限制</dt>
+                                    {if $user->node_speedlimit!=0}
+                                        <dd>
+                                            <i class="icon icon-md">settings_input_component</i>&nbsp;{$user->node_speedlimit}
+                                            Mbps
+                                        </dd>
                                     {else}
-                                    <dd><i class="icon icon-md">settings_input_component</i>&nbsp;不限速</dd>
+                                        <dd><i class="icon icon-md">settings_input_component</i>&nbsp;不限速</dd>
                                     {/if}
-                                        <dt>在線設備數</dt>
+                                    <dt>在線設備數</dt>
                                     <dd><i class="icon icon-md">phonelink</i>&nbsp;{$user->online_ip_count()}
                                         / {$user->node_connector}</dd>
-                                        <dt>余額</dt>
+                                    <dt>余額</dt>
                                     <dd><i class="icon icon-md">monetization_on</i>&nbsp;{$user->money} CNY</dd>
-                                        <dt>上次使用</dt>
-                                        {if $user->lastSsTime()!="從未使用喵"}
-                                    <dd><i class="icon icon-md">event</i>&nbsp;{$user->lastSsTime()}</dd>
+                                    <dt>上次使用</dt>
+                                    {if $user->lastSsTime()!="從未使用喵"}
+                                        <dd><i class="icon icon-md">event</i>&nbsp;{$user->lastSsTime()}</dd>
                                     {else}
-                                    <dd><i class="icon icon-md">event</i>&nbsp;從未使用</dd>
+                                        <dd><i class="icon icon-md">event</i>&nbsp;從未使用</dd>
                                     {/if}
 
-                                        <dt>上次簽到時間：</dt>
+                                    <dt>上次簽到時間：</dt>
                                     <dd><i class="icon icon-md">event</i>&nbsp;{$user->lastCheckInTime()}</dd>
                                     <p id="checkin-msg"></p>
 
@@ -423,43 +409,43 @@
                             <div class="card-inner margin-bottom-no">
                                 <div id="traffic_chart" style="height: 300px; width: 100%;"></div>
                                 <script src="/assets/materialize/js/canvasjs.min.js"></script>
-            										<script type="text/javascript">
-            											var chart = new CanvasJS.Chart("traffic_chart",{
-            												title:{
-            													text: "{($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100}%",
-            													fontColor: "#848484",
-                                                              	fontSize: 70,
-                                                          		verticalAlign: "center",
-                                                              	horizontalAlign: "center"
-            													},
-                                                            toolTip: {
-                                                                backgroundColor: "#ffffff",
-                                                                borderThickness: 0,
-                                                                cornerRadius: 0,
-                                                                fontColor: "#424242"
-                                                    			},
-            												data: [
-            												{
-            													  explodeOnClick: false,
-                                                            innerRadius: "96%",
-                                                            radius: "90%",
-                                                            startAngle: 270,
-            													type: "doughnut",
-            													dataPoints: [
-            														{if $user->transfer_enable != 0}
-            														{
-            															y: {$user->last_day_t/$user->transfer_enable*100},color: "#c70000"
-            														},
-            														{
-            															y: {($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100},color: "#424242"
-            														}
-            														{/if}
-            													]
-            												}
-            												]
-            											});
-            											chart.render();
-            										</script>
+                                <script type="text/javascript">
+                                    var chart = new CanvasJS.Chart("traffic_chart",{
+                                        title:{
+                                            text: "{($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100}%",
+                                            fontColor: "#848484",
+                                            fontSize: 70,
+                                            verticalAlign: "center",
+                                            horizontalAlign: "center"
+                                        },
+                                        toolTip: {
+                                            backgroundColor: "#ffffff",
+                                            borderThickness: 0,
+                                            cornerRadius: 0,
+                                            fontColor: "#424242"
+                                        },
+                                        data: [
+                                            {
+                                                explodeOnClick: false,
+                                                innerRadius: "96%",
+                                                radius: "90%",
+                                                startAngle: 270,
+                                                type: "doughnut",
+                                                dataPoints: [
+                                                    {if $user->transfer_enable != 0}
+                                                    {
+                                                        y: {$user->last_day_t/$user->transfer_enable*100},color: "#c70000"
+                                                    },
+                                                    {
+                                                        y: {($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100},color: "#424242"
+                                                    }
+                                                    {/if}
+                                                ]
+                                            }
+                                        ]
+                                    });
+                                    chart.render();
+                                </script>
                             </div>
                         </div>
                     </div>
@@ -478,7 +464,7 @@
                                     var ds = document.createElement('script');
                                     ds.type = 'text/javascript';
                                     ds.async = true;
-                                    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                                    ds.src = (document.location.protocol === 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
                                     ds.charset = 'UTF-8';
                                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
                                 })();
@@ -488,7 +474,6 @@
                 </div>
             {/if}
             {include file='dialog.tpl'}
-    </div>
     </section>
 </main>
 
@@ -512,9 +497,8 @@
 
 
     window.onload = function () {
-        var myShakeEvent = new Shake(threshold: 15});
-
-        myShakeEvent.start();
+        var myShakeEvent = new Shake({threshold: 15});
+    myShakeEvent.start();
 
         window.addEventListener('shake', shakeEventDidOccur, false);
 

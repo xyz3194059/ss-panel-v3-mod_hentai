@@ -92,7 +92,6 @@
 											{$codes->render()}
 											</div>
 										</div>
-
 								</div>
 							</div>
 						</div>
@@ -109,30 +108,17 @@
 							</div>
 						</div>
 					</div>
-
-
-
 								</div>
 							</div>
 						</div>
 					</div>
 					{/if}
-
-
 					{include file='dialog.tpl'}
 				</div>
 			</section>
 		</div>
 	</main>
-
-
-
-
-
-
-
 {include file='user/footer.tpl'}
-
 
 <script>
     $(document).ready(function () {
