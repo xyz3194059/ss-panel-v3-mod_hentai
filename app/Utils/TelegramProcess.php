@@ -10,22 +10,22 @@ class TelegramProcess
             switch ($command) {
                 case 'cq':
                     $bot->sendMessage($message->getChat()->getId(), "您当月流量状况：
-今日已使用 ".$user->TodayusedTraffic()." ".number_format(($user->u+$user->d-$user->last_day_t)/$user->transfer_enable*100, 2)."%
-总共已使用 ".$user->LastusedTraffic()." ".number_format($user->last_day_t/$user->transfer_enable*100, 2)."%
-剩余 ".$user->unusedTraffic()." ".number_format(($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100, 2)."%
-当前在线设备数 ".$user->online_ip_count()." 台
-					", $parseMode = null, $disablePreview = false, $replyToMessageId = $reply_to);
+                    今日已使用 ".$user->TodayusedTraffic()." ".number_format(($user->u+$user->d-$user->last_day_t)/$user->transfer_enable*100, 2)."%
+                    总共已使用 ".$user->LastusedTraffic()." ".number_format($user->last_day_t/$user->transfer_enable*100, 2)."%
+                    剩余 ".$user->unusedTraffic()." ".number_format(($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100, 2)."%
+                    当前在线设备数 ".$user->online_ip_count()." 台
+                    ", $parseMode = null, $disablePreview = false, $replyToMessageId = $reply_to);
                     break;
                 case 'qd':
                     if (!$user->isAbleToCheckin()) {
-                        $bot->sendMessage($message->getChat()->getId(), " Config::get('appName') :您已经签到过了哦", $parseMode = null, $disablePreview = false, $replyToMessageId = $reply_to);
+                        $bot->sendMessage($message->getChat()->getId(), " Config::get('appName') :您今天已经签过到了！", $parseMode = null, $disablePreview = false, $replyToMessageId = $reply_to);
                         break;
                     }
                     $traffic = rand(Config::get('checkinMin'), Config::get('checkinMax'));
                     $user->transfer_enable = $user->transfer_enable + Tools::toMB($traffic);
                     $user->last_check_in_time = time();
                     $user->save();
-                    $bot->sendMessage($message->getChat()->getId(), "nico~nico~ni ！你获得了 ".$traffic." MB 流量！", $parseMode = null, $disablePreview = false, $replyToMessageId = $reply_to);
+                    $bot->sendMessage($message->getChat()->getId(), "签到成功！你获得了 ".$traffic." MB 流量！", $parseMode = null, $disablePreview = false, $replyToMessageId = $reply_to);
                     break;
                 default:
                     $bot->sendMessage($message->getChat()->getId(), "???", $parseMode = null, $disablePreview = false, $replyToMessageId = $reply_to);
@@ -56,7 +56,6 @@ class TelegramProcess
                 case 'help':
                     $help_list = "命令列表：
 						/ping  获取群组ID
-						/chat 唠嗑
 						/traffic 查询流量
 						/checkin 签到获取流量
 						/help 获取帮助信息
@@ -168,7 +167,6 @@ class TelegramProcess
                 case 'help':
                     $help_list_group = "命令列表：
 						/ping  获取群组ID
-						/chat 唠嗑
 						/traffic 查询流量
 						/checkin 签到获取流量
 						/help 获取帮助信息

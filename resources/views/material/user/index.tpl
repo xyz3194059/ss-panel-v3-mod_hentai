@@ -1,7 +1,5 @@
 {include file='user/main.tpl'}
 {$ssr_prefer = URL::SSRCanConnect($user, 0)}
-
-
 <main class="content">
     <div class="content-header ui-content-header">
         <div class="container">
@@ -11,9 +9,7 @@
     <div class="container">
         <section class="content-inner margin-top-no">
             <div class="ui-card-wrap">
-
                 <div class="col-lg-6 col-md-6">
-
                     <div class="card">
                         <div class="card-main">
                             <div class="card-inner margin-bottom-no">
@@ -162,7 +158,7 @@
                                                 <p><span class="icon icon-lg text-white">filter_4</span>
                                                     添加訂閱地址，輸入以下訂閱地址後確定</p>
                                                 <p><span class="icon icon-lg text-white">filter_5</span>
-                                                    訂閱出現系統自帶的與仟佰星雲，請把系統自帶的無效訂閱左滑刪除（自帶影響訂閱更新速度）</p>
+                                                    訂閱出現系統自帶的與{$config["appName"]}，請把系統自帶的無效訂閱左滑刪除（自帶影響訂閱更新速度）</p>
                                                 <p><span class="icon icon-lg text-white">filter_6</span> 點擊確定並升級</p>
                                                 <p><span class="icon icon-lg text-white">filter_7</span> 選擇任意節點</p>
                                                 <p><span class="icon icon-lg text-white">filter_8</span>
@@ -228,7 +224,7 @@
                                                 {$ssr_url_all_mu = URL::getAllUrl($pre_user, 1, 0)}
                                                 {if URL::SSRCanConnect($user)}
                                                     <dl class="dl-horizontal">\
-                                                        <dt><code>優點導入普通端口，如果普通端口無法使用再導入單端口</code></dt>
+                                                        <dt><code>優先入普通端口，如果普通端口無法使用再導入單端口</code></dt>
                                                         <dt>端口</dt>
                                                         <dd>{$user->port}</dd>
                                                         <dt>密碼</dt>

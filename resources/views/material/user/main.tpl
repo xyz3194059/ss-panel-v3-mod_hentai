@@ -479,13 +479,5 @@
     </div>
 </nav>
 <!--這裏替換crisp.chat的代碼，如您不需要請把script標簽刪除-->
-<script type="text/javascript"> window.$crisp = [];
-    window.CRISP_WEBSITE_ID = "您的ID";
-    (function () {
-        d = document;
-        s = d.createElement("script");
-        s.src = "https://client.crisp.chat/l.js";
-        s.async = 1;
-        d.getElementsByTagName("head")[0].appendChild(s);
-    })(); </script>
+<!--<script type="text/javascript"> window.$crisp=[];window.CRISP_WEBSITE_ID="您的ID";(function(){ d=document;s=d.createElement("script"); s.src="https://client.crisp.chat/l.js"; s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})(); </script>-->
 <!--這裏放crisp.chat的代碼，如您不需要請把script標簽刪除-->
