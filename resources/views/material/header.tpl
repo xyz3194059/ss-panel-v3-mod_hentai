@@ -10,7 +10,8 @@
     <!-- css -->
     <link href="/theme/material/css/base.min.css" rel="stylesheet">
     <link href="/theme/material/css/project.min.css" rel="stylesheet">
-    <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/assets/materialize/css/bg.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- favicon -->
     <!-- ... -->
 </head>
@@ -29,8 +30,9 @@
 <body class="page-brand">
 <div class="logo" >
     {if $config['logo'] == 'true'}
-    <img src="{$config["log_url"]}" />
+    <img src="{$config["logo_url"]}" />
     {else}
         <p style="font-size: 400%">&nbsp;{$config["appName"]}</p>
     {/if}
 </div>
+<script src="/assets/materialize/css/bg.js"></script>
