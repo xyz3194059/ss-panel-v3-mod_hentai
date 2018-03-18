@@ -9,6 +9,7 @@
 <script src="http://static.geetest.com/static/tools/gt.js"></script>
 <script src="/theme/material/js/base.min.js"></script>
 <script src="/theme/material/js/project.min.js"></script>
+<script src="/assets/materialize/js/bg.js"></script>
 </body>
 
 </html>

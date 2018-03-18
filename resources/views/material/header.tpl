@@ -22,17 +22,17 @@
     }
 
      .logo {
-        margin:100px auto 0;
+        margin: auto 0;
         padding:15px;
         text-align:center;
      }
+
 </style>
 <body class="page-brand">
 <div class="logo" >
     {if $config['logo'] == 'true'}
-    <img src="{$config["logo_url"]}" />
+    <img style="width: auto" src="{$config["logo_url"]}" />
     {else}
         <p style="font-size: 400%">&nbsp;{$config["appName"]}</p>
     {/if}
 </div>
-<script src="/assets/materialize/js/bg.js"></script>

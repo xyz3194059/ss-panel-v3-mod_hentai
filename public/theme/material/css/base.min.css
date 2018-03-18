@@ -67,7 +67,6 @@ a,body {
 }
 
 body {
-	background-color: rgba(245, 245, 245, 0.54);
 	font-family: "Helvetica Neue","Helvetica","Arial","PingFang SC","Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif;
 	font-size: 15px;
 	font-weight: 400;
@@ -6157,7 +6156,6 @@ html.no-touchevents .tile-action-show,html.no-touchevents .tile:hover .tile-acti
 
 @media only screen and (min-width:1440px) {
 	.nav-drawer.nav-drawer-lg {
-		background-color: transparent;
 		display: block!important;
 		overflow: visible;
 		width: 240px;
