@@ -12,7 +12,7 @@
     <!-- css -->
     <link href="/theme/material/css/base.min.css" rel="stylesheet">
     <link href="/theme/material/css/project.min.css" rel="stylesheet">
-    <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <style>
         body {
@@ -311,52 +311,52 @@
         </div>
     </ul>
 
-    <ul class="nav nav-list pull-right">
-        <div class="dropdown margin-right">
-            <a class="dropdown-toggle padding-left-no padding-right-no" data-toggle="dropdown">
-                {if $user->isLogin}
-                <span class="access-hide">{$user->user_name}</span>
-                <span class="icon icon-cd margin-right">account_circle</span>
-                <!--	<span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="{$user->gravatar}"></span>  -->
-            </a>
-            <ul class="dropdown-menu dropdown-menu-right">
-                <li>
-                    <a class="padding-right-lg waves-attach" href="/user/"><span class="icon icon-lg margin-right">account_box</span>用戶中心</a>
-                </li>
+    {*<ul class="nav nav-list pull-right">*}
+        {*<div class="dropdown margin-right">*}
+            {*<a class="dropdown-toggle padding-left-no padding-right-no" data-toggle="dropdown">*}
+                {*{if $user->isLogin}*}
+                {*<span class="access-hide">{$user->user_name}</span>*}
+                {*<span class="icon icon-cd margin-right">account_circle</span>*}
+                {*<!--	<span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="{$user->gravatar}"></span>  -->*}
+            {*</a>*}
+            {*<ul class="dropdown-menu dropdown-menu-right">*}
+                {*<li>*}
+                    {*<a class="padding-right-lg waves-attach" href="/user/"><span class="icon icon-lg margin-right">account_box</span>用戶中心</a>*}
+                {*</li>*}
 
-                <li>
-                    <a class="padding-right-cd waves-attach" href="/user/logout"><span class="icon icon-lg margin-right">exit_to_app</span>登出</a>
-                </li>
-            </ul>
-            {else}
-            <span class="access-hide">未登錄</span>
-            <span class="icon icon-lg margin-right">account_circle</span>
-            <!-- <span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="/theme/material/images/users/avatar-001.jpg"></span>  -->
+                {*<li>*}
+                    {*<a class="padding-right-cd waves-attach" href="/user/logout"><span class="icon icon-lg margin-right">exit_to_app</span>登出</a>*}
+                {*</li>*}
+            {*</ul>*}
+            {*{else}*}
+            {*<span class="access-hide">未登錄</span>*}
+            {*<span class="icon icon-lg margin-right">account_circle</span>*}
+            {*<!-- <span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="/theme/material/images/users/avatar-001.jpg"></span>  -->*}
 
-            <ul class="dropdown-menu dropdown-menu-right">
-                <li>
-                    <a class="padding-right-lg waves-attach" href="/auth/login"><span class="icon icon-lg margin-right">account_box</span>登錄</a>
-                </li>
-                <li>
-                    <a class="padding-right-lg waves-attach" href="/auth/register"><span class="icon icon-lg margin-right">pregnant_woman</span>注冊</a>
-                </li>
-            </ul>
-            {/if}
+            {*<ul class="dropdown-menu dropdown-menu-right">*}
+                {*<li>*}
+                    {*<a class="padding-right-lg waves-attach" href="/auth/login"><span class="icon icon-lg margin-right">account_box</span>登錄</a>*}
+                {*</li>*}
+                {*<li>*}
+                    {*<a class="padding-right-lg waves-attach" href="/auth/register"><span class="icon icon-lg margin-right">pregnant_woman</span>注冊</a>*}
+                {*</li>*}
+            {*</ul>*}
+            {*{/if}*}
 
-        </div>
+        {*</div>*}
     </ul>
 </header>
 <nav aria-hidden="true" class="menu menu-left nav-drawer nav-drawer-md" id="ui_menu" tabindex="-1">
     <div class="menu-scroll">
         <div class="menu-content">
-            <a class="menu-logo" href="/"><i class="icon icon-lg">language</i>&nbsp;{$config["appName"]}</a>
+            <p class="menu-logo">&nbsp;{$config["appName"]}</p>
             <ul class="nav">
                 <li>
                     <a class="waves-attach" data-toggle="collapse" href="#ui_menu_me">我的</a>
                     <ul class="menu-collapse collapse in" id="ui_menu_me">
                         <li>
                             <a href="/user">
-                                <i class="icon icon-lg">account_balance_wallet</i>&nbsp;用戶中心
+                                <i class="icon icon-lg">account_balance_wallet</i>&nbsp;首頁
                             </a>
                         </li>
 
@@ -369,7 +369,7 @@
 
                         <li>
                             <a href="/user/edit">
-                                <i class="icon icon-lg">sync_problem</i>&nbsp;資料編輯
+                                <i class="icon icon-lg">settings</i>&nbsp;賬號設置
                             </a>
                         </li>
 
@@ -381,7 +381,7 @@
                         </li>
                         <li>
                             <a href="/user/invite">
-                                <i class="icon icon-lg">loyalty</i>&nbsp;邀請碼
+                                <i class="icon icon-lg">loyalty</i>&nbsp;推廣系統
                             </a>
                         </li>
 
@@ -389,7 +389,7 @@
                     </ul>
 
 
-                    <a class="waves-attach" data-toggle="collapse" href="#ui_menu_use">使用</a>
+                    <a class="waves-attach" data-toggle="collapse" href="#ui_menu_use">服務</a>
                     <ul class="menu-collapse collapse in" id="ui_menu_use">
                         <li>
                             <a href="/user/node">
@@ -413,68 +413,71 @@
                             <a href="/user/lookingglass">
                                 <i class="icon icon-lg">visibility</i>&nbsp;延遲檢測
                             </a>
+                        </li>
+                        <li>
                             <a href="/user/announcement">
-                                <i class="icon icon-lg">start</i>&nbsp;使用教程
+                                <i class="icon icon-lg">start</i>&nbsp;公告欄
                             </a>
                         </li>
                     </ul>
 
-                    <!--	<a class="waves-attach" data-toggle="collapse" href="#ui_menu_detect">審計</a>
-						<ul class="menu-collapse collapse in" id="ui_menu_detect">
-							<li><a href="/user/detect"><i class="icon icon-lg">account_balance</i>&nbsp;審計規則</a></li>
-							<li><a href="/user/detect/log"><i class="icon icon-lg">assignment_late</i>&nbsp;審計記錄</a></li>
-						</ul>
 
-						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_trade">幫助</a>
-						<ul class="menu-collapse collapse in" id="ui_menu_trade">
-							{if $config['enable_wecenter']=='true'}
-							<li>
-								<a href="{$config["wecenter_url"]}" target="_blank">
-									<i class="icon icon-lg">help</i>&nbsp;問答系統
-								</a>
-							</li>
-							{/if}-->
-
-
-                    <a class="waves-attach" data-toggle="collapse" href="#ui_menu_help">商店</a>
-                    <ul class="menu-collapse collapse in" id="ui_menu_help">
+                    <a class="waves-attach" data-toggle="collapse" href="#ui_menu_trade">幫助</a>
+                    <ul class="menu-collapse collapse in" id="ui_menu_trade">
                         <li>
-                            <a href="/user/code">
-                                <i class="icon icon-lg">code</i>&nbsp;充值
+                            <a href="/user/help">
+                                <i class="icon icon-lg">start</i>&nbsp;设置教程
                             </a>
                         </li>
-
-                        <li>
-                            <a href="/user/shop">
-                                <i class="icon icon-lg">shop</i>&nbsp;套餐購買
-                            </a>
-                        </li>
-
-                        <li><a href="/user/bought"><i class="icon icon-lg">shopping_cart</i>&nbsp;購買記錄</a></li>
-
-
-                        {if $config['enable_donate']=='true'}
+                        {if $config['enable_wecenter']=='true'}
                             <li>
-                                <a href="/user/donate">
-                                    <i class="icon icon-lg">attach_money</i>&nbsp;捐贈公示
+                                <a href="{$config["wecenter_url"]}" target="_blank">
+                                    <i class="icon icon-lg">help</i>&nbsp;問答系統
                                 </a>
                             </li>
                         {/if}
 
+
+                        <a class="waves-attach" data-toggle="collapse" href="#ui_menu_help">商店</a>
+                        <ul class="menu-collapse collapse in" id="ui_menu_help">
+                            <li>
+                                <a href="/user/code">
+                                    <i class="icon icon-lg">code</i>&nbsp;充值
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/user/shop">
+                                    <i class="icon icon-lg">shop</i>&nbsp;套餐購買
+                                </a>
+                            </li>
+
+                            <li><a href="/user/bought"><i class="icon icon-lg">shopping_cart</i>&nbsp;購買記錄</a></li>
+
+
+                            {if $config['enable_donate']=='true'}
+                                <li>
+                                    <a href="/user/donate">
+                                        <i class="icon icon-lg">attach_money</i>&nbsp;捐贈公示
+                                    </a>
+                                </li>
+                            {/if}
+
+                        </ul>
+
+
+                        {if $user->isAdmin()}
+                            <li>
+                                <a href="/admin">
+                                    <i class="icon icon-lg">person_pin</i>&nbsp;管理面板
+                                </a>
+                            </li>
+                        {/if}
+
+                        <li>
+                            <a class="padding-right-cd waves-attach" href="/user/logout"><span class="icon icon-lg margin-right">exit_to_app</span>登出</a>
+                        </li>
                     </ul>
-
-
-                    {if $user->isAdmin()}
-                <li>
-                    <a href="/admin">
-                        <i class="icon icon-lg">person_pin</i>&nbsp;管理面板
-                    </a>
-                </li>
-                {/if}
-
-
-                </li>
-            </ul>
         </div>
     </div>
 </nav>

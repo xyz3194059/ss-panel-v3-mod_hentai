@@ -440,7 +440,7 @@ class Job
 
         $adminUser = User::where("is_admin", "=", "1")->get();
 
-        $latest_content = file_get_contents("https://raw.githubusercontent.com/NimaQu/ss-panel-v3-mod_UIChanges/master/bootstrap.php");
+        $latest_content = file_get_contents("https://raw.githubusercontent.com/ZBrettonYe/ss-panel-v3-mod_hentai/master/bootstrap.php");
         $newmd5 = md5($latest_content);
         $oldmd5 = md5(file_get_contents(BASE_PATH."/bootstrap.php"));
 

@@ -5,6 +5,8 @@
 $System_Config['key'] = '';
 $System_Config['debug'] =  'false';  //  正式环境请确保为false
 $System_Config['appName'] = '';             //站点名称
+$System_config['logo'] = 'false';     //站点名称是否使用logo图片来代替
+$System_config['logo_url'] = '/images/logo.png';      //logo图片的储存地址；
 $System_Config['baseUrl'] = '';           // 站点地址
 $System_Config['timeZone'] = 'PRC';        // PRC 天朝时间  UTC 格林时间
 $System_Config['pwdMethod'] = 'sha256';       // 密码加密   可选 md5,sha256
@@ -14,6 +16,7 @@ $System_Config['authDriver'] = 'cookie';   // 登录验证存储方式 可选: c
 $System_Config['sessionDriver'] = 'cookie';
 $System_Config['cacheDriver'] = 'cookie';
 $System_Config['tokenDriver'] = 'db';
+
 
 //$System_Config['version'] = '<a href="https://www.zhaoj.in">Glzjin</a> mod-2016042210000';
 
