@@ -35,4 +35,4 @@
         <p style="font-size: 400%">&nbsp;{$config["appName"]}</p>
     {/if}
 </div>
-<script src="/assets/materialize/css/bg.js"></script>
+<script src="/assets/materialize/js/bg.js"></script>

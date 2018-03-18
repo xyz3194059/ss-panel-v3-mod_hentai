@@ -236,7 +236,7 @@
 </script>
 
 {if $config['enable_telegram'] == 'true'}
-<script src=" /assets/public/js/jquery.qrcode.min.js "></script>
+<script src=" /assets/AdminLTE/js/jquery.qrcode.min.js "></script>
 <script>
 	var telegram_qrcode = 'mod://login/{$login_token}';
 	jQuery('#telegram-qr').qrcode({

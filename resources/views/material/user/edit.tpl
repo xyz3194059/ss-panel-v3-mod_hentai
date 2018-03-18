@@ -454,7 +454,7 @@
     })
 </script>
 
-<script src=" /assets/public/js/jquery.qrcode.min.js "></script>
+<script src=" /assets/AdminLTE/js/jquery.qrcode.min.js "></script>
 <script>
 	var ga_qrcode = '{$user->getGAurl()}';
 	jQuery('#ga-qr').qrcode({
